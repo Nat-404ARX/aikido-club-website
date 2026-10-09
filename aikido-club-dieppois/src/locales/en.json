@@ -1,0 +1,23 @@
+
+{
+  "navigation": {
+    "home": "Home",
+    "club": "The club",
+    "aikido": "Aikido",
+    "schedule": "Schedule and fees",
+    "news": "News",
+    "contact": "Contact"
+  },
+  "home": {
+    "eyebrow": "Dieppe Aikido Club",
+    "title": "Harmony of body and mind",
+    "subtitle": "Discover aikido, a Japanese martial art based on movement, balance and respect.",
+    "discover": "Discover the club",
+    "practice": "Join us",
+    "welcomeTitle": "Welcome to the club",
+    "welcomeText": "A place to discover aikido, progress together and share the values of a martial art open to everyone."
+  },
+  "footer": {
+    "rights": "All rights reserved"
+  }
+}

@@ -1,0 +1,23 @@
+
+{
+  "navigation": {
+    "home": "Accueil",
+    "club": "Le club",
+    "aikido": "L'aïkido",
+    "schedule": "Horaires et tarifs",
+    "news": "Actualités",
+    "contact": "Contact"
+  },
+  "home": {
+    "eyebrow": "Aïkido Club Dieppois",
+    "title": "L'harmonie du corps et de l'esprit",
+    "subtitle": "Découvrez l'aïkido, un art martial japonais fondé sur le mouvement, l'équilibre et le respect.",
+    "discover": "Découvrir le club",
+    "practice": "Nous rejoindre",
+    "welcomeTitle": "Bienvenue au club",
+    "welcomeText": "Un lieu pour découvrir l'aïkido, progresser ensemble et partager les valeurs d'un art martial accessible à tous."
+  },
+  "footer": {
+    "rights": "Tous droits réservés"
+  }
+}
