@@ -20,7 +20,7 @@
   "hero": {
     "label": "Club introduction",
     "eyebrow": "Dieppe Aikido Club",
-    "title": "The art of movement.",
+    "title": "Discover aikido: a martial art and a philosophy of life.",
     "subtitle": "The path to harmony.",
     "description": "Discover aikido, a martial discipline based on movement, self-control and respect for your training partner.",
     "scheduleCta": "View our class schedule",
@@ -133,5 +133,12 @@
     "description": "Discover our practice, our classes and life at the club.",
     "primaryCta": "Discover the club",
     "secondaryCta": "Contact us"
+  }, 
+  "club": {
+    "club": "The club",
+    "ourstory": "Learn about the club's history",
+    "chronologie": "Timeline",
+    "title": "Our story",
+    "intro": "“More than a martial art, it is a philosophy of life. There is no opponent, only a partner. There is no competition. Practitioners seek harmony and self-control. [...] Every gesture is precise, every movement calculated. Each person takes turns being the attacker and then the defender, giving and receiving. Aikido is a silent dialogue in which one learns to know oneself through the other. Aikido is much more than just physical training; it is an inner quest, a path toward harmony.” Florent Boucher"
   }
 }

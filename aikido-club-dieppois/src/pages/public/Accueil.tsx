@@ -11,11 +11,7 @@ export default function Accueil() {
   const { t } = useTranslation();
 
   const historyMilestones = [
-    { year: "1980", key: "discovery" },
     { year: "1981", key: "foundation" },
-    { year: "1985", key: "transmission" },
-    { year: "2008", key: "independence" },
-    { year: "2022", key: "teaching" },
     { year: "2025", key: "newChapter" },
   ] as const;
 
@@ -82,7 +78,7 @@ export default function Accueil() {
                   1981
                 </div>
 
-                <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-neutral-200">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-neutral-200">
                   <img
                     src="/assets/images/quisommenous.png"
                     alt={t("about.imageAlt")}
@@ -195,7 +191,7 @@ export default function Accueil() {
 
             <div className="md:col-span-5">
               <ScrollReveal delay={150}>
-                <div className="relative aspect-[1/2] max-h-200 overflow-hidden rounded-sm bg-neutral-800">
+                <div className="relative aspect-[1/2] max-h-200 overflow-hidden rounded-xl bg-neutral-800">
                   <img
                     src="/assets/images/pratique-aikido.png"
                     alt={t("objective.imageAlt")}
@@ -224,7 +220,7 @@ export default function Accueil() {
                   {t("history.eyebrow")}
                 </p>
 
-                <h2 className="mt-6 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-7xl">
+                <h2 className="mt-6 max-w-3xl text-2xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-5xl">
                   {t("history.title")}
                 </h2>
               </div>
@@ -240,7 +236,7 @@ export default function Accueil() {
             <div className="lg:col-span-5">
               <ScrollReveal>
                 <div className="group relative lg:sticky lg:top-24">
-                  <div className="relative aspect-[4/5] overflow-hidden bg-neutral-200">
+                  <div className="relative aspect-[4/5] overflow-hidden bg-neutral-200 rounded-xl">
                     <img
                       src="/assets/images/accueil/histoire-club.jpg"
                       alt={t("history.imageAlt")}

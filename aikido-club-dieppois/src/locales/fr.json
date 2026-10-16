@@ -20,7 +20,7 @@
   "hero": {
     "label": "Présentation du club",
     "eyebrow": "Aïkido Club Dieppois",
-    "title": "L'art du mouvement.",
+    "title": "Découvrez l'aïkido : un art martial et une philosophie de vie.",
     "subtitle": "La voie de l'harmonie.",
     "description": "Découvrez l'aïkido, une discipline martiale fondée sur le mouvement, la maîtrise de soi et le respect du partenaire.",
     "scheduleCta": "Découvrir nos horaires",
@@ -133,5 +133,12 @@
     "description": "Découvrez notre pratique, nos cours et la vie du club.",
     "primaryCta": "Découvrir le club",
     "secondaryCta": "Nous contacter"
+  },
+  "club": {
+    "club": "Le club",
+    "ourstory": "Découvrez l'histoire du club",
+    "chronologie": "Chronologie",
+    "title": "Notre histoire",
+    "intro": "“Plus qu’un art martial, c’est une philosophie de vie. Il n’y a pas d’adversaire mais un partenaire. Il n’y a pas de compétition. Les pratiquants recherchent l’harmonie et la maîtrise de soi. [...] Chaque geste est précis, chaque mouvement calculé. Chacun est à tour de rôle attaquant puis défenseur, donnant et recevant. L’aïkido est un dialogue silencieux où l’on apprend à se connaître soi-même à travers l’autre. L’aïkido est bien plus qu’un simple entraînement physique, c'est une quête intérieure, un chemin vers l’harmonie.” Florent Boucher"
   }
 }

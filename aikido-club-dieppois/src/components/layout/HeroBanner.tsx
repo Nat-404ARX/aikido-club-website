@@ -68,7 +68,7 @@ export default function HeroBanner({
                 {t("hero.eyebrow")}
               </p>
 
-              <h1 className="max-w-2xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+              <h1 className="max-w-xl text-xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-4xl">
                 {t("hero.title")}
                 <span className="mt-2 block text-neutral-400">
                   {t("hero.subtitle")}
