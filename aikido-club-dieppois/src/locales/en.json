@@ -133,12 +133,93 @@
     "description": "Discover our practice, our classes and life at the club.",
     "primaryCta": "Discover the club",
     "secondaryCta": "Contact us"
-  }, 
+  },
   "club": {
     "club": "The club",
     "ourstory": "Learn about the club's history",
     "chronologie": "Timeline",
     "title": "Our story",
     "intro": "“More than a martial art, it is a philosophy of life. There is no opponent, only a partner. There is no competition. Practitioners seek harmony and self-control. [...] Every gesture is precise, every movement calculated. Each person takes turns being the attacker and then the defender, giving and receiving. Aikido is a silent dialogue in which one learns to know oneself through the other. Aikido is much more than just physical training; it is an inner quest, a path toward harmony.” Florent Boucher"
+  },
+  "horaire": {
+    "about": "Practical Information",
+    "hours": "Hours",
+    "tarifs": "Rates",
+    "intro": "Check out our class schedules, the season's schedule, and the club's pricing information.",
+    "checkHour": "Check the hours",
+    "eachWeek": "Each week",
+    "classHours": "Class Schedules",
+    "selectedDay": "Select a day to see the available sessions.",
+    "today": "Today",
+    "plan": "Weekly Schedule",
+    "noclass": "No courses listed",
+    "checkYear": "Check the annual schedule for any activities or exceptions.",
+    "confirmHours": "Please check the club's official schedule to confirm the posted times. Sessions may be subject to change during school breaks.",
+    "seasonCalendar": "Season Schedule",
+    "yearCalendar": "The Annual Schedule",
+    "season": "Season",
+    "downloadCalendar": "Download the schedule",
+    "maximize": "Enlarge the poster",
+    "addCalendar": "Annual schedule to be added",
+    "soonCalendar": "The official poster for the season will be available here as soon as it is received.",
+    "joinClub": "Club Registration",
+    "tarif": "Rates and Dues",
+    "officialDoc": "Official Season Document",
+    "formule": "Formula",
+    "allTarif": "Full pricing details",
+    "joinCondition": "Please see the club's document for registration requirements and official information.",
+    "downloadPDF": "Download the PDF",
+    "seeYouSoon": "See you soon at the dojo",
+    "question": "Any questions before we begin ?"
+  },
+  "location": {
+    "eyebrow": "Join us",
+    "title": "Come see us at the dojo",
+    "description": "Whether you're coming to try out aikido or to practice regularly, we welcome you to the club's dojo.",
+    "addressTitle": "Dojo Address",
+    "address": "22 Rue Jacques Prévert \n76370 Dieppe, France",
+    "mapPlaceholder": "Map Location",
+    "mapDescription": "An interactive map can be added here."
+  },
+  "contact": {
+    "eyebrow": "Let's stay in touch",
+    "title": "Contact",
+    "description": "Do you have a question about aikido, classes, or registration? Find the club's contact information or write to us using the form.",
+    "cta": "Write to us"
+  },
+  "details": {
+    "eyebrow": "Our Contact Information",
+    "title": "Let's talk about it together.",
+    "description": "Choose the way to contact us that works best for you. You can also find us on social media to keep up with what's happening at the club.",
+    "toComplete": "To complete",
+    "locationTitle": "The dojo",
+    "channels": {
+      "email": "Email Adress",
+      "phone": "Phone number",
+      "facebook": "Facebook",
+      "youtube": "YouTube",
+      "whatsapp": "WhatsApp",
+      "instagram": "Instagram"
+    }
+  },
+  "form": {
+    "eyebrow": "A Request for Information",
+    "title": "How can we help you?",
+    "description": "Fill out the form below to submit your request. All fields are required.",
+    "requiredNote": "Fields marked with an asterisk are required.",
+    "fields": {
+      "name": "Name",
+      "email": "Email Adress",
+      "phone": "Phone number",
+      "message": "Your message"
+    },
+    "placeholders": {
+      "name": "Your first and last name",
+      "email": "you@exemple.com",
+      "phone": "06 00 00 00 00",
+      "message": "How can we help you?"
+    },
+    "submit": "Prepare My Application",
+    "demoNotice": "Form validation is working, but submission has not yet been configured. Your message was not sent to the club."
   }
 }

@@ -140,5 +140,87 @@
     "chronologie": "Chronologie",
     "title": "Notre histoire",
     "intro": "“Plus qu’un art martial, c’est une philosophie de vie. Il n’y a pas d’adversaire mais un partenaire. Il n’y a pas de compétition. Les pratiquants recherchent l’harmonie et la maîtrise de soi. [...] Chaque geste est précis, chaque mouvement calculé. Chacun est à tour de rôle attaquant puis défenseur, donnant et recevant. L’aïkido est un dialogue silencieux où l’on apprend à se connaître soi-même à travers l’autre. L’aïkido est bien plus qu’un simple entraînement physique, c'est une quête intérieure, un chemin vers l’harmonie.” Florent Boucher"
+  },
+  "horaire": {
+    "about": "Informations pratiques",
+    "hours": "Horaires",
+    "tarifs": "Tarifs",
+    "intro": "Retrouvez les horaires de nos cours, le planning de la saison et les informations tarifaires du club.",
+    "checkHour": "Consulter les horaires",
+    "eachWeek": "Chaque semaine",
+    "classHours": "Les horaires de cours",
+    "selectedDay": "Sélectionnez une journée pour découvrir les séances proposées.",
+    "today": "Aujourd'hui",
+    "plan": "Planning hebdomadaire",
+    "noclass": "Aucun cours renseigné",
+    "checkYear": "Consultez le planning annuel pour connaître les éventuelles activités ou exceptions.",
+    "confirmHours": "Les horaires affichés sont à confirmer avec le planning officiel du club. Les séances peuvent être modifiées pendant les vacances.",
+    "seasonCalendar": "Calendrier de la saison",
+    "yearCalendar": "Le planning annuel",
+    "season": "Saison",
+    "downloadCalendar": "Télécharger le planning",
+    "maximize": "Agrandir l’affiche",
+    "addCalendar": "Planning annuel à ajouter",
+    "soonCalendar": "L’affiche officielle de la saison sera disponible ici dès qu’elle aura été récupérée.",
+    "joinClub": "Inscription au club",
+    "tarif": "Tarifs et cotisations",
+    "officialDoc": "Document officiel de la saison",
+    "formule": "Formule",
+    "allTarif": "Tous les détails des tarifs",
+    "joinCondition": "Retrouvez les conditions d’inscription et les informations officielles dans le document du club.",
+    "downloadPDF": "Télécharger le PDF",
+    "seeYouSoon": "À bientôt au dojo",
+    "question": "Une question avant de commencer ?",
+    "LUN": "Lundi"
+  },
+  "location": {
+    "eyebrow": "Nous rejoindre",
+    "title": "Retrouvez-nous au dojo",
+    "description": "Que vous veniez découvrir l’aïkido ou pratiquer régulièrement, nous vous accueillons au dojo du club.",
+    "addressTitle": "Adresse du dojo",
+    "address": "22 Rue Jacques Prévert \n76370 Dieppe, France",
+    "mapPlaceholder": "Emplacement de la carte",
+    "mapDescription": "Une carte interactive pourra être ajoutée ici."
+  },
+  "contact": {
+    "eyebrow": "Restons en contact",
+    "title": "Contact",
+    "description": "Une question sur l’aïkido, les cours ou les inscriptions ? Retrouvez les coordonnées du club ou écrivez-nous grâce au formulaire.",
+    "cta": "Nous écrire"
+  },
+  "details": {
+    "eyebrow": "Nos coordonnées",
+    "title": "Parlons ensemble.",
+    "description": "Choisissez le moyen de contact qui vous convient. Retrouvez-nous également sur nos réseaux sociaux pour suivre la vie du club.",
+    "toComplete": "À compléter",
+    "locationTitle": "Le dojo",
+    "channels": {
+      "email": "Adresse e-mail",
+      "phone": "Téléphone",
+      "facebook": "Facebook",
+      "youtube": "YouTube",
+      "whatsapp": "WhatsApp",
+      "instagram": "Instagram"
+    }
+  },
+  "form": {
+    "eyebrow": "Une demande d’information",
+    "title": "Comment pouvons-nous vous aider ?",
+    "description": "Remplissez le formulaire ci-dessous pour préparer votre demande. Tous les champs sont obligatoires.",
+    "requiredNote": "Les champs marqués d’un astérisque sont obligatoires.",
+    "fields": {
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "phone": "Numéro de téléphone",
+      "message": "Votre message"
+    },
+    "placeholders": {
+      "name": "Votre nom et prénom",
+      "email": "vous@exemple.fr",
+      "phone": "06 00 00 00 00",
+      "message": "Comment pouvons-nous vous renseigner ?"
+    },
+    "submit": "Préparer ma demande",
+    "demoNotice": "La validation du formulaire fonctionne, mais l’envoi n’est pas encore configuré. Votre message n’a pas été transmis au club."
   }
 }

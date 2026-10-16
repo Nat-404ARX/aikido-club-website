@@ -8,13 +8,6 @@ import {
   Menu,
   X,
   ChevronDown,
-  Globe,
-  House,
-  CalendarDays,
-  BookOpen,
-  Clock,
-  Users,
-  Mail,
 } from "lucide-react";
 
 const eventLinks = [
@@ -272,7 +265,7 @@ export default function Navbar() {
           aria-label={t("nav.mobileNavigation")}
           aria-hidden={!mobileOpen}
           inert={!mobileOpen}
-          className={`absolute bottom-0 right-0 top-0 flex w-[min(88vw,380px)] flex-col overflow-y-auto bg-[#F2EFE8] p-6 shadow-2xl transition-transform duration-300 ${
+          className={`absolute bottom-0 right-0 top-0 flex w-[min(88vw,380px)] h-[90vh] flex-col overflow-y-auto bg-[#F2EFE8] p-6 shadow-2xl transition-transform duration-300 ${
             mobileOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
