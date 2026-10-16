@@ -7,6 +7,7 @@
   --color-text: #222222;
   --color-text-muted: #666666;
   --color-border: #e5e5e5;
+  --color-accent: #c83b32;
 
   /* Typographie */
   --font-body: system-ui, sans-serif;
@@ -25,3 +26,4 @@
   --transition-fast: 150ms ease;
   --transition-normal: 250ms ease;
 }
+

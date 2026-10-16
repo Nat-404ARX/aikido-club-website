@@ -1,23 +1,137 @@
-
 {
-  "navigation": {
+  "nav": {
     "home": "Home",
     "club": "The club",
     "aikido": "Aikido",
-    "schedule": "Schedule and fees",
-    "news": "News",
-    "contact": "Contact"
+    "courses": "Classes",
+    "schedule": "Schedule & fees",
+    "events": "Events",
+    "allEvents": "All events",
+    "contact": "Contact",
+    "language": "Choose language",
+    "mainNavigation": "Main navigation",
+    "mobileNavigation": "Mobile navigation",
+    "navigation": "Navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "followUs": "Follow the club",
+    "social": "Visit the club's {{name}} page"
   },
-  "home": {
+  "hero": {
+    "label": "Club introduction",
     "eyebrow": "Dieppe Aikido Club",
-    "title": "Harmony of body and mind",
-    "subtitle": "Discover aikido, a Japanese martial art based on movement, balance and respect.",
-    "discover": "Discover the club",
-    "practice": "Join us",
-    "welcomeTitle": "Welcome to the club",
-    "welcomeText": "A place to discover aikido, progress together and share the values of a martial art open to everyone."
+    "title": "The art of movement.",
+    "subtitle": "The path to harmony.",
+    "description": "Discover aikido, a martial discipline based on movement, self-control and respect for your training partner.",
+    "scheduleCta": "View our class schedule",
+    "aikidoCta": "Discover aikido",
+    "imageAlt": "Aikido illustration",
+    "quote": "Aikido is not a fighting technique, but a martial art, [...] “Art” because we are on a perpetual quest, and “Martial” because it deals with conflict, it deals with combat. [...] It uses the possibility of conflict as a way to develop ourselves personally and socially, both as individuals and in our relationships.",
+    "quoteAuthor": "Noël Franck",
+    "eventEyebrow": "Featured club event",
+    "eventCta": "Discover the event",
+    "previous": "Previous slide",
+    "next": "Next slide",
+    "goToSlide": "Show slide {{number}}",
+    "pause": "Pause slideshow",
+    "resume": "Resume slideshow"
   },
-  "footer": {
-    "rights": "All rights reserved"
+  "about": {
+    "eyebrow": "The club",
+    "since": "Since",
+    "title": "A practice, a history, a community.",
+    "description": "Since 1981, Aïkido Club Dieppois has introduced people in Dieppe to the practice of aikido. It is a place where everyone can embrace a challenging practice, progress at their own pace and share much more than a simple training session.",
+    "cta": "Contact Us",
+    "imageAlt": "Aïkido Club Dieppois practitioners training in the dojo"
+  },
+  "objective": {
+    "eyebrow": "Our purpose",
+    "title": "Growing together, far beyond the mat.",
+    "description": "Aikido is about more than learning techniques. It encourages us to better understand our movements, develop our awareness and build a respectful relationship with our partners. At the club, everyone progresses at their own pace through practice, sharing and respect.",
+    "cta": "Discover aikido",
+    "imageAlt": "Two practitioners working on an aikido technique",
+    "imageCaption": "Learning, practising and progressing together.",
+    "values": {
+      "progression": "Progress",
+      "sharing": "Sharing",
+      "respect": "Respect"
+    }
+  },
+  "history": {
+    "eyebrow": "Our history",
+    "title": "Over few decades of practice and tradition.",
+    "intro": "Born from an encounter with aikido in 1980, the club has grown over the years thanks to everyone who has helped keep the practice alive in Dieppe.",
+    "imageAlt": "Archive photograph of Aïkido Club Dieppois",
+    "imageEyebrow": "A shared journey",
+    "imageCaption": "The club's beginnings",
+    "imageNote": "[TO COMPLETE: add the photograph's date and identify the people shown.]",
+    "milestones": {
+      "discovery": {
+        "title": "A defining discovery",
+        "description": "While preparing for his judo instructor qualification, Gilles Baglan discovers aikido. He asks Jean Pottier, an instructor in Saint-Valery-en-Caux, to come and teach the discipline in Dieppe."
+      },
+      "foundation": {
+        "title": "The club is founded",
+        "description": "Jean Pottier accepts the invitation. In 1981, Aïkido Club Dieppois is established within the Maison des Jeunes et de la Culture (MJC), now known as L’Archipel."
+      },
+      "transmission": {
+        "title": "Passing on the practice",
+        "description": "In 1985, Jean Pottier leaves the region and asks Gilles Baglan, then a first dan, to succeed him as instructor."
+      },
+      "independence": {
+        "title": "Becoming independent",
+        "description": "The club separates from the MJC and becomes an independent sports association affiliated with the French Federation of Aikido, Aikibudo and Related Disciplines (FFAAA)."
+      },
+      "teaching": {
+        "title": "A new generation of teaching",
+        "description": "Club president since 2019, Florent Boucher earns his federal instructor qualification in 2022 and becomes an instructor. Gilles Baglan and Florent Boucher then share the Wednesday and Friday classes."
+      },
+      "newChapter": {
+        "title": "New classes, new opportunities",
+        "description": "In September 2025, the club expands its programme with a children's class on Wednesdays, an Aïki Taïso class and a monthly changing themed class on Mondays. Gilles Baglan, Florent Boucher, Patrick De Mey and José Pédro rotate the Monday classes. Patrick De Mey teaches the children's classes."
+      }
+    },
+    "footer": "The club's story continues through its instructors, practitioners and everyone who helps it thrive.",
+    "cta": "Learn more about the club"
+  },
+  "teachers": {
+    "eyebrow": "Meet the instructors",
+    "title": "One practice to teach",
+    "intro": "Behind every class are different journeys, experiences and a shared commitment: teaching aikido and helping every practitioner progress.",
+    "people": {
+      "gilles": {
+        "name": "Gilles Baglan",
+        "role": "Founder",
+        "description": "He has been teaching at the Dieppe Aikido Club since 1981. He is the club’s founder. We can never thank him enough for his dedication and for passing on his passion for aikido! He is currently a 4th Dan.",
+        "imageAlt": "Portrait of Gilles Baglan, instructor at Aïkido Club Dieppois"
+      },
+      "florent": {
+        "name": "Florent Boucher",
+        "role": "President and instructor",
+        "description": "Currently a 3rd Dan, he has been the club president since 2019 and has been teaching since earning his BF in 2022. He has also recently become secretary of the Normandy Aikido League.",
+        "imageAlt": "Portrait of Florent Boucher, president and instructor"
+      },
+      "patrick": {
+        "name": "Patrick De Mey",
+        "role": "Instructor",
+        "description": "A long-time practitioner who taught in Offranville before joining us, he holds the Federal Certificate and a 1st Dan, and teaches classes on Mondays, alternating with the other instructors, as well as the children’s classes on Wednesdays.",
+        "imageAlt": "Portrait of Patrick De Mey, instructor"
+      },
+      "jose": {
+        "name": "José Pédro",
+        "role": "Instructor",
+        "description": "A practitioner with many years of experience, a Federal Certificate holder, and a 2nd Dan, he teaches on Mondays on a rotating basis with the other instructors",
+        "imageAlt": "Portrait of José Pédro, instructor"
+      }
+    },
+    "footer": "Would you like to discover their teaching and the atmosphere of the dojo? Come and meet the club.",
+    "cta": "Discover our aikido classes"
+  },
+  "closing": {
+    "eyebrow": "Aïkido Club Dieppois",
+    "title": "Would you like to learn more about the club?",
+    "description": "Discover our practice, our classes and life at the club.",
+    "primaryCta": "Discover the club",
+    "secondaryCta": "Contact us"
   }
 }

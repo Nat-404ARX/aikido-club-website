@@ -1,23 +1,137 @@
-
 {
-  "navigation": {
+  "nav": {
     "home": "Accueil",
     "club": "Le club",
     "aikido": "L'aïkido",
+    "courses": "Les cours",
     "schedule": "Horaires et tarifs",
-    "news": "Actualités",
-    "contact": "Contact"
+    "events": "Événements",
+    "allEvents": "Tous les événements",
+    "contact": "Contact",
+    "language": "Choisir la langue",
+    "mainNavigation": "Navigation principale",
+    "mobileNavigation": "Navigation mobile",
+    "navigation": "Navigation",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "followUs": "Suivez le club",
+    "social": "Visiter la page {{name}} du club"
   },
-  "home": {
+  "hero": {
+    "label": "Présentation du club",
     "eyebrow": "Aïkido Club Dieppois",
-    "title": "L'harmonie du corps et de l'esprit",
-    "subtitle": "Découvrez l'aïkido, un art martial japonais fondé sur le mouvement, l'équilibre et le respect.",
-    "discover": "Découvrir le club",
-    "practice": "Nous rejoindre",
-    "welcomeTitle": "Bienvenue au club",
-    "welcomeText": "Un lieu pour découvrir l'aïkido, progresser ensemble et partager les valeurs d'un art martial accessible à tous."
+    "title": "L'art du mouvement.",
+    "subtitle": "La voie de l'harmonie.",
+    "description": "Découvrez l'aïkido, une discipline martiale fondée sur le mouvement, la maîtrise de soi et le respect du partenaire.",
+    "scheduleCta": "Découvrir nos horaires",
+    "aikidoCta": "Découvrir l'aïkido",
+    "imageAlt": "Illustration de l'aïkido",
+    "quote": "L’aïkido n’est pas une technique de combat, c’est un art martial, [...] « Art » parce qu’on est en quête perpétuelle et « Martial », parce que ça parle du conflit, ça parle du combat. [...] C’est utiliser l’hypothèse du conflit pour une recherche de développement personnel et social, personnel et relationnel.",
+    "quoteAuthor": "Noël Franck",
+    "eventEyebrow": "À la une du club",
+    "eventCta": "Découvrir l'événement",
+    "previous": "Diapositive précédente",
+    "next": "Diapositive suivante",
+    "goToSlide": "Afficher la diapositive {{number}}",
+    "pause": "Mettre le diaporama en pause",
+    "resume": "Reprendre le diaporama"
   },
-  "footer": {
-    "rights": "Tous droits réservés"
+  "about": {
+    "eyebrow": "Le club",
+    "since": "Depuis",
+    "title": "Une pratique, une histoire, un collectif.",
+    "description": "Depuis 1981, l’Aïkido Club Dieppois fait vivre et découvrir l’aïkido à Dieppe. Un lieu où chacun peut s’engager dans une pratique exigeante, progresser à son rythme et partager bien plus qu’un simple entraînement.",
+    "cta": "Contactez-nous",
+    "imageAlt": "Les pratiquants de l’Aïkido Club Dieppois dans le dojo"
+  },
+  "objective": {
+    "eyebrow": "Notre objectif",
+    "title": "Progresser ensemble, bien au-delà du tatami.",
+    "description": "L’aïkido ne se résume pas à l’apprentissage de techniques. C’est une démarche qui invite à mieux comprendre ses mouvements, à développer son attention et à construire une relation respectueuse avec son partenaire. Au club, chacun avance à son rythme, dans une dynamique de progression, de partage et de respect.",
+    "cta": "Comprendre l’aïkido",
+    "imageAlt": "Deux pratiquants travaillent une technique d’aïkido",
+    "imageCaption": "Apprendre, pratiquer et progresser ensemble.",
+    "values": {
+      "progression": "Progression",
+      "sharing": "Partage",
+      "respect": "Respect"
+    }
+  },
+  "history": {
+    "eyebrow": "Notre histoire",
+    "title": "Des décennies de pratique et de transmission.",
+    "intro": "Né d’une rencontre avec l’aïkido en 1980, le club a grandi au fil des années grâce à celles et ceux qui ont fait vivre sa pratique à Dieppe.",
+    "imageAlt": "Photographie d’archive de l’Aïkido Club Dieppois",
+    "imageEyebrow": "Une aventure collective",
+    "imageCaption": "Les débuts du club",
+    "imageNote": "[À COMPLÉTER : préciser la date et les personnes présentes sur la photo.]",
+    "milestones": {
+      "discovery": {
+        "title": "Une découverte décisive",
+        "description": "En préparant son diplôme de moniteur de judo, Gilles Baglan découvre l’aïkido. Il sollicite Jean Pottier, professeur à Saint-Valery-en-Caux, pour qu’il vienne enseigner cette discipline à Dieppe."
+      },
+      "foundation": {
+        "title": "La naissance de l’Aïkido Club Dieppois",
+        "description": "Jean Pottier accepte la proposition. En 1981, le club voit le jour au sein de la Maison des Jeunes et de la Culture (MJC), aujourd’hui connue sous le nom de L’Archipel."
+      },
+      "transmission": {
+        "title": "La transmission continue",
+        "description": "En 1985, Jean Pottier quitte la région et confie la succession à Gilles Baglan, alors premier dan, qui reprend l’enseignement."
+      },
+      "independence": {
+        "title": "Le club prend son indépendance",
+        "description": "L’Aïkido Club Dieppois se sépare de la MJC et devient une association sportive indépendante, affiliée à la Fédération Française d’Aïkido, Aïkibudo et Affinitaires (FFAAA)."
+      },
+      "teaching": {
+        "title": "Une nouvelle génération d’enseignement",
+        "description": "Président du club depuis 2019, Florent Boucher obtient son brevet fédéral en 2022 et devient à son tour professeur. Gilles Baglan et Florent Boucher se partagent alors les cours du mercredi et du vendredi."
+      },
+      "newChapter": {
+        "title": "De nouveaux cours, de nouvelles possibilités",
+        "description": "En septembre 2025, le club enrichit son programme avec un cours enfants le mercredi, un cours d’Aïki Taïso et un cours thématique différent chaque mois le lundi. Gilles Baglan, Florent Boucher, Patrick De Mey et José Pédro se relaient pour les cours du lundi. Patrick De Mey encadre les cours enfants."
+      }
+    },
+    "footer": "L’histoire du club continue de s’écrire avec ses professeurs, ses pratiquants et toutes les personnes qui le font vivre.",
+    "cta": "En savoir plus sur le club"
+  },
+  "teachers": {
+    "eyebrow": "Celles et ceux qui transmettent",
+    "title": "Une pratique à enseigner",
+    "intro": "Derrière chaque cours, des parcours, des expériences et un engagement commun : transmettre l’aïkido et accompagner chaque pratiquant dans sa progression.",
+    "people": {
+      "gilles": {
+        "name": "Gilles Baglan",
+        "role": "Fondateur",
+        "description": "Enseignants depuis 1981 à l'aïkido club dieppois. Il est le fondateur du club. Nous ne le remercierons jamais assez pour son investissement, et la transmission de sa passion pour l'aïkido  ! Il est à présent 4ème Dan.",
+        "imageAlt": "Portrait de Gilles Baglan, professeur à l’Aïkido Club Dieppois"
+      },
+      "florent": {
+        "name": "Florent Boucher",
+        "role": "Président et professeur",
+        "description": "Actuellement 3ème Dan, il est président du club depuis 2019 et enseignant depuis l'obtention de son BF en 2022. Il est également, depuis peu, secrétaire de la ligue Aïkido Normandie",
+        "imageAlt": "Portrait de Florent Boucher, président et professeur"
+      },
+      "patrick": {
+        "name": "Patrick De Mey",
+        "role": "Professeur",
+        "description": "Pratiquant depuis longtemps, enseignant à Offranville avant de nous rejoindre, détenteur du Brevet Fédéral et 1er Dan, donne cours le lundi en alternance avec les autre enseignants et les cours enfants du mercredi.",
+        "imageAlt": "Portrait de Patrick De Mey, professeur"
+      },
+      "jose": {
+        "name": "José Pédro",
+        "role": "Professeur",
+        "description": "Pratiquant depuis de nombreuses années, détendteur du Brevet Fédéral et 2ème Dan, donne cours en alternance avec les autres enseignants le lundi",
+        "imageAlt": "Portrait de José Pédro, professeur"
+      }
+    },
+    "footer": "Envie de découvrir leur enseignement et l’ambiance du dojo ? Venez rencontrer le club.",
+    "cta": "Découvrir les cours"
+  },
+  "closing": {
+    "eyebrow": "L’Aïkido Club Dieppois",
+    "title": "Vous souhaitez en savoir plus sur le club ?",
+    "description": "Découvrez notre pratique, nos cours et la vie du club.",
+    "primaryCta": "Découvrir le club",
+    "secondaryCta": "Nous contacter"
   }
 }
