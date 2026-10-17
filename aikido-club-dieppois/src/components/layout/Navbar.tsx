@@ -18,12 +18,12 @@ const eventLinks = [
 const socialLinks = [
   {
     name: "Facebook",
-    href: "", // Remplacer par l'URL officielle du club.
+    href: "https://www.facebook.com/aikidodieppe",
     icon: "facebook",
   },
   {
     name: "Instagram",
-    href: "", // Remplacer par l'URL officielle du club.
+    href: "https://www.instagram.com/aikidoclubdieppois/", 
     icon: "instagram",
   },
 ];
@@ -32,6 +32,7 @@ const mainLinks = [
   { to: "/club", labelKey: "nav.club" },
   { to: "/aikido", labelKey: "nav.aikido" },
   { to: "/cours", labelKey: "nav.courses" },
+  { to: "/actualite", labelKey: "nav.actu" },
   { to: "/horaires", labelKey: "nav.schedule" },
   { to: "/contact", labelKey: "nav.contact" },
 ];
@@ -175,7 +176,7 @@ export default function Navbar() {
         >
           {/* Remplacer par le logo officiel quand il sera disponible */}
           <div className="flex size-13 items-center p-1 justify-center rounded-md bg-neutral-900 text-[#F2EFE8]">
-            <img src={"/assets/icons/aikido-club-dieppois.avif"} alt="Aïkido Club Dieppois Logo"/>
+            <img src={"/assets/logos/logo_club.png"} alt="Aïkido Club Dieppois Logo" className="rounded-3xl"/>
           </div>
 
           <span className="leading-tight">

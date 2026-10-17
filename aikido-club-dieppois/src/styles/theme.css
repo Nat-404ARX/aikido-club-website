@@ -7,7 +7,7 @@
   --color-text: #222222;
   --color-text-muted: #666666;
   --color-border: #e5e5e5;
-  --color-accent: #c83b32;
+  --color-accent: #2C6DA5;
 
   /* Typographie */
   --font-body: system-ui, sans-serif;
@@ -27,3 +27,160 @@
   --transition-normal: 250ms ease;
 }
 
+/* Vagues */
+@keyframes wave-drift {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.wave-drift {
+  animation: wave-drift 22s linear infinite;
+}
+
+.wave-drift-slow {
+  animation: wave-drift 36s linear infinite reverse;
+}
+
+
+@keyframes enso-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.enso-draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: enso-draw 2.6s cubic-bezier(0.65, 0, 0.35, 1) 0.3s forwards;
+}
+
+.enso-draw-thin {
+  animation-delay: 0.6s;
+  animation-duration: 2.8s;
+}
+
+
+@keyframes kanji-in {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes kanji-float {
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.kanji-float {
+  opacity: 0;
+  animation: kanji-in 1.4s ease-out 1.6s forwards, kanji-float 7s ease-in-out 3s infinite;
+}
+
+
+.kanji-ghost {
+  color: var(--color-primary);
+  opacity: 0.035;
+}
+
+
+.seigaiha-bg,
+.photo-placeholder::before,
+.seigaiha-drift::before {
+  background-image:
+    radial-gradient(circle at 50% 100%, transparent 0 10px, currentColor 10px 11px, transparent 11px 20px, currentColor 20px 21px, transparent 21px 30px, currentColor 30px 31px, transparent 31px 40px),
+    radial-gradient(circle at 50% 100%, transparent 0 10px, currentColor 10px 11px, transparent 11px 20px, currentColor 20px 21px, transparent 21px 30px, currentColor 30px 31px, transparent 31px 40px);
+  background-size: 80px 40px;
+  background-position: 0 0, 40px 20px;
+}
+
+
+.photo-placeholder {
+  background: linear-gradient(160deg, var(--color-surface) 0%, #dfeaf3 100%);
+  color: var(--color-accent);
+}
+
+.photo-placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.22;
+  mask-image: linear-gradient(to top, #000, transparent 85%);
+}
+
+
+@keyframes seigaiha-move {
+  to {
+    background-position: 80px 40px, 120px 60px;
+  }
+}
+
+.seigaiha-drift::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  color: #fff;
+  opacity: 0.12;
+  animation: seigaiha-move 24s linear infinite;
+}
+
+
+.title-underline {
+  position: relative;
+  padding-bottom: 1.25rem;
+}
+
+.title-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 3.5rem;
+  border-radius: 9999px;
+  background: var(--color-accent);
+  transition: width 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+section:hover .title-underline::after {
+  width: 9rem;
+}
+
+
+.slot-row {
+  transition: padding-left 0.3s ease;
+}
+
+.slot-row:hover {
+  padding-left: 0.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .wave-drift,
+  .wave-drift-slow,
+  .kanji-float,
+  .seigaiha-drift::before {
+    animation: none;
+  }
+
+  .kanji-float {
+    opacity: 1;
+  }
+
+  .enso-draw {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}

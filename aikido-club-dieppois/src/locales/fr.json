@@ -6,6 +6,7 @@
     "courses": "Les cours",
     "schedule": "Horaires et tarifs",
     "events": "Événements",
+    "actu": "Actualitées",
     "allEvents": "Tous les événements",
     "contact": "Contact",
     "language": "Choisir la langue",
@@ -170,8 +171,7 @@
     "joinCondition": "Retrouvez les conditions d’inscription et les informations officielles dans le document du club.",
     "downloadPDF": "Télécharger le PDF",
     "seeYouSoon": "À bientôt au dojo",
-    "question": "Une question avant de commencer ?",
-    "LUN": "Lundi"
+    "question": "Une question avant de commencer ?"
   },
   "location": {
     "eyebrow": "Nous rejoindre",
@@ -222,5 +222,106 @@
     },
     "submit": "Préparer ma demande",
     "demoNotice": "La validation du formulaire fonctionne, mais l’envoi n’est pas encore configuré. Votre message n’a pas été transmis au club."
+  },
+  "actu": {
+    "eyebrow": "La vie du club",
+    "title": "Actualités",
+    "description": "Retrouvez les nouvelles du club, les moments partagés sur les tatamis et les dernières publications de notre communauté.",
+    "cta": "Découvrir les actualités",
+    "facebook": "Suivre le club sur Facebook"
+  },
+  "feed": {
+    "eyebrow": "Au fil des jours",
+    "title": "Les dernières nouvelles",
+    "description": "Les publications du club, rassemblées ici pour retrouver facilement les textes et les photos.",
+    "loading": "Chargement des actualités…",
+    "errorTitle": "Les actualités sont indisponibles",
+    "errorDescription": "Impossible de récupérer les publications pour le moment. Vous pouvez réessayer dans quelques instants.",
+    "retry": "Réessayer",
+    "emptyTitle": "Le fil se prépare",
+    "emptyDescription": "Les publications du club apparaîtront ici dès que la connexion aux actualités sera configurée.",
+    "visitFacebook": "Consulter Facebook"
+  },
+  "post": {
+    "clubName": "Aïkido Club Dieppois",
+    "openOriginal": "Ouvrir la publication originale",
+    "openImage": "Ouvrir la photo en grand format",
+    "imageAlt": "Photo publiée par le club",
+    "noPhotos": "Publication textuelle",
+    "photoCount_one": "{{count}} photo",
+    "photoCount_other": "{{count}} photos",
+    "viewOnFacebook": "Voir sur Facebook"
+  },
+  "sidebar": {
+    "title": "Suivez la vie du club",
+    "description": "Retrouvez également nos publications et les échanges avec la communauté sur Facebook.",
+    "link": "Retrouver le club"
+  },
+  "cours": {
+    "about": "Pratique",
+    "titleA": "Les cours",
+    "titleB": "du dojo",
+    "intro": "Du débutant au gradé, du corps à mains nues aux armes : trouve le cours qui correspond à ton rythme et à ton niveau.",
+    "explore": "Découvrir les cours",
+    "nav": "Types de cours",
+    "schedule": "Horaires",
+    "tba": "À compléter",
+    "trial": "Essayer un cours",
+    "ctaTitle": "Prêt à monter sur le tatami ?",
+    "ctaText": "Le premier cours d'essai est offert. Viens en tenue de sport, on s'occupe du reste.",
+    "ctaButton": "Nous contacter",
+    "days": {
+      "mon": "Lundi",
+      "tue": "Mardi",
+      "wed": "Mercredi",
+      "thu": "Jeudi",
+      "fri": "Vendredi",
+      "sat": "Samedi",
+      "sun": "Dimanche"
+    },
+    "items": {
+      "all": {
+        "name": "Cours tous niveaux",
+        "audience": "Adultes",
+        "tag": "Tous grades",
+        "description": "Le cœur de la pratique. Débutants et pratiquants confirmés travaillent ensemble : techniques de base, déplacements, chutes et enchaînements. À compléter.",
+        "alt": "Photo large du tatami pendant un cours collectif : pratiquants en keikogi blanc et hakama, deux binômes en pleine technique, lumière douce du matin."
+      },
+      "teen": {
+        "name": "Cours ados",
+        "audience": "12 – 17 ans",
+        "tag": "Découverte",
+        "description": "Un cours pensé pour les adolescents : confiance en soi, coordination, respect et esprit d'équipe. À compléter.",
+        "alt": "Groupe d'ados souriants au centre du tatami, saluant le professeur, ambiance dynamique et bienveillante."
+      },
+      "weapons": {
+        "name": "Cours d'armes",
+        "audience": "Adultes",
+        "tag": "Bokken · Jo · Tanto",
+        "description": "Travail du bokken, du jo et du tanto pour affiner distance, précision et justesse du geste. À compléter.",
+        "alt": "Gros plan sur deux bokken qui se croisent, mains en premier plan, fond de dojo flou."
+      },
+      "taiso": {
+        "name": "Aïki Taïso",
+        "audience": "Tous publics",
+        "tag": "Préparation physique",
+        "description": "Cours d'aïkido adapté. Sans chute (ou très peu) et peu de contraintes articulaires, ces cours sont particulièrement adaptés aux personnes ayant des difficultés physiques ou appréhendant de se faire mal.",
+        "alt": "Pratiquants de tous âges réalisant un exercice d'étirement ou de mobilité sur le tatami, geste lent et fluide, ambiance calme."
+      },
+      "advanced": {
+        "name": "Cours gradés",
+        "audience": "Ceinture noire & kyu avancés",
+        "tag": "Perfectionnement",
+        "description": "Un cours exigeant pour approfondir les principes, affiner les détails et préparer les passages de grade. À compléter.",
+        "alt": "Pratiquant en hakama noir exécutant une projection ample, vue de côté, mouvement figé en pleine action."
+      },
+      "themed": {
+        "name": "Cours thématique",
+        "audience": "À confirmer",
+        "tag": "Thème du mois",
+        "description": "Un thème différent chaque mois : une technique, un principe, une arme, une approche. À compléter.",
+        "alt": "Le professeur montrant un détail technique à un groupe rassemblé en demi-cercle autour de lui sur le tatami."
+      }
+    }
   }
 }

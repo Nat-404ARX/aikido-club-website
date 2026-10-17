@@ -22,7 +22,7 @@ const contact = {
   phone: "06 60 40 44 22",
   facebook: "https://www.facebook.com/aikidodieppe",
   youtube: "https://www.youtube.com/@aikidoclubdieppois",
-  whatsapp: "",
+  whatsapp: "Sur Invitation",
   instagram: "https://www.instagram.com/aikidoclubdieppois/",
 };
 
@@ -48,6 +48,13 @@ export default function Contact() {
       iconType: "lucide",
     },
     {
+      key: "whatsapp",
+      value: contact.whatsapp,
+      href: contact.whatsapp,
+      icon: WhatsApp,
+      iconType: "image",
+    },
+    {
       key: "facebook",
       value: contact.facebook,
       href: contact.facebook,
@@ -59,13 +66,6 @@ export default function Contact() {
       value: contact.youtube,
       href: contact.youtube,
       icon: Youtube,
-      iconType: "image",
-    },
-    {
-      key: "whatsapp",
-      value: contact.whatsapp,
-      href: contact.whatsapp,
-      icon: WhatsApp,
       iconType: "image",
     },
     {

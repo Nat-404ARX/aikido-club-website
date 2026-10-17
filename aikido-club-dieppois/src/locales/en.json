@@ -6,6 +6,7 @@
     "courses": "Classes",
     "schedule": "Schedule & fees",
     "events": "Events",
+    "actu": "News",
     "allEvents": "All events",
     "contact": "Contact",
     "language": "Choose language",
@@ -221,5 +222,106 @@
     },
     "submit": "Prepare My Application",
     "demoNotice": "Form validation is working, but submission has not yet been configured. Your message was not sent to the club."
+  },
+  "actu": {
+    "eyebrow": "Club life",
+    "title": "News",
+    "description": "Catch up on club news, moments shared on the mat, and the latest posts from our community.",
+    "cta": "Explore the news",
+    "facebook": "Follow the club on Facebook"
+  },
+  "feed": {
+    "eyebrow": "What's happening",
+    "title": "Latest updates",
+    "description": "Club posts gathered in one place, making it easy to browse the stories and photos.",
+    "loading": "Loading news…",
+    "errorTitle": "News is currently unavailable",
+    "errorDescription": "We couldn't retrieve the posts right now. Please try again in a moment.",
+    "retry": "Try again",
+    "emptyTitle": "The feed is getting ready",
+    "emptyDescription": "Club posts will appear here once the news feed connection has been configured.",
+    "visitFacebook": "Visit Facebook"
+  },
+  "post": {
+    "clubName": "Aïkido Club Dieppois",
+    "openOriginal": "Open the original post",
+    "openImage": "Open the full-size photo",
+    "imageAlt": "Photo published by the club",
+    "noPhotos": "Text post",
+    "photoCount_one": "{{count}} photo",
+    "photoCount_other": "{{count}} photos",
+    "viewOnFacebook": "View on Facebook"
+  },
+  "sidebar": {
+    "title": "Follow the club",
+    "description": "You can also find our posts and join the community on Facebook.",
+    "link": "Find the club"
+  },
+  "cours": {
+    "about": "Practice",
+    "titleA": "The classes",
+    "titleB": "of the dojo",
+    "intro": "From beginner to advanced, bare hands to weapons: find the class that fits your pace and your level.",
+    "explore": "Explore the classes",
+    "nav": "Class types",
+    "schedule": "Schedule",
+    "tba": "To be announced",
+    "trial": "Try a class",
+    "ctaTitle": "Ready to step onto the tatami?",
+    "ctaText": "Your first trial class is free. Come in sportswear, we'll take care of the rest.",
+    "ctaButton": "Contact us",
+    "days": {
+      "mon": "Monday",
+      "tue": "Tuesday",
+      "wed": "Wednesday",
+      "thu": "Thursday",
+      "fri": "Friday",
+      "sat": "Saturday",
+      "sun": "Sunday"
+    },
+    "items": {
+      "all": {
+        "name": "All-levels class",
+        "audience": "Adults",
+        "tag": "All grades",
+        "description": "The heart of the practice. Beginners and experienced practitioners train together: basic techniques, movement, falling and sequences. To be completed.",
+        "alt": "Wide photo of the tatami during a group class: practitioners in white keikogi and hakama, two pairs mid-technique, soft morning light."
+      },
+      "teen": {
+        "name": "Teen class",
+        "audience": "Ages 12 – 17",
+        "tag": "Discovery",
+        "description": "A class designed for teenagers: self-confidence, coordination, respect and team spirit. To be completed.",
+        "alt": "Group of smiling teens at the centre of the tatami, bowing to the teacher, lively and friendly atmosphere."
+      },
+      "weapons": {
+        "name": "Weapons class",
+        "audience": "Adults",
+        "tag": "Bokken · Jo · Tanto",
+        "description": "Work with the bokken, jo and tanto to refine distance, precision and accuracy of movement. To be completed.",
+        "alt": "Close-up of two crossing bokken, hands in the foreground, blurred dojo background."
+      },
+      "taiso": {
+        "name": "Aiki Taiso",
+        "audience": "Everyone",
+        "tag": "Physical conditioning",
+        "description": "Adapted aikido class. With no falls (or very few) and little strain on the joints, these classes are especially suited to people with physical difficulties or who worry about getting hurt.",
+        "alt": "Practitioners of all ages doing a stretching or mobility exercise on the tatami, slow and fluid movement, calm atmosphere."
+      },
+      "advanced": {
+        "name": "Advanced class",
+        "audience": "Black belts & advanced kyu",
+        "tag": "Refinement",
+        "description": "A demanding class to deepen principles, refine details and prepare for grading. To be completed.",
+        "alt": "Practitioner in black hakama performing a sweeping throw, side view, movement frozen mid-action."
+      },
+      "themed": {
+        "name": "Themed class",
+        "audience": "To be confirmed",
+        "tag": "Theme of the month",
+        "description": "A different theme each month: a technique, a principle, a weapon, an approach. To be completed.",
+        "alt": "The teacher showing a technical detail to a group gathered in a half-circle around them on the tatami."
+      }
+    }
   }
 }
