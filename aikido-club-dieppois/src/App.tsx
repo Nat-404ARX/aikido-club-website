@@ -16,6 +16,12 @@ import Contact from "./pages/public/Contact.tsx";
 import AdminLogin from "./pages/admin/AdminLogin.tsx";
 import AdminDashboard from "./pages/admin/AdminDashboard.tsx";
 import AdminPages from "./pages/admin/AdminPages.tsx";
+import AdminComptes from "./pages/admin/AdminComptes.tsx";
+import AdminEvenement from "./pages/admin/AdminEvenement";
+import AdminCours from "./pages/admin/AdminCours";
+import AdminHoraire from "./pages/admin/AdminHoraire";
+import AdminMedia from "./pages/admin/AdminMedia";
+import Message from "./pages/admin/AdminMessage.tsx";
 
 import AdminAccueil from "./components/admin/AdminAccueil.tsx";
 
@@ -41,7 +47,6 @@ export default function App() {
         <Route path="aikido" element={<Aikido />} />
         <Route path="cours" element={<Cours />} />
         <Route path="horaires" element={<Horaires />} />
-        <Route path="actualite" element={<Actualite />} />
         <Route path="evenements" element={<Evenements />} />
         <Route path="contact" element={<Contact />} />
       </Route>
@@ -57,34 +62,16 @@ export default function App() {
           <Route path="pages" element={<AdminPages />} />
           <Route path="pages/accueil" element={<AdminAccueil />} />
 
-          <Route
-            path="cours"
-            element={<PageEnConstruction titre="Gestion des cours" />}
-          />
-          <Route
-            path="horaires"
-            element={<PageEnConstruction titre="Horaires et tarifs" />}
-          />
-          <Route
-            path="actualite"
-            element={<PageEnConstruction titre="Actualités" />}
-          />
-          <Route
-            path="evenements"
-            element={<PageEnConstruction titre="Gestion des événements" />}
-          />
-          <Route
-            path="medias"
-            element={<PageEnConstruction titre="Bibliothèque de médias" />}
-          />
-          <Route
-            path="messages"
-            element={<PageEnConstruction titre="Messages reçus" />}
-          />
-          <Route
-            path="comptes"
-            element={<PageEnConstruction titre="Comptes administrateurs" />}
-          />
+          <Route path="cours" element={<AdminCours />} />
+          <Route path="horaires" element={<AdminHoraire />} />
+          <Route path="evenements" element={<AdminEvenement />} />
+          <Route path="medias" element={<AdminMedia />} />
+
+          <Route path="messages" element={<Message />} />
+
+          <Route element={<ProtectedAdminRoute requiredRole="super_admin" />}>
+            <Route path="comptes" element={<AdminComptes />} />
+          </Route>
         </Route>
       </Route>
 

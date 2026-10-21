@@ -16,12 +16,15 @@ import Facebook from "/assets/icons/media/facebook.png";
 import Instagram from "/assets/icons/media/instagram.png";
 import type { LucideIcon } from "lucide-react";
 
+import { messagesService } from "../../services/messagesService.ts";
+
 
 import {club} from "../../data/info.ts"
 
 export default function Contact() {
   const { t } = useTranslation();
-  const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const contactItems = [
     {
@@ -84,12 +87,39 @@ export default function Contact() {
   };
 
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    // Démonstration front uniquement : aucun message n'est envoyé.
-    setSubmitted(true);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    setIsSubmitting(true);
+    setSubmitError(null);
+    setIsSubmitting(false);
+
+    try {
+      await messagesService.send({
+        name: String(formData.get("name") ?? ""),
+        email: String(formData.get("email") ?? ""),
+        phone: String(formData.get("phone") ?? ""),
+        message: String(formData.get("message") ?? ""),
+      });
+
+      setIsSubmitting(true);
+      form.reset();
+    } catch (error) {
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : "Une erreur est survenue lors de l'envoi."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   }
+
+
   const link =
     "text-white/85 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white";
 
@@ -254,7 +284,10 @@ export default function Contact() {
           <ScrollReveal delay={100}>
             <form
               onSubmit={handleSubmit}
-              onChange={() => setSubmitted(false)}
+              onChange={() => {
+                setIsSubmitting(false);
+                setSubmitError(null);
+              }}
               className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm sm:p-8 lg:p-10"
             >
               <div className="grid gap-6 sm:grid-cols-2">
@@ -340,18 +373,28 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="mt-7 inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-xl bg-neutral-950 px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-[var(--color-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 focus-visible:ring-offset-2 sm:w-auto sm:min-w-52"
+                disabled={isSubmitting}
+                className="mt-7 inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-xl bg-neutral-950 px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-[var(--color-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 focus-visible:ring-offset-2 sm:w-auto sm:min-w-52 disabled:cursor-not-allowed disabled:opacity-60"
               >
-                {t("form.submit")}
+                {isSubmitting ? "…" : t("form.submit")}
                 <Send size={17} />
               </button>
 
-              {submitted && (
+              {isSubmitting && (
                 <p
                   role="status"
-                  className="mt-5 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-relaxed text-amber-950"
+                  className="mt-5 rounded-xl border border-green-200 bg-green-50 p-4 text-sm leading-relaxed text-green-950"
                 >
-                  {t("form.demoNotice")}
+                  {t("form.successNotice")}
+                </p>
+              )}
+
+              {submitError && (
+                <p
+                  role="alert"
+                  className="mt-5 rounded-xl border border-red-200 bg-red-50 p-4 text-sm leading-relaxed text-red-950"
+                >
+                  {submitError}
                 </p>
               )}
             </form>

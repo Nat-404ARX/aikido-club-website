@@ -220,6 +220,7 @@
       "message": "Comment pouvons-nous vous renseigner ?"
     },
     "submit": "Préparer ma demande",
+    "successNotice": "Votre message a bien été envoyé. Le club vous répondra dès que possible.",
     "demoNotice": "La validation du formulaire fonctionne, mais l’envoi n’est pas encore configuré. Votre message n’a pas été transmis au club."
   },
   "actu": {

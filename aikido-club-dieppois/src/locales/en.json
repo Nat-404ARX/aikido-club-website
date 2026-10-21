@@ -220,6 +220,7 @@
       "message": "How can we help you?"
     },
     "submit": "Prepare My Application",
+    "successNotice": "Your message has been sent successfully. The club will get back to you as soon as possible.",
     "demoNotice": "Form validation is working, but submission has not yet been configured. Your message was not sent to the club."
   },
   "actu": {
