@@ -13,8 +13,9 @@ import {
   type Actualite,
 } from "../../services/actualiteService.ts";
 import Facebook from "/assets/icons/media/facebook.png"
+import { club } from "../../data/info.ts"
 
-const FACEBOOK_PAGE_URL = "https://www.facebook.com/aikidodieppe";
+const FACEBOOK_PAGE_URL = club.facebook;
 
 function formatDate(date: string, locale: string) {
   const parsedDate = new Date(date);
@@ -56,7 +57,7 @@ function PublicationCard({
       <div className="flex items-center justify-between gap-4 px-5 pt-5 sm:px-7 sm:pt-7">
         <div className="flex min-w-0 items-center gap-3">
           <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-neutral-950 text-white">
-            <img src={Facebook} className={"w-21"} />
+            <img src={Facebook} className={"w-12 rounded-xl"} />
           </div>
 
           <div className="min-w-0">
@@ -200,7 +201,7 @@ export default function Actualites() {
   return (
     <main className="overflow-hidden bg-[#f5f3ee] text-neutral-950">
       {/* INTRODUCTION */}
-      <section className="px-6 pb-16 pt-18 sm:pb-20 sm:pt-20 lg:pt-32">
+      <section className="px-6 pb-18 pt-18 sm:pb-16 sm:pt-16 lg:pb-20 lg:pt-20">
         <div className="mx-auto max-w-7xl">
           <ScrollReveal>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
@@ -235,7 +236,6 @@ export default function Actualites() {
                 rel="noreferrer"
                 className="mt-8 inline-flex min-h-12 items-center gap-3 rounded-full bg-neutral-950 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-accent)]"
               >
-                <img src={Facebook} className={"w-18"} />
                 {t("actu.facebook")}
                 <ArrowUpRight size={16} />
               </a>
@@ -320,7 +320,7 @@ export default function Actualites() {
               <aside className="lg:sticky lg:top-28">
                 <div className="rounded-2xl bg-neutral-950 p-6 text-white sm:p-7">
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10">
-                    <img src={Facebook} className={"w-23"} />
+                    <img src={Facebook} className={"w-23 rounded-xl"} />
                   </div>
 
                   <h3 className="mt-5 text-xl font-semibold">

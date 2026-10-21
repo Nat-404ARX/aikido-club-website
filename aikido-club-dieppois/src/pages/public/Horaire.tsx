@@ -142,7 +142,7 @@ export default function HorairesTarifs() {
   return (
     <main className="overflow-hidden bg-[#f5f3ee] text-neutral-950">
       {/* INTRODUCTION */}
-      <section className="px-6 pb-16 pt-28 sm:pb-20 sm:pt-36 lg:pt-44">
+      <section className="px-6 pb-18 pt-18 sm:pb-16 sm:pt-16 lg:pb-20 lg:pt-20">
         <div className="mx-auto max-w-7xl">
           <ScrollReveal>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">

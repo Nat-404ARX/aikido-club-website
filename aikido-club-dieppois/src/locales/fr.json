@@ -178,7 +178,6 @@
     "title": "Retrouvez-nous au dojo",
     "description": "Que vous veniez découvrir l’aïkido ou pratiquer régulièrement, nous vous accueillons au dojo du club.",
     "addressTitle": "Adresse du dojo",
-    "address": "22 Rue Jacques Prévert \n76370 Dieppe, France",
     "mapPlaceholder": "Emplacement de la carte",
     "mapDescription": "Une carte interactive pourra être ajoutée ici."
   },
@@ -323,5 +322,33 @@
         "alt": "Le professeur montrant un détail technique à un groupe rassemblé en demi-cercle autour de lui sur le tatami."
       }
     }
+  },
+  "footer": {
+    "tagline": "Un dojo ouvert à toutes et tous, pour pratiquer l'aïkido dans le respect, l'écoute et la bienveillance.",
+    "nav": {
+      "title": "Navigation",
+      "home": "Accueil",
+      "courses": "Les cours",
+      "schedule": "Horaires & tarifs",
+      "contact": "Contact"
+    },
+    "info": {
+      "title": "L'association",
+      "status": "Statut",
+      "rna": "N° RNA",
+      "siret": "N° SIRET",
+      "federation": "Fédération"
+    },
+    "contact": {
+      "title": "Nous trouver"
+    },
+    "legal": {
+      "legal": "Mentions légales",
+      "privacy": "Confidentialité",
+      "cookies": "Cookies",
+      "rules": "Règlement intérieur"
+    },
+    "rights": "Tous droits réservés.",
+    "backToTop": "Haut de page"
   }
 }

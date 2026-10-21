@@ -27,22 +27,6 @@
   --transition-normal: 250ms ease;
 }
 
-/* Vagues */
-@keyframes wave-drift {
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.wave-drift {
-  animation: wave-drift 22s linear infinite;
-}
-
-.wave-drift-slow {
-  animation: wave-drift 36s linear infinite reverse;
-}
-
-
 @keyframes enso-draw {
   from {
     stroke-dashoffset: 1;
@@ -64,7 +48,7 @@
   animation-duration: 2.8s;
 }
 
-
+/* Kanji central : apparition douce puis léger flottement */
 @keyframes kanji-in {
   from {
     opacity: 0;
@@ -88,13 +72,13 @@
   animation: kanji-in 1.4s ease-out 1.6s forwards, kanji-float 7s ease-in-out 3s infinite;
 }
 
-
+/* Kanji en filigrane (sections) */
 .kanji-ghost {
   color: var(--color-primary);
   opacity: 0.035;
 }
 
-
+/* Motif seigaiha (vagues japonaises) */
 .seigaiha-bg,
 .photo-placeholder::before,
 .seigaiha-drift::before {
@@ -105,7 +89,7 @@
   background-position: 0 0, 40px 20px;
 }
 
-
+/* Placeholder photo */
 .photo-placeholder {
   background: linear-gradient(160deg, var(--color-surface) 0%, #dfeaf3 100%);
   color: var(--color-accent);
@@ -119,7 +103,7 @@
   mask-image: linear-gradient(to top, #000, transparent 85%);
 }
 
-
+/* Section CTA : seigaiha qui dérive lentement */
 @keyframes seigaiha-move {
   to {
     background-position: 80px 40px, 120px 60px;
@@ -135,7 +119,7 @@
   animation: seigaiha-move 24s linear infinite;
 }
 
-
+/* Trait sous le titre : se déploie au survol de la section */
 .title-underline {
   position: relative;
   padding-bottom: 1.25rem;
@@ -157,7 +141,7 @@ section:hover .title-underline::after {
   width: 9rem;
 }
 
-
+/* Ligne d'horaire : léger décalage au survol */
 .slot-row {
   transition: padding-left 0.3s ease;
 }
@@ -168,8 +152,7 @@ section:hover .title-underline::after {
 
 @media (prefers-reduced-motion: reduce) {
 
-  .wave-drift,
-  .wave-drift-slow,
+  .wave-layer,
   .kanji-float,
   .seigaiha-drift::before {
     animation: none;
@@ -184,3 +167,80 @@ section:hover .title-underline::after {
     stroke-dashoffset: 0;
   }
 }
+
+/* Vagues  */
+.waves {
+  --wave-h: 4rem;
+  --wave-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'%3E%3Cpath d='M0 60q360-80 720 0t720 0V120H0Z'/%3E%3C/svg%3E");
+  position: sticky; /* à changer en relative pour rester fix */
+  bottom: 0;
+  z-index: 50;
+  height: var(--wave-h);
+  margin-top: calc(var(--wave-h) * -1);
+  margin-bottom: -1px;
+  overflow: hidden;
+  pointer-events: none;
+  color: var(--color-accent);
+}
+
+@media (min-width: 640px) {
+  .waves {
+    --wave-h: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .waves {
+    --wave-h: 8rem;
+  }
+}
+
+.wave-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% + var(--w));
+  background-color: currentColor;
+  -webkit-mask-image: var(--wave-mask);
+  mask-image: var(--wave-mask);
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+  -webkit-mask-position: 0 100%;
+  mask-position: 0 100%;
+  -webkit-mask-size: var(--w) 100%;
+  mask-size: var(--w) 100%;
+  animation: wave-slide var(--wave-speed) linear infinite;
+  will-change: transform;
+}
+
+.wave-layer-back {
+  --w: clamp(900px, 130vw, 2200px);
+  --wave-speed: 48s;
+  height: 100%;
+  opacity: 0.2;
+  animation-delay: -9s;
+}
+
+.wave-layer-mid {
+  --w: clamp(720px, 100vw, 1600px);
+  --wave-speed: 36s;
+  height: 78%;
+  opacity: 0.4;
+  animation-direction: reverse;
+}
+
+.wave-layer-front {
+  --w: clamp(560px, 70vw, 1100px);
+  --wave-speed: 24s;
+  height: 52%;
+  opacity: 0.95;
+  animation-delay: -5s;
+}
+
+@keyframes wave-slide {
+  to {
+    transform: translateX(calc(var(--w) * -1));
+  }
+}
+
+

@@ -178,7 +178,6 @@
     "title": "Come see us at the dojo",
     "description": "Whether you're coming to try out aikido or to practice regularly, we welcome you to the club's dojo.",
     "addressTitle": "Dojo Address",
-    "address": "22 Rue Jacques Prévert \n76370 Dieppe, France",
     "mapPlaceholder": "Map Location",
     "mapDescription": "An interactive map can be added here."
   },
@@ -323,5 +322,33 @@
         "alt": "The teacher showing a technical detail to a group gathered in a half-circle around them on the tatami."
       }
     }
+  },
+  "footer": {
+    "tagline": "A dojo open to everyone, to practise aikido with respect, attentiveness and kindness.",
+    "nav": {
+      "title": "Navigation",
+      "home": "Home",
+      "courses": "Classes",
+      "schedule": "Hours & fees",
+      "contact": "Contact"
+    },
+    "info": {
+      "title": "The association",
+      "status": "Status",
+      "rna": "RNA no.",
+      "siret": "SIRET no.",
+      "federation": "Federation"
+    },
+    "contact": {
+      "title": "Find us"
+    },
+    "legal": {
+      "legal": "Legal notice",
+      "privacy": "Privacy",
+      "cookies": "Cookies",
+      "rules": "Club rules"
+    },
+    "rights": "All rights reserved.",
+    "backToTop": "Back to top"
   }
 }

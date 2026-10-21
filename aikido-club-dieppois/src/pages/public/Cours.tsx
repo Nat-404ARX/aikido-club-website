@@ -34,19 +34,6 @@ function useActiveSection(ids: string[]) {
   return active;
 }
 
-function Waves({ className = "", color = "var(--color-accent)" }: { className?: string; color?: string }) {
-  const d = "M0 50 q180 -40 360 0 t360 0 t360 0 t360 0 t360 0 t360 0 t360 0 t360 0 V100 H0Z";
-  return (
-    <div aria-hidden className={`pointer-events-none absolute inset-x-0 bottom-0 h-20 overflow-hidden sm:h-28 ${className}`}>
-      <svg viewBox="0 0 2880 100" preserveAspectRatio="none" className="wave-drift absolute bottom-0 h-full w-[200%] opacity-[0.12]" style={{ fill: color }}>
-        <path d={d} />
-      </svg>
-      <svg viewBox="0 0 2880 100" preserveAspectRatio="none" className="wave-drift-slow absolute -bottom-2 h-[80%] w-[200%] opacity-[0.2]" style={{ fill: color }}>
-        <path d={d} />
-      </svg>
-    </div>
-  );
-}
 
 function Enso() {
   return (
@@ -82,13 +69,14 @@ export default function Cours() {
 
   return (
     <main className="bg-[var(--color-background)] text-[var(--color-text)]">
-      <section className="relative overflow-hidden px-6 pb-22 pt-18 sm:pb-20 sm:pt-16 lg:pt-20">
-        <div className="mx-auto grid max-w-[100vw] items-center gap-6 lg:grid-cols-8">
-          <ScrollReveal>
-            <div className="lg:col-span-7">
+      {/* ============ HERO ============ */}
+      <section className="relative overflow-hidden px-6 pb-12 pt-12 sm:pb-16 lg:pt-16">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-8">
+            <ScrollReveal>
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">{t("cours.about")}</p>
 
-              <h1 className="mt-6 max-w-4xl text-3xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-7xl">
+              <h1 className="mt-6 max-w-4xl text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
                 {t("cours.titleA")}
                 <br />
                 <span className="text-neutral-400">{t("cours.titleB")}</span>
@@ -96,23 +84,23 @@ export default function Cours() {
 
               <div className="mt-8 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
                 <p className="max-w-xl text-base leading-relaxed text-neutral-600 sm:text-lg">{t("cours.intro")}</p>
-                <a href="#all" className="group inline-flex items-center gap-3 text-sm font-semibold">
+                <a href="#all" className="group inline-flex shrink-0 items-center gap-3 text-sm font-semibold">
                   {t("cours.explore")}
                   <span className="flex h-11 w-11 items-center justify-center rounded-full border border-neutral-300 transition-all duration-300 group-hover:border-neutral-950 group-hover:bg-neutral-950 group-hover:text-white">
                     <ArrowDown size={18} />
                   </span>
                 </a>
               </div>
-            </div>
-          </ScrollReveal>
+            </ScrollReveal>
+          </div>
 
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-4">
             <Enso />
           </div>
         </div>
-        <Waves />
       </section>
 
+      {/* ============ NAV COLLANTE ============ */}
       <nav aria-label={t("cours.nav")} className="sticky top-[var(--header-h,4.5rem)] z-30 border-y border-[var(--color-border)] bg-white/80 backdrop-blur-md">
         <ul className="mx-auto flex max-w-7xl gap-2 overflow-x-auto px-6 py-3 [scrollbar-width:none]">
           {courses.map((c) => {
@@ -123,8 +111,8 @@ export default function Cours() {
                   href={`#${c.id}`}
                   aria-current={isActive ? "true" : undefined}
                   className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)] ${isActive
-                      ? "border-[var(--color-accent)] bg-[var(--color-accent)] text-white"
-                      : "border-[var(--color-border)] text-[var(--color-text-muted)] hover:border-[var(--color-text)] hover:text-[var(--color-text)]"
+                    ? "border-[var(--color-accent)] bg-[var(--color-accent)] text-white"
+                    : "border-[var(--color-border)] text-[var(--color-text-muted)] hover:border-[var(--color-text)] hover:text-[var(--color-text)]"
                     }`}
                 >
                   <span aria-hidden className="text-base leading-none">{c.kanji}</span>
@@ -203,13 +191,12 @@ export default function Cours() {
           </section>
         );
       })}
-
-      <section className="seigaiha-drift relative overflow-hidden bg-[var(--color-accent)] px-6 py-24 text-white sm:py-32">
+      <section className="relative overflow-hidden bg-[var(--color-primary)] px-6 pb-36 pt-24 text-white sm:pb-44 sm:pt-32">
         <div className="relative mx-auto max-w-4xl text-center">
           <ScrollReveal>
             <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">{t("cours.ctaTitle")}</h2>
-            <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">{t("cours.ctaText")}</p>
-            <a href="/contact" className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[var(--color-primary)] transition-transform duration-300 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+            <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">{t("cours.ctaText")}</p>
+            <a href="/contact" className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[var(--color-primary)] transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--color-accent)] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
               {t("cours.ctaButton")}
               <ArrowUpRight size={18} />
             </a>

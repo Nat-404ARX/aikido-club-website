@@ -105,8 +105,9 @@ export default function Club() {
               {t("club.club")}
             </p>
 
-            <h1 className="mt-6 max-w-5xl text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl lg:text-6xl">
+            <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl lg:text-8xl">
               {t("club.title")}
+              <span className="text-neutral-400">.</span>
               <span className="block min-h-[1.02em]" />
             </h1>
 

@@ -16,15 +16,8 @@ import Facebook from "/assets/icons/media/facebook.png";
 import Instagram from "/assets/icons/media/instagram.png";
 import type { LucideIcon } from "lucide-react";
 
-// À compléter avec les coordonnées officielles du club.
-const contact = {
-  email: "aikidodieppe@gmail.com",
-  phone: "06 60 40 44 22",
-  facebook: "https://www.facebook.com/aikidodieppe",
-  youtube: "https://www.youtube.com/@aikidoclubdieppois",
-  whatsapp: "Sur Invitation",
-  instagram: "https://www.instagram.com/aikidoclubdieppois/",
-};
+
+import {club} from "../../data/info.ts"
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -33,45 +26,45 @@ export default function Contact() {
   const contactItems = [
     {
       key: "email",
-      value: contact.email,
-      href: contact.email ? `mailto:${contact.email}` : "",
+      value: club.email,
+      href: club.email ? `mailto:${club.email}` : "",
       icon: Mail,
       iconType: "lucide",
     },
     {
       key: "phone",
-      value: contact.phone,
-      href: contact.phone
-        ? `tel:${contact.phone.replace(/[^\d+]/g, "")}`
+      value: club.phone,
+      href: club.phone
+        ? `tel:${club.phone.replace(/[^\d+]/g, "")}`
         : "",
       icon: Phone,
       iconType: "lucide",
     },
     {
       key: "whatsapp",
-      value: contact.whatsapp,
-      href: contact.whatsapp,
+      value: club.whatsapp,
+      href: club.whatsapp,
       icon: WhatsApp,
       iconType: "image",
     },
     {
       key: "facebook",
-      value: contact.facebook,
-      href: contact.facebook,
+      value: club.facebook,
+      href: club.facebook,
       icon: Facebook,
       iconType: "image",
     },
     {
       key: "youtube",
-      value: contact.youtube,
-      href: contact.youtube,
+      value: club.youtube,
+      href: club.youtube,
       icon: Youtube,
       iconType: "image",
     },
     {
       key: "instagram",
-      value: contact.instagram,
-      href: contact.instagram,
+      value: club.instagram,
+      href: club.instagram,
       icon: Instagram,
       iconType: "image",
     },
@@ -97,11 +90,13 @@ export default function Contact() {
     // Démonstration front uniquement : aucun message n'est envoyé.
     setSubmitted(true);
   }
+  const link =
+    "text-white/85 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white";
 
   return (
     <main className="overflow-hidden bg-[#f5f3ee] text-neutral-950">
       {/* INTRODUCTION */}
-      <section className="px-6 pb-16 pt-18 sm:pb-20 sm:pt-16 lg:pt-22">
+      <section className="px-6 pb-18 pt-18 sm:pb-16 sm:pt-16 lg:pb-20 lg:pt-20">
         <div className="mx-auto max-w-7xl">
           <ScrollReveal>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
@@ -215,7 +210,11 @@ export default function Contact() {
             <div>
               <h3 className="font-semibold">{t("details.locationTitle")}</h3>
               <p className="mt-2 text-sm leading-relaxed text-white/60">
-                {t("location.address")}
+                <a href={club.mapsUrl} target="_blank" rel="noopener noreferrer" className={link}>
+                  {club.address.map((line) => (
+                    <span key={line} className="block">{line}</span>
+                  ))}
+                </a>
               </p>
             </div>
           </div>
