@@ -350,5 +350,424 @@
     },
     "rights": "All rights reserved.",
     "backToTop": "Back to top"
+  },
+  "aikido": {
+    "about": "The art of peace",
+    "titleA": "Aikido",
+    "titleB": "the way of harmony",
+    "intro": "A Japanese martial art without competition, born from the samurai tradition, where you learn to welcome another person's force rather than oppose it.",
+    "explore": "Discover aikido",
+    "nav": "Page sections",
+    "navItems": {
+      "essence": "The essentials",
+      "histoire": "Origins",
+      "ueshiba": "Ō-Sensei",
+      "aujourdhui": "Today"
+    },
+    "aikiLabel": "And what about aikido?",
+    "essence": {
+      "title": "What aikido brings you",
+      "lead": "No tournaments, no podium, no opponent: in aikido, you train with a partner, never against one. That approach changes everything, on the mat and beyond.",
+      "benefits": {
+        "body": {
+          "title": "A supple, sturdy body",
+          "text": "Falls, rotations, footwork: you build mobility, balance, coordination and posture, without ever chasing performance."
+        },
+        "mind": {
+          "title": "A steady mind",
+          "text": "Staying calm in the face of an attack, breathing, recentring. Many practitioners find it a valuable counterweight to everyday stress."
+        },
+        "respect": {
+          "title": "Respect and attention",
+          "text": "The bow, listening to your partner, caring for the dojo: etiquette is an integral part of the practice."
+        },
+        "defense": {
+          "title": "Protecting without harming",
+          "text": "Techniques aim to neutralise an attack while preserving, as far as possible, the person attacking."
+        },
+        "everyone": {
+          "title": "Open to everyone",
+          "text": "Young or older, sporty or not: the practice adapts to each person and requires no prior strength or flexibility."
+        },
+        "harmony": {
+          "title": "No competition",
+          "text": "We progress together. You learn as much by receiving a technique as by performing it."
+        }
+      }
+    },
+    "name": {
+      "title": "Three characters, one philosophy",
+      "lead": "The word aikidō (合気道) is made of three ideograms. Together, they sum up the spirit of the art.",
+      "chars": {
+        "ai": {
+          "meaning": "to unite, to harmonise",
+          "text": "Matching your partner's movement rather than clashing with it."
+        },
+        "ki": {
+          "meaning": "energy, breath, spirit",
+          "text": "That vital dynamic made of intention, presence and breathing, which you learn to feel and guide."
+        },
+        "do": {
+          "meaning": "the Way",
+          "text": "A never-ending path of learning: aikido is as much a school of life as a technique."
+        }
+      },
+      "sum": "合気道 is often translated as “the way of the harmony of energies”.",
+      "motto": "“True victory is victory over oneself.” This maxim, dear to the founder, sums up aikido: the real opponent is our own fears and ego."
+    },
+    "history": {
+      "title": "From the samurai to aikido",
+      "lead": "Aikido was not born in a gym, but out of eight centuries of warrior tradition and the singular life of one man. Let's follow the thread.",
+      "roots": {
+        "kamakura": {
+          "title": "The age of warriors",
+          "text": "In the late 12th century, the bushi, warriors who would become the samurai, take power in Japan. They train in the arts of the battlefield: sword, spear, bow, unarmed combat in armour. These techniques, grouped under the name bujutsu, are designed for survival.",
+          "aiki": "This is the soil from which the throws, joint locks and disarms that aikido inherits grew.",
+          "alt": "Samurai in traditional armour (yoroi) and kabuto helmet, standing in a misty landscape — old print or photographic reconstruction."
+        },
+        "edo": {
+          "title": "Edo peace: from combat to the Way",
+          "text": "Under the Tokugawa shōguns (1603–1868), Japan enjoys more than two and a half centuries of peace. Samurai become administrators and scholars. Schools (ryū) codify their techniques and add a moral and spiritual dimension, nourished by Zen Buddhism, Shinto and Confucianism. Bushidō, “the way of the warrior”, takes shape.",
+          "aiki": "The idea that martial training is a path of personal growth, the dō, is the seed of every modern budō.",
+          "alt": "Inside an old wooden dojo: plank floor, rack of bokken, calligraphy on the wall — or an ukiyo-e print of sword training."
+        },
+        "meiji": {
+          "title": "Meiji: the end of a world",
+          "text": "The Meiji Restoration ends feudal society. Samurai lose their privileges and in 1876 are forbidden to carry swords. Many schools vanish. Those that survive transform: alongside the combat arts (bujutsu) appear “ways” (budō) oriented towards education, such as Kanō Jigorō's judo (1882)."
+        },
+        "daito": {
+          "title": "Takeda Sōkaku and Daitō-ryū",
+          "text": "Born in 1859, Takeda Sōkaku is one of the last great masters of the old world. He teaches Daitō-ryū aiki-jūjutsu, an art he says descends from the Minamoto line and was passed down in the Takeda clan of Aizu. Travelling from dojo to dojo, he trains carefully chosen students. One of them, a young man from Wakayama, will change history: Morihei Ueshiba.",
+          "aiki": "The term aiki, “uniting energies”, is at the heart of Daitō-ryū. Ueshiba will make it the principle of his own art.",
+          "alt": "Archive portrait of Takeda Sōkaku: a small man with a piercing gaze, in kimono and hakama, early 20th century."
+        }
+      }
+    },
+    "ueshiba": {
+      "title": "Morihei Ueshiba, “Ō-Sensei”",
+      "lead": "Founder of aikido, Morihei Ueshiba (1883–1969) is called Ō-Sensei, the “Great Teacher”, by his students. His life blends martial arts, adventure, spirituality and a quest for peace.",
+      "alt": "Portrait of an elderly Morihei Ueshiba: white beard, dark hakama, calm gaze — archive photograph.",
+      "facts": {
+        "born": {
+          "label": "Born",
+          "value": "14 December 1883, Tanabe (Wakayama)"
+        },
+        "died": {
+          "label": "Died",
+          "value": "26 April 1969, Tokyo"
+        },
+        "titles": {
+          "label": "Titles",
+          "value": "Ō-Sensei · Kaiso (founder)"
+        },
+        "motto": {
+          "label": "Motto",
+          "value": "Masakatsu Agatsu"
+        }
+      },
+      "events": {
+        "birth": {
+          "title": "A frail child by the sea",
+          "text": "Morihei is born in Tanabe, a port on the Wakayama coast, into a family of landowners. Small and in poor health, he prefers books. His father, Yoroku, encourages him to swim and practise sumo. One day he sees his father, a local councillor, beaten by thugs hired by political rivals: he resolves to become strong.",
+          "aiki": "The sea, the mountains and the shrines of the Kumano region leave a lasting mark on his spiritual sensibility.",
+          "alt": "Rocky coast of Tanabe (Wakayama) at sunrise, calm sea and a small fishing harbour — landscape photograph."
+        },
+        "youth": {
+          "title": "Jūjutsu, sword and bayonet",
+          "text": "As a young man he studies several schools of jūjutsu and swordsmanship, notably Kitō-ryū and Yagyū Shingan-ryū, and toughens his body. Enlisted in the army, he serves in the Russo-Japanese War (1904–1905) and earns a reputation as a formidable fighter despite his small stature, barely over 1.50 m.",
+          "aiki": "His bare-handed techniques keep the logic of the sword and staff: that is why aikido also practises weapons."
+        },
+        "hokkaido": {
+          "title": "Pioneer in Hokkaidō",
+          "text": "In 1912, Ueshiba leads a group of families who set out to settle the frozen, wild lands of Shirataki in Hokkaidō. He clears land, fells trees and works alongside the villagers: a hard life that forges his body and his character.",
+          "aiki": "This bond with the land never leaves him: later, he will see farming as an integral part of his practice.",
+          "alt": "Snowy landscape of Shirataki, Hokkaidō: birch forest and a log cabin under the snow."
+        },
+        "takeda": {
+          "title": "Meeting Takeda Sōkaku",
+          "text": "In 1915, at an inn in Engaru, Ueshiba meets Takeda Sōkaku. Overwhelmed by his mastery, he sets everything aside to study Daitō-ryū: he has a dojo built at his home, hosts the master for months and follows him on his travels. He will later receive a teaching licence."
+        },
+        "ayabe": {
+          "title": "Ayabe and the Ōmoto religion",
+          "text": "Called to his father's bedside, he leaves Hokkaidō in 1919. On the way, he meets Deguchi Onisaburō, spiritual leader of the Ōmoto movement, in Ayabe near Kyōto. His father dies soon after. In 1920 Ueshiba settles in Ayabe, opens a dojo there and divides his life between training, farming and spiritual practice.",
+          "aiki": "With Deguchi, he discovers a vision in which the martial art becomes a path to peace and universal harmony: a decisive turning point.",
+          "alt": "Ōmoto sanctuary in Ayabe: wooden buildings and a garden in the mist, spiritual atmosphere."
+        },
+        "mongolia": {
+          "title": "The Mongolian expedition",
+          "text": "In 1924, Ueshiba joins Deguchi on an expedition to Mongolia, a utopian project for a kingdom of peace. The adventure ends abruptly: the group is arrested and narrowly escapes execution. Ueshiba would recount sensing, through flashes of light, where bullets would come from before they were even fired."
+        },
+        "light": {
+          "title": "The illumination",
+          "text": "In 1925, a naval officer and sword master challenges him. Unarmed, Ueshiba dodges every attack without being touched, until his opponent is exhausted. Shortly afterwards, in his garden, he has an intense spiritual experience: the universe seems to tremble and a golden light fills him. He concludes that the true way of the warrior is not to defeat, but to protect life.",
+          "aiki": "This is aikido's true moment of birth: from a fighting technique, the art becomes a path to peace."
+        },
+        "kobukan": {
+          "title": "The Kōbukan, in Tokyo",
+          "text": "Settled in Tokyo from 1927, Ueshiba opens his own dojo, the Kōbukan, in Shinjuku in 1931. His art, then called aiki-bujutsu or aiki-budō, attracts soldiers, police officers, public figures and students who will themselves become great masters, such as Shioda Gōzō and Tomiki Kenji.",
+          "alt": "Inside a 1930s dojo: large tatami area, students in keikogi lined up, Ueshiba at the centre — black-and-white archive photograph."
+        },
+        "iwama": {
+          "title": "Iwama: the name “aikidō” is adopted",
+          "text": "In 1942, while war rages, Ueshiba withdraws to Iwama (Ibaraki Prefecture), where he farms and founds a dojo and a shrine dedicated to his art. The name aikidō (合気道) is officially adopted that same year. There he deepens a practice centred on harmony, breath and the spiritual dimension, which he sometimes calls takemusu aiki, creative and spontaneous aiki.",
+          "aiki": "At Iwama, weapons (ken, jō) and bare hands are studied as one coherent whole: a legacy still very present in teaching today.",
+          "alt": "Iwama dojo and shrine surrounded by rice fields and hedgerows, golden late-afternoon light."
+        },
+        "aikikai": {
+          "title": "The Aikikai and the rebirth",
+          "text": "After the war, martial arts are at first restricted under the Occupation. In 1948 the Aikikai Foundation is recognised by the Ministry of Education and the Hombu Dōjō reopens in Tokyo, led by the founder's son, Kisshōmaru Ueshiba. Aikido, an art of reconciliation, is ready to be known."
+        },
+        "legacy": {
+          "title": "Ō-Sensei's legacy",
+          "text": "In the 1950s and 60s, Ueshiba travels, gives demonstrations and receives official honours. He passes away on 26 April 1969, aged 85, leaving an art now practised all over the world. His message comes down to one idea: aikido is meant to reconcile, not to divide.",
+          "alt": "An elderly Ueshiba performing a technique against several partners during a demonstration — archive photograph."
+        }
+      }
+    },
+    "world": {
+      "title": "From Japan to the world",
+      "lead": "After the founder's death, his students spread across every continent. Each passes on the art with their own sensibility.",
+      "france": {
+        "title": "Arrival in Europe",
+        "text": "Aikido begins to travel abroad in the 1950s. In France it is presented as early as 1951 by Mochizuki Minoru, then developed by masters from Japan such as Abe Tadashi, Noro Masamichi and Tamura Nobuyoshi, who train generations of practitioners.",
+        "alt": "Aikido demonstration in France in the 1950s–60s, black-and-white archive photograph, audience in a circle."
+      },
+      "styles": {
+        "title": "Several schools, one source",
+        "text": "Each of Ueshiba's students extends the art in their own way: the Aikikai, the most widespread current, Shioda Gōzō's Yoshinkan (1955), more rigorous, the Tomiki style, which introduces a form of competition, or Tōhei Kōichi's Ki Society, centred on coordinating ki. The forms differ; the spirit remains the same."
+      },
+      "today": {
+        "year": "Today",
+        "title": "A living art",
+        "text": "Aikido is practised today in around a hundred countries, by people of all ages. It even inspires training for law enforcement, such as the Tokyo riot police, long trained in the Yoshinkan style. But the essence is lived in neighbourhood dojos, like ours.",
+        "alt": "Practitioners of all ages gathered on the club's tatami, bowing and smiling, warm light — atmosphere photograph of the dojo."
+      }
+    },
+    "today": {
+      "title": "Aikido today",
+      "lead": "What do you actually do on a tatami? Here is what you need to understand it, or to prepare for your first try."
+    },
+    "principles": {
+      "title": "The key principles",
+      "lead": "Six ideas come back again and again in practice. Grasping them is already understanding aikido.",
+      "items": {
+        "maai": {
+          "title": "Ma-ai · the right distance",
+          "text": "Neither too close nor too far: everything starts with the right distance from your partner."
+        },
+        "irimi": {
+          "title": "Irimi & tenkan · enter and pivot",
+          "text": "Enter into the attack or pivot to avoid it: two basic movements to leave the line of attack and stay in control."
+        },
+        "kuzushi": {
+          "title": "Kuzushi · unbalancing",
+          "text": "You don't fight your partner's force: you guide it until their balance breaks, and the technique becomes almost effortless."
+        },
+        "hara": {
+          "title": "Hara · the centre",
+          "text": "Movement starts from the lower abdomen, the body's centre. A stable centre means a stable body."
+        },
+        "kokyu": {
+          "title": "Kokyū · breath",
+          "text": "Breathing and movement go together: breath sets the rhythm of the gesture and helps you stay calm under pressure."
+        },
+        "zanshin": {
+          "title": "Zanshin · the lingering mind",
+          "text": "Stay attentive until the end of the technique, and even after. A serene presence, always awake."
+        }
+      }
+    },
+    "partners": {
+      "title": "Tori and uke: a duo",
+      "text": "You always train in pairs. Tori (or nage) leads the technique; uke attacks and then receives, falling if necessary. Roles swap constantly: being uke means learning to feel, to react and to fall without getting hurt.",
+      "ukemi": "Falls (ukemi) are learned very gradually, at your own pace. For those who prefer to avoid falling, adapted classes such as Aiki Taiso exist.",
+      "attacksTitle": "A few classic attacks",
+      "attacks": {
+        "shomen": {
+          "name": "Shōmen-uchi",
+          "meaning": "vertical strike to the head"
+        },
+        "yokomen": {
+          "name": "Yokomen-uchi",
+          "meaning": "diagonal strike to the side of the head"
+        },
+        "tsuki": {
+          "name": "Tsuki",
+          "meaning": "straight punch, thrust"
+        },
+        "katate": {
+          "name": "Katate-dori",
+          "meaning": "one-wrist grab"
+        },
+        "ryote": {
+          "name": "Ryōte-dori",
+          "meaning": "two-wrist grab"
+        },
+        "ushiro": {
+          "name": "Ushiro-dori",
+          "meaning": "grab from behind"
+        }
+      }
+    },
+    "flow": {
+      "title": "How a class unfolds",
+      "lead": "A class usually lasts between one hour and an hour and a half. Here is a typical outline, with indicative timings for 1.5 hours. Click each step.",
+      "step": "Step {{n}} of {{total}}",
+      "steps": {
+        "rei": {
+          "title": "The bow",
+          "text": "You bow when stepping onto the tatami, then the class opens with a group bow in seiza (kneeling), facing the kamiza, the dojo's place of honour, and the teacher. A way of leaving your worries outside."
+        },
+        "warmup": {
+          "title": "Warm-up",
+          "text": "Joint rotations, stretching, breathing and footwork (tai-sabaki): you prepare the wrists, shoulders and back, and wake up your centre."
+        },
+        "ukemi": {
+          "title": "Falling",
+          "text": "Forward and backward rolls, side falls: you learn to fall softly, with progression suited to each person."
+        },
+        "waza": {
+          "title": "Techniques",
+          "text": "The teacher demonstrates a technique; practitioners work on it in pairs, alternating tori and uke. Lots of repetition, listening and friendly corrections."
+        },
+        "free": {
+          "title": "Weapons or free practice",
+          "text": "Depending on the day: work with the bokken or jō, defence against weapons, or freer practice against several partners (randori) for the more advanced."
+        },
+        "calm": {
+          "title": "Cooling down",
+          "text": "Breathing, closing bow, thanks to your partner and the teacher, then everyone tidies the dojo together."
+        }
+      }
+    },
+    "techniques": {
+      "title": "The basic techniques",
+      "lead": "Japanese names can be intimidating; behind each one lies a simple idea. Each technique is applied against many attacks, standing, kneeling or against several partners.",
+      "note": "In all, several dozen fundamental techniques, which unfold almost endlessly. You deepen them for a lifetime.",
+      "items": {
+        "ikkyo": {
+          "name": "Ikkyō",
+          "meaning": "first technique",
+          "text": "Control of the arm and elbow that brings the partner to the ground. The fundamental technique, the one you work on for life."
+        },
+        "nikyo": {
+          "name": "Nikyō",
+          "meaning": "second technique",
+          "text": "Wrist control through a rotation that immobilises without brute force. Precise, subtle, highly instructive."
+        },
+        "sankyo": {
+          "name": "Sankyō",
+          "meaning": "third technique",
+          "text": "A spiral twist of the wrist and forearm that travels through the whole arm and makes the partner follow the movement."
+        },
+        "shihonage": {
+          "name": "Shihōnage",
+          "meaning": "four-direction throw",
+          "text": "The arm is raised like a sword and brought behind the partner: a great cut that throws or pins. Highly emblematic."
+        },
+        "iriminage": {
+          "name": "Iriminage",
+          "meaning": "entering throw",
+          "text": "You enter the attacker's movement and guide them backwards in a sweeping gesture, like a pendulum."
+        },
+        "kotegaeshi": {
+          "name": "Kote-gaeshi",
+          "meaning": "wrist turn-out",
+          "text": "The wrist is turned outwards: the partner falls by following the movement. Easy to see, subtle to achieve."
+        },
+        "kaitenage": {
+          "name": "Kaiten-nage",
+          "meaning": "rotary throw",
+          "text": "The attacker's arm is guided in a large circle: they spin around us before falling. Rotation and fluidity."
+        },
+        "kokyunage": {
+          "name": "Kokyū-nage",
+          "meaning": "breath throw",
+          "text": "No lock: only centre, timing and breath. Sometimes the hardest to perform."
+        }
+      }
+    },
+    "gear": {
+      "title": "The uniform",
+      "lead": "Simple and sober, it is designed for grabs, rolls and… respect for the place.",
+      "alt": "Still life on a tatami: folded white keikogi, dark hakama, belt and bokken laid side by side, soft light.",
+      "items": {
+        "keikogi": {
+          "name": "Keikogi",
+          "sub": "the uniform",
+          "text": "White jacket and trousers in thick cotton, resistant to grabs and friction. A beginner can start in plain sportswear."
+        },
+        "obi": {
+          "name": "Obi",
+          "sub": "the belt",
+          "text": "White for beginners, black for dan grades. Colours vary between federations and for children."
+        },
+        "hakama": {
+          "name": "Hakama",
+          "sub": "the pleated trousers",
+          "text": "Pleated and worn over the keikogi, often from a certain grade depending on the dojo. Its seven pleats traditionally recall the virtues of budō."
+        },
+        "zori": {
+          "name": "Zōri",
+          "sub": "sandals",
+          "text": "You train barefoot; sandals are kept for moving around off the tatami, to keep the mat clean."
+        }
+      }
+    },
+    "weapons": {
+      "title": "The weapons",
+      "lead": "They aren't for fighting but for understanding: distance, axis, the edge of the movement. Many bare-handed movements extend those of the sword.",
+      "note": "All training weapons are made of wood and never sharp.",
+      "bokken": {
+        "name": "Bokken",
+        "sub": "wooden sword",
+        "text": "A replica of the Japanese sword, in oak. It teaches cutting, distance and posture."
+      },
+      "jo": {
+        "name": "Jō",
+        "sub": "staff",
+        "text": "A wooden staff about 1.27 m long. It teaches strikes, thrusts and throws, with great freedom of movement."
+      },
+      "tanto": {
+        "name": "Tantō",
+        "sub": "knife",
+        "text": "A wooden knife, for working on defences against a short weapon, with care and precision."
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": {
+        "sport": {
+          "q": "Do I need to be sporty or flexible?",
+          "a": "No. Classes adapt to your condition: flexibility and stamina come with practice. For a gentler approach, Aiki Taiso is designed precisely for that."
+        },
+        "comp": {
+          "q": "Are there competitions?",
+          "a": "Not in aikido as Ueshiba passed it on, with the exception of the Tomiki style. You train together, not against each other."
+        },
+        "defense": {
+          "q": "Does aikido help with self-defence?",
+          "a": "It is first and foremost a martial art, cultivating clarity, distance management and calm in the face of aggression. Its effectiveness depends on practice time, but its primary goal remains self-improvement."
+        },
+        "age": {
+          "q": "From what age can you start?",
+          "a": "There is no age limit to begin. We offer classes for teenagers, for adults and an adapted class open to everyone: see the classes page."
+        },
+        "outfit": {
+          "q": "What should I wear for a first try?",
+          "a": "Flexible sportswear (trousers without zips, a T-shirt), no jewellery, barefoot on the tatami. The keikogi comes later."
+        },
+        "progress": {
+          "q": "How do you progress?",
+          "a": "Through grades: kyu first, then dan, the first of which is the “black belt”. The pace depends on the federation and your regularity, but the key is to progress at your own pace."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to step onto the tatami?",
+      "text": "You now have the keys to understanding aikido. The best way to grasp its spirit is still to try it: discover our classes, schedules and the levels on offer.",
+      "button": "See the classes",
+      "contact": "Contact us"
+    }
   }
 }
