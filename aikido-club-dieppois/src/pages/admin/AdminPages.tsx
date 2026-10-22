@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, House, Users } from "lucide-react";
+import { ArrowRight, House, Users, ContactRound } from "lucide-react";
 
 export default function AdminPages() {
   return (
@@ -67,6 +67,33 @@ export default function AdminPages() {
             gérez leur présence sur le site et organisez leur ordre d’affichage.
           </p>
         </Link>
+
+
+        <Link
+          to="/admin/pages/informations-club"
+          className="group rounded-xl border border-neutral-200 bg-white p-5 transition hover:border-neutral-400 hover:shadow-sm"
+        >
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex size-11 items-center justify-center rounded-lg bg-neutral-100 text-neutral-700">
+              <ContactRound aria-hidden="true" className="size-5" />
+            </div>
+
+            <ArrowRight
+              aria-hidden="true"
+              className="size-5 text-neutral-400 transition group-hover:translate-x-1 group-hover:text-neutral-900"
+            />
+          </div>
+
+          <h2 className="mt-5 text-lg font-semibold text-neutral-900">
+            Informations du club
+          </h2>
+
+          <p className="mt-2 text-sm leading-relaxed text-neutral-500">
+            Modifiez les coordonnées, les réseaux sociaux, l’adresse du dojo et
+            le planning annuel sans toucher au code.
+          </p>
+        </Link>
+
       </div>
     </section>
   );

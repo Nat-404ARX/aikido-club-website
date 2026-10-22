@@ -15,7 +15,7 @@ import ScrollReveal from "../../components/ui/ScrollReveal";
 import { useTranslation } from "react-i18next";
 
 import { useWeeklySchedule, usePricing } from "../../data/cours.ts"
-import { club, annualSchedule } from "../../data/info.ts"
+import { useClubInformation } from "../../hooks/useClubInformation.tsx";
 
 
 function getCurrentDayIndex() {
@@ -32,6 +32,10 @@ function formatPrice(price: number) {
 
 export default function HorairesTarifs() {
   const weeklySchedule = useWeeklySchedule();
+  const { club } = useClubInformation();
+  const { annualSchedule } = useClubInformation();
+  console.log(club);
+  console.log(annualSchedule);
   const pricing = usePricing()[0];
   const [selectedDay, setSelectedDay] = useState(getCurrentDayIndex);
   const [showAnnualImage, setShowAnnualImage] = useState(false);

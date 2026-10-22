@@ -31,6 +31,7 @@ import Message from "./pages/admin/AdminMessage.tsx";
 
 import AdminAccueil from "./components/admin/AdminAccueil.tsx";
 import AdminProfesseurs from "./components/admin/AdminTeacher.tsx";
+import AdminInformationsClub from "./components/admin/AdminInformationClub.tsx";
 
 
 
@@ -76,6 +77,7 @@ export default function App() {
           <Route path="pages" element={<AdminPages />} />
           <Route path="pages/accueil" element={<AdminAccueil />} />
           <Route path="pages/professeurs" element={<AdminProfesseurs />} />
+          <Route path="pages/informations-club" element={<AdminInformationsClub />} />
 
           <Route path="cours" element={<AdminCours />} />
           <Route path="horaires" element={<AdminHoraire />} />

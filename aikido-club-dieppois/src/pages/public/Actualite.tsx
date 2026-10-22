@@ -13,9 +13,8 @@ import {
   type Actualite,
 } from "../../services/actualiteService.ts";
 import Facebook from "/assets/icons/media/facebook.png"
-import { club } from "../../data/info.ts"
+import { useClubInformation } from "../../hooks/useClubInformation.tsx";
 
-const FACEBOOK_PAGE_URL = club.facebook;
 
 function formatDate(date: string, locale: string) {
   const parsedDate = new Date(date);
@@ -160,6 +159,9 @@ function PublicationCard({
 
 export default function Actualites() {
   const { t, i18n } = useTranslation();
+  const { club, annualSchedule } =
+    useClubInformation();
+  const FACEBOOK_PAGE_URL = club.facebook;
   const [posts, setPosts] = useState<Actualite[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);

@@ -19,10 +19,12 @@ import type { LucideIcon } from "lucide-react";
 import { messagesService } from "../../services/messagesService.ts";
 
 
-import {club} from "../../data/info.ts"
+import { useClubInformation } from "../../hooks/useClubInformation.tsx";
 
 export default function Contact() {
   const { t } = useTranslation();
+  const { club, annualSchedule } =
+    useClubInformation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
 

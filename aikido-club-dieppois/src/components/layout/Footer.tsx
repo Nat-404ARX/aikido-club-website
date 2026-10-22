@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ArrowUp, ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 
-/* ------------------------------------------------------------------ */
-/*  DONNÉES ÉDITABLES (futur backoffice) — textes dans footer.*.json  */
-/* ------------------------------------------------------------------ */
-import { club } from "../../data/info.ts"
+
+import { useClubInformation } from "../../hooks/useClubInformation.tsx";
 
 const navLinks = [
   { key: "home", to: "/" },
@@ -32,6 +31,8 @@ const associationInfo = [
 /* ------------------------------------------------------------------ */
 export default function Footer() {
   const { t } = useTranslation();
+  const { club, annualSchedule, loading, error } =
+    useClubInformation();
   const link =
     "text-white/85 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white";
 
