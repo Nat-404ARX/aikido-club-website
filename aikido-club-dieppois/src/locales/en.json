@@ -170,8 +170,10 @@
     "allTarif": "Full pricing details",
     "joinCondition": "Please see the club's document for registration requirements and official information.",
     "downloadPDF": "Download the PDF",
+    "note": "Prices are for reference only; please consult the document to find out the price of your license based on your situation.",
     "seeYouSoon": "See you soon at the dojo",
-    "question": "Any questions before we begin ?"
+    "question": "Any questions before we begin ?",
+    "contactus": "Contact us by email, phone, or directly on our website."
   },
   "location": {
     "eyebrow": "Join us",
@@ -270,6 +272,10 @@
     "ctaTitle": "Ready to step onto the tatami?",
     "ctaText": "Your first trial class is free. Come in sportswear, we'll take care of the rest.",
     "ctaButton": "Contact us",
+    "from": "From ",
+    "to": " to ",
+    "maj": "Adult",
+    "min": "Child",
     "days": {
       "mon": "Monday",
       "tue": "Tuesday",
@@ -282,21 +288,21 @@
     "items": {
       "all": {
         "name": "All-levels class",
-        "audience": "Adults",
+        "audience": "Ages 14 and up",
         "tag": "All grades",
         "description": "The heart of the practice. Beginners and experienced practitioners train together: basic techniques, movement, falling and sequences. To be completed.",
         "alt": "Wide photo of the tatami during a group class: practitioners in white keikogi and hakama, two pairs mid-technique, soft morning light."
       },
       "teen": {
         "name": "Teen class",
-        "audience": "Ages 12 – 17",
+        "audience": "Ages 10 and up",
         "tag": "Discovery",
         "description": "A class designed for teenagers: self-confidence, coordination, respect and team spirit. To be completed.",
         "alt": "Group of smiling teens at the centre of the tatami, bowing to the teacher, lively and friendly atmosphere."
       },
       "weapons": {
         "name": "Weapons class",
-        "audience": "Adults",
+        "audience": "Ages 14 and up",
         "tag": "Bokken · Jo · Tanto",
         "description": "Work with the bokken, jo and tanto to refine distance, precision and accuracy of movement. To be completed.",
         "alt": "Close-up of two crossing bokken, hands in the foreground, blurred dojo background."
@@ -310,14 +316,14 @@
       },
       "advanced": {
         "name": "Advanced class",
-        "audience": "Black belts & advanced kyu",
+        "audience": "Hakama",
         "tag": "Refinement",
         "description": "A demanding class to deepen principles, refine details and prepare for grading. To be completed.",
         "alt": "Practitioner in black hakama performing a sweeping throw, side view, movement frozen mid-action."
       },
       "themed": {
         "name": "Themed class",
-        "audience": "To be confirmed",
+        "audience": "Everyone",
         "tag": "Theme of the month",
         "description": "A different theme each month: a technique, a principle, a weapon, an approach. To be completed.",
         "alt": "The teacher showing a technical detail to a group gathered in a half-circle around them on the tatami."
@@ -347,7 +353,8 @@
       "legal": "Legal notice",
       "privacy": "Privacy",
       "cookies": "Cookies",
-      "rules": "Club rules"
+      "rules": "Club rules",
+      "engagement": "Club commitment"
     },
     "rights": "All rights reserved.",
     "backToTop": "Back to top"

@@ -14,110 +14,11 @@ import {
 import ScrollReveal from "../../components/ui/ScrollReveal";
 import { useTranslation } from "react-i18next";
 
-const weeklySchedule = [
-  {
-    day: "Lundi",
-    short: "LUN",
-    courses: [
-      {
-        time: "À compléter",
-        name: "Aïki Taïso",
-        audience: "Tous publics",
-        detail: "Préparation physique",
-      },
-      {
-        time: "À compléter",
-        name: "Cours thématique",
-        audience: "À confirmer",
-        detail: "Thème différent chaque mois",
-      },
-    ],
-  },
-  {
-    day: "Mardi",
-    short: "MAR",
-    courses: [],
-  },
-  {
-    day: "Mercredi",
-    short: "MER",
-    courses: [
-      {
-        time: "De 17h 30 à 18h 30",
-        name: "Cours adultes",
-        audience: "Adultes",
-        detail: "Aïkido",
-      },
-      {
-        time: "À compléter",
-        name: "Cours d’armes",
-        audience: "Adultes",
-        detail: "Armes",
-      },
-      {
-        time: "À compléter",
-        name: "Cours enfants",
-        audience: "Enfants",
-        detail: "Aïkido",
-      },
-    ],
-  },
-  {
-    day: "Jeudi",
-    short: "JEU",
-    courses: [],
-  },
-  {
-    day: "Vendredi",
-    short: "VEN",
-    courses: [
-      {
-        time: "À compléter",
-        name: "Cours adultes",
-        audience: "Adultes",
-        detail: "Aïkido",
-      },
-    ],
-  },
-  {
-    day: "Samedi",
-    short: "SAM",
-    courses: [],
-  },
-  {
-    day: "Dimanche",
-    short: "DIM",
-    courses: [],
-  },
-] as const;
+import { useWeeklySchedule, usePricing } from "../../data/cours.ts"
+import { club, annualSchedule } from "../../data/info.ts"
 
-const annualSchedule = {
-  season: "2026-2027",
-  image: "/assets/images/horaires/planning-annuel.jpg",
-  pdf: "",
-};
-
-const pricing = {
-  season: "2026-2027",
-  pdf: "/documents/tarifs/tarifs2026-2027.pdf",
-  plans: [
-    {
-      key: "adult",
-      name: "Adulte",
-      price: null as number | null,
-      description: "",
-    },
-    {
-      key: "child",
-      name: "Enfant",
-      price: null as number | null,
-      description: "",
-    },
-  ],
-};
 
 function getCurrentDayIndex() {
-  // JavaScript : dimanche = 0, lundi = 1, etc.
   return (new Date().getDay() + 6) % 7;
 }
 
@@ -130,6 +31,8 @@ function formatPrice(price: number) {
 }
 
 export default function HorairesTarifs() {
+  const weeklySchedule = useWeeklySchedule();
+  const pricing = usePricing()[0];
   const [selectedDay, setSelectedDay] = useState(getCurrentDayIndex);
   const [showAnnualImage, setShowAnnualImage] = useState(false);
   const [annualImageAvailable, setAnnualImageAvailable] = useState(true);
@@ -441,15 +344,15 @@ export default function HorairesTarifs() {
                   <div className="mt-8">
                     {plan.price !== null ? (
                       <p className="text-4xl font-semibold tracking-tight">
-                        {formatPrice(plan.price)}
+                        {formatPrice(plan.price)}*
                       </p>
                     ) : (
                       <p className="text-3xl font-semibold tracking-tight text-neutral-300">
-                        — €
+                        - €*
                       </p>
                     )}
                   </div>
-
+                  
                   {plan.description && (
                     <p className="mt-4 text-sm leading-relaxed text-neutral-600">
                       {plan.description}
@@ -458,7 +361,11 @@ export default function HorairesTarifs() {
                 </article>
               </ScrollReveal>
             ))}
+            <p className="text-sm leading-relaxed text-neutral-500 w-[0.8]">
+              *{t("horaire.note")}
+            </p>
           </div>
+
 
           <ScrollReveal delay={150}>
             <div className="mt-8 flex flex-col items-start justify-between gap-6 rounded-2xl bg-neutral-950 p-6 text-white sm:flex-row sm:items-center sm:p-8">
@@ -518,20 +425,26 @@ export default function HorairesTarifs() {
               <div>
                 <h3 className="font-semibold text-xl">{t("location.addressTitle")}</h3>
                 <p className="mt-2 whitespace-pre-line text-lg leading-relaxed text-neutral-600">
-                  {t("location.address")}
+                  {club.address.map((line) => (
+                    <span key={line} className="block">{line}</span>
+                  ))}
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="flex min-h-64 items-center justify-center rounded-2xl border border-dashed border-neutral-300 bg-[#f5f3ee] p-8 text-center">
-            <div>
-              <MapPin size={32} className="mx-auto text-neutral-400" />
-              <p className="mt-4 font-medium">{t("location.mapPlaceholder")}</p>
-              <p className="mt-2 text-sm text-neutral-500">
-                {t("location.mapDescription")}
-              </p>
-            </div>
+          <div className="relative flex min-h-[320px] items-center justify-center rounded-2xl border border-dashed border-neutral-300 bg-[#f5f3ee] p-8 text-center">
+            <iframe
+              src={club.miniMapsUrl}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Emplacement du dojo"
+              className="absolute inset-0 h-full w-full min-h-[320px] rounded-2xl"
+            />
           </div>
         </div>
       </section>
@@ -552,7 +465,7 @@ export default function HorairesTarifs() {
             </h2>
 
             <p className="mx-auto mt-5 max-w-xl text-neutral-600">
-              {/* Texte à compléter */}
+              {t("horaire.contactus")}
             </p>
 
             <a

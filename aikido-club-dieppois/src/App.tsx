@@ -13,6 +13,12 @@ import Evenements from "./pages/public/Evenement.tsx";
 import Actualite from "./pages/public/Actualite.tsx";
 import Contact from "./pages/public/Contact.tsx";
 
+import MentionLegal from "./pages/public/MentionLegal.tsx";
+import Cookie from "./pages/public/Cookie.tsx";
+import Confidentialite from "./pages/public/Confidentialite.tsx";
+import Engagement from "./pages/public/Engagement.tsx";
+import Reglement from "./pages/public/Reglement.tsx";
+
 import AdminLogin from "./pages/admin/AdminLogin.tsx";
 import AdminDashboard from "./pages/admin/AdminDashboard.tsx";
 import AdminPages from "./pages/admin/AdminPages.tsx";
@@ -24,6 +30,7 @@ import AdminMedia from "./pages/admin/AdminMedia";
 import Message from "./pages/admin/AdminMessage.tsx";
 
 import AdminAccueil from "./components/admin/AdminAccueil.tsx";
+import AdminProfesseurs from "./components/admin/AdminTeacher.tsx";
 
 
 
@@ -48,7 +55,14 @@ export default function App() {
         <Route path="cours" element={<Cours />} />
         <Route path="horaires" element={<Horaires />} />
         <Route path="evenements" element={<Evenements />} />
+        <Route path="actualite" element={<Actualite />} />
         <Route path="contact" element={<Contact />} />
+
+        <Route path="mention-legal" element={<MentionLegal />} />
+        <Route path="confidentialite" element={<Confidentialite />} />
+        <Route path="cookies" element={<Cookie />} />
+        <Route path="engagement" element={<Engagement />} />
+        <Route path="reglement-interieur" element={<Reglement />} />
       </Route>
       
       {/* Connexion : accessible sans être connecté */}
@@ -61,6 +75,7 @@ export default function App() {
 
           <Route path="pages" element={<AdminPages />} />
           <Route path="pages/accueil" element={<AdminAccueil />} />
+          <Route path="pages/professeurs" element={<AdminProfesseurs />} />
 
           <Route path="cours" element={<AdminCours />} />
           <Route path="horaires" element={<AdminHoraire />} />

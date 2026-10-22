@@ -2,18 +2,8 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ArrowDown, ArrowUpRight, Clock } from "lucide-react";
 import ScrollReveal from "../../components/ui/ScrollReveal.tsx";
-type DayKey = "mon" | "tue" | "wed" | "thu" | "fri" | "sat" | "sun";
-type Slot = { day: DayKey; time: string | null };
-type Course = { id: string; kanji: string; slots: Slot[] };
 
-const courses: Course[] = [
-  { id: "all", kanji: "皆", slots: [{ day: "tue", time: null }, { day: "thu", time: null }] },
-  { id: "teen", kanji: "若", slots: [{ day: "wed", time: null }] },
-  { id: "weapons", kanji: "剣", slots: [{ day: "fri", time: null }] },
-  { id: "taiso", kanji: "体", slots: [{ day: "mon", time: "17h30 - 18h30" }] },
-  { id: "advanced", kanji: "段", slots: [{ day: "thu", time: null }] },
-  { id: "themed", kanji: "題", slots: [{ day: "sat", time: null }] },
-];
+import { courses } from "../../data/cours.ts"
 
 const courseIds = courses.map((c) => c.id);
 

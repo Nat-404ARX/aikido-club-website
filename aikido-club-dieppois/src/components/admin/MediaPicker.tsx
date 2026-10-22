@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { Check, Image, LoaderCircle, X } from "lucide-react";
 import {
   getMediaError,
-  MEDIA_CATEGORIES,
   mediaService,
-  type MediaCategory,
   type MediaFile,
-} from "../../services/mediaService";
+} from "../../services/mediaServices.ts";
+
+import { MEDIA_CATEGORIES, type MediaCategory } from "../../data/mediaCategories.ts"
 
 interface MediaPickerProps {
   onSelect: (media: MediaFile) => void;

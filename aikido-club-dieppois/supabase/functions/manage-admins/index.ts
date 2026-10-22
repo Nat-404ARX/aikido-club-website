@@ -1,4 +1,5 @@
 import { createClient } from "npm:@supabase/supabase-js@2";
+import { corsHeaders } from "npm:@supabase/supabase-js@2/cors";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -19,13 +20,28 @@ function response(body: unknown, status = 200) {
   });
 }
 
+function jsonResponse(
+  body: unknown,
+  status = 200
+): Response {
+  return new Response(JSON.stringify(body), {
+    status,
+    headers: {
+      ...corsHeaders,
+      "Content-Type": "application/json",
+    },
+  });
+}
+
 function isRole(value: unknown): value is AdminRole {
   return value === "admin" || value === "super_admin";
 }
 
-Deno.serve(async (req) => {
+Deno.serve(async (req: Request): Promise<Response> => {
   if (req.method === "OPTIONS") {
-    return new Response("ok", { headers: corsHeaders });
+    return new Response("ok", {
+      headers: corsHeaders,
+    });
   }
 
   if (req.method !== "POST") {
@@ -82,7 +98,10 @@ Deno.serve(async (req) => {
     actorError ||
     actorProfile?.role !== "super_admin"
   ) {
-    return response({ error: "Accès réservé au super-administrateur." }, 403);
+    return jsonResponse(
+      { error: "Accès refusé" },
+      403
+    );
   }
 
   let body: {

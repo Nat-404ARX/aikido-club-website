@@ -15,10 +15,11 @@ const navLinks = [
 ];
 
 const legalLinks = [
-  { key: "legal", to: "/mentions-legales" },
+  { key: "legal", to: "/mention-legal" },
   { key: "privacy", to: "/confidentialite" },
   { key: "cookies", to: "/cookies" },
   { key: "rules", to: "/reglement-interieur" },
+  { key: "engagement", to: "/engagement" },
 ];
 
 const associationInfo = [

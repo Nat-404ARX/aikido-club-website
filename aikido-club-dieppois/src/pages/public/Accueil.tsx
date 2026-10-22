@@ -4,6 +4,7 @@ import HeroBanner from "../../components/layout/HeroBanner.tsx"
 import { useTranslation } from "react-i18next";
 import { ArrowUpRight, ArrowRight, ArrowLeft } from "lucide-react";
 import ScrollReveal from "../../components/ui/ScrollReveal.tsx";
+import { useTeachers } from "../../data/profs.ts";
 
 export default function Accueil() {
 
@@ -15,28 +16,7 @@ export default function Accueil() {
     { year: "2025", key: "newChapter" },
   ] as const;
 
-  const teachers = [
-    {
-      key: "gilles",
-      number: "01",
-      image: "/assets/images/prof/gilles.png",
-    },
-    {
-      key: "florent",
-      number: "02",
-      image: "/assets/images/prof/florent.png",
-    },
-    {
-      key: "patrick",
-      number: "03",
-      image: "/assets/images/prof/patrick.png",
-    },
-    {
-      key: "jose",
-      number: "04",
-      image: "/assets/images/prof/jose.png",
-    },
-  ] as const;
+  const teachers = useTeachers();
 
   const teachersTrackRef = useRef<HTMLDivElement>(null);
   const [activeTeacher, setActiveTeacher] = useState(0);
