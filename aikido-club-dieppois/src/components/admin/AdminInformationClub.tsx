@@ -7,6 +7,12 @@ import {
   Upload,
 } from "lucide-react";
 
+import {
+  defaultPricing,
+  pricingService,
+  type PricingData,
+} from "../../services/princingService.ts";
+
 import MediaPicker from "./MediaPicker.tsx";
 import {
   clubInformationService,
@@ -24,6 +30,9 @@ export default function AdminInformationsClub() {
   const [uploadingPdf, setUploadingPdf] = useState(false);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
+  const [pricing, setPricing] = useState<PricingData>(defaultPricing);
+  const [pricingSaving, setPricingSaving] = useState(false);
+  const [pricingMessage, setPricingMessage] = useState("");
 
   useEffect(() => {
     let cancelled = false;
@@ -51,6 +60,66 @@ export default function AdminInformationsClub() {
       cancelled = true;
     };
   }, []);
+
+  useEffect(() => {
+    pricingService
+      .get()
+      .then(setPricing)
+      .catch((error: unknown) => {
+        console.error("Erreur de chargement des tarifs :", error);
+        setPricingMessage("Impossible de charger les tarifs.");
+      });
+  }, []);
+
+  const updatePlan = (
+    key: "adult" | "child",
+    field: "price" | "description",
+    value: number | null | string
+  ) => {
+    setPricing((current) => ({
+      ...current,
+      plans: current.plans.map((plan) =>
+        plan.key === key
+          ? { ...plan, [field]: value }
+          : plan
+      ),
+    }));
+  };
+
+  const savePricing = async () => {
+    setPricingSaving(true);
+    setPricingMessage("");
+
+    try {
+      await pricingService.save(pricing);
+      setPricingMessage("Tarifs enregistrés avec succès.");
+    } catch (error) {
+      console.error(error);
+      setPricingMessage("Erreur lors de l'enregistrement des tarifs.");
+    } finally {
+      setPricingSaving(false);
+    }
+  };
+
+  const uploadPricingPdf = async (file: File) => {
+    setPricingMessage("");
+
+    try {
+      const url = await pricingService.uploadPdf(file);
+
+      setPricing((current) => ({
+        ...current,
+        pdf_url: url,
+      }));
+
+      setPricingMessage(
+        "PDF chargé. Enregistre les tarifs pour confirmer le nouveau lien."
+      );
+    } catch (error) {
+      console.error(error);
+      setPricingMessage("Impossible de téléverser le PDF.");
+    }
+  };
 
   function updateField<K extends keyof ClubInformationInput>(
     field: K,
@@ -396,6 +465,176 @@ export default function AdminInformationsClub() {
         </div>
       </section>
 
+
+      {/* Mentions légales */}
+      <section className="space-y-6 rounded-xl border border-neutral-200 bg-white p-6 shadow-sm">
+        <div>
+          <h2 className="text-xl font-semibold text-neutral-900">
+            Mentions légales
+          </h2>
+          <p className="mt-1 text-sm text-neutral-500">
+            Informations juridiques de l’association et de l’hébergement.
+            Les valeurs à confirmer pourront être corrigées ici.
+          </p>
+        </div>
+
+        <div className="grid gap-5 sm:grid-cols-2">
+          <label className="block text-sm font-medium text-neutral-700">
+            Type de structure
+            <input
+              type="text"
+              value={form.legal_association_type}
+              onChange={(event) => updateField("legal_association_type", event.target.value)}
+              placeholder="Association sportive"
+              className={inputClass}
+            />
+          </label>
+
+          <label className="block text-sm font-medium text-neutral-700">
+            Numéro de club
+            <input
+              type="text"
+              value={form.legal_club_number}
+              onChange={(event) => updateField("legal_club_number", event.target.value)}
+              placeholder="0X XX XX XX XX"
+              className={inputClass}
+            />
+          </label>
+
+          <label className="block text-sm font-medium text-neutral-700">
+            Discipline
+            <input
+              type="text"
+              value={form.legal_discipline}
+              onChange={(event) => updateField("legal_discipline", event.target.value)}
+              placeholder="Aïkido"
+              className={inputClass}
+            />
+          </label>
+
+          <label className="block text-sm font-medium text-neutral-700">
+            Nom de l’association / objet social
+            <input
+              type="text"
+              value={form.legal_social_object}
+              onChange={(event) => updateField("legal_social_object", event.target.value)}
+              placeholder="Aïkido Club Dieppois"
+              className={inputClass}
+            />
+          </label>
+
+          <label className="block text-sm font-medium text-neutral-700 sm:col-span-2">
+            Président de l’association
+            <input
+              type="text"
+              value={form.legal_president_name}
+              onChange={(event) => updateField("legal_president_name", event.target.value)}
+              placeholder=""
+              className={inputClass}
+            />
+          </label>
+
+          <label className="block text-sm font-medium text-neutral-700 sm:col-span-2">
+            Adresse du lieu de pratique
+            <textarea
+              rows={3}
+              value={form.legal_practice_address}
+              onChange={(event) => updateField("legal_practice_address", event.target.value)}
+              placeholder={""}
+              className={inputClass}
+            />
+          </label>
+
+          <label className="block text-sm font-medium text-neutral-700 sm:col-span-2">
+            Adresse du siège social
+            <textarea
+              rows={3}
+              value={form.legal_registered_office}
+              onChange={(event) => updateField("legal_registered_office", event.target.value)}
+              placeholder={""}
+              className={inputClass}
+            />
+          </label>
+
+          <label className="block text-sm font-medium text-neutral-700 sm:col-span-2">
+            Directeur de la publication
+            <input
+              type="text"
+              value={form.legal_publication_director}
+              onChange={(event) => updateField("legal_publication_director", event.target.value)}
+              placeholder=""
+              className={inputClass}
+            />
+          </label>
+        </div>
+
+        <div className="border-t border-neutral-200 pt-5">
+          <h3 className="mb-4 font-semibold text-neutral-900">
+            Hébergement du site
+          </h3>
+
+          <div className="grid gap-5 sm:grid-cols-2">
+            <label className="block text-sm font-medium text-neutral-700">
+              Nom de l’hébergeur
+              <input
+                type="text"
+                value={form.legal_host_name}
+                onChange={(event) => updateField("legal_host_name", event.target.value)}
+                placeholder=""
+                className={inputClass}
+              />
+            </label>
+
+            <label className="block text-sm font-medium text-neutral-700">
+              Raison sociale
+              <input
+                type="text"
+                value={form.legal_host_company}
+                onChange={(event) => updateField("legal_host_company", event.target.value)}
+                placeholder=""
+                className={inputClass}
+              />
+            </label>
+
+            <label className="block text-sm font-medium text-neutral-700 sm:col-span-2">
+              Adresse de l’hébergeur
+              <textarea
+                rows={2}
+                value={form.legal_host_address}
+                onChange={(event) => updateField("legal_host_address", event.target.value)}
+                placeholder=""
+                className={inputClass}
+              />
+            </label>
+
+            <label className="block text-sm font-medium text-neutral-700 sm:col-span-2">
+              Coordonnées de l’hébergeur
+              <input
+                type="text"
+                value={form.legal_host_contact}
+                onChange={(event) => updateField("legal_host_contact", event.target.value)}
+                placeholder="Téléphone, e-mail ou autre contact officiel"
+                className={inputClass}
+              />
+            </label>
+          </div>
+        </div>
+
+        <div className="border-t border-neutral-200 pt-5">
+          <label className="block text-sm font-medium text-neutral-700">
+            URL du site partenaire
+            <input
+              type="url"
+              value={form.legal_partner_url}
+              onChange={(event) => updateField("legal_partner_url", event.target.value)}
+              placeholder="https://www.exemple.fr"
+              className={inputClass}
+            />
+          </label>
+        </div>
+      </section>
+
+
       <div className="flex justify-end">
         <button
           type="submit"
@@ -410,6 +649,126 @@ export default function AdminInformationsClub() {
           {saving ? "Enregistrement…" : "Enregistrer les modifications"}
         </button>
       </div>
+
+
+      <section className="space-y-6 rounded-xl border border-neutral-200 p-6">
+        <div>
+          <h2 className="text-xl font-semibold">Tarifs et cotisations</h2>
+          <p className="mt-1 text-sm text-neutral-500">
+            Modifie les prix, la saison et le document PDF public.
+          </p>
+        </div>
+
+        <div>
+          <label className="mb-2 block text-sm font-medium">
+            Saison
+          </label>
+          <input
+            type="text"
+            value={pricing.season}
+            onChange={(e) =>
+              setPricing((current) => ({
+                ...current,
+                season: e.target.value,
+              }))
+            }
+            placeholder="2026-2027"
+            className="w-full rounded-lg border border-neutral-300 px-3 py-2"
+          />
+        </div>
+
+        {pricing.plans.map((plan) => (
+          <div
+            key={plan.key}
+            className="grid gap-4 rounded-lg border border-neutral-200 p-4 md:grid-cols-2"
+          >
+            <div>
+              <h3 className="font-medium">
+                {plan.key === "adult" ? "Adultes" : "Enfants"}
+              </h3>
+
+              <label className="mb-1 mt-3 block text-sm">
+                Tarif annuel (€)
+              </label>
+              <input
+                type="number"
+                min="0"
+                step="0.01"
+                value={plan.price ?? ""}
+                onChange={(e) =>
+                  updatePlan(
+                    plan.key,
+                    "price",
+                    e.target.value === "" ? null : Number(e.target.value)
+                  )
+                }
+                className="w-full rounded-lg border border-neutral-300 px-3 py-2"
+              />
+            </div>
+
+            <div>
+              <label className="mb-1 block text-sm">
+                Description
+              </label>
+              <textarea
+                value={plan.description}
+                onChange={(e) =>
+                  updatePlan(plan.key, "description", e.target.value)
+                }
+                rows={3}
+                className="w-full rounded-lg border border-neutral-300 px-3 py-2"
+              />
+            </div>
+          </div>
+        ))}
+
+        <div>
+          <label className="mb-2 block text-sm font-medium">
+            Document PDF des tarifs
+          </label>
+
+          {pricing.pdf_url && (
+            <p className="mb-2 break-all text-sm">
+              Document actuel :{" "}
+              <a
+                href={pricing.pdf_url}
+                target="_blank"
+                rel="noreferrer"
+                className="underline"
+              >
+                Consulter le PDF
+              </a>
+            </p>
+          )}
+
+          <input
+            type="file"
+            accept="application/pdf,.pdf"
+            onChange={(e) => {
+              const file = e.target.files?.[0];
+              if (file) void uploadPricingPdf(file);
+              e.currentTarget.value = "";
+            }}
+            className="block w-full text-sm rounded-lg outline border-black"
+          />
+        </div>
+
+        {pricingMessage && (
+          <p role="status" className="text-sm">
+            {pricingMessage}
+          </p>
+        )}
+
+        <button
+          type="button"
+          onClick={() => void savePricing()}
+          disabled={pricingSaving}
+          className="rounded-lg bg-neutral-900 px-5 py-3 text-white disabled:opacity-50"
+        >
+          {pricingSaving ? "Enregistrement..." : "Enregistrer les tarifs"}
+        </button>
+      </section>
+
     </form>
   );
 }

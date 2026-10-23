@@ -5,10 +5,9 @@ const adminLinks = [
   { to: "/admin", label: "Tableau de bord", end: true },
   { to: "/admin/pages", label: "Pages et Contenues" },
   { to: "/admin/cours", label: "Modifier l'organisation des cours" },
-  { to: "/admin/horaires", label: "Horaires et tarifs" },
   { to: "/admin/evenements", label: "Événements" },
   { to: "/admin/medias", label: "Gestions des Médias" },
-  { to: "/admin/messages", label: "Voir les demandes de reseignements" },
+  { to: "/admin/messages", label: "Voir les demandes de renseignements" },
   { to: "/admin/comptes", label: "Comptes administrateurs" },
 ];
 

@@ -123,25 +123,3 @@ export const useWeeklySchedule = () => {
   ];
 };
 
-export const usePricing = () => {
-  const { t } = useTranslation('translation', { keyPrefix: 'cours' });
-  return [
-    {
-    season: "2026-2027",
-    pdf: "/documents/tarifs/tarifs2026-2027.pdf",
-    plans: [
-      {
-        key: "adult",
-        name: t('maj'),
-        price: 175 as number | null,
-        description: "",
-      },
-      {
-        key: "child",
-        name: t('min'),
-        price: 115 as number | null,
-        description: "",
-      },
-    ],}
-  ]
-};

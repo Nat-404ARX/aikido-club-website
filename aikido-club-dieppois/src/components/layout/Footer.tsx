@@ -21,18 +21,21 @@ const legalLinks = [
   { key: "engagement", to: "/engagement" },
 ];
 
-const associationInfo = [
-  { key: "status", value: "Association loi 1901" },
-  { key: "rna", value: "W000000000" },
-  { key: "siret", value: "000 000 000 00000" },
-  { key: "federation", value: "FFAAA" },
-];
+
 
 /* ------------------------------------------------------------------ */
 export default function Footer() {
   const { t } = useTranslation();
   const { club, annualSchedule, loading, error } =
     useClubInformation();
+
+  const associationInfo = [
+    { key: "status", value: "Association loi 1901" },
+    { key: "rna", value: "W000000000" },
+    { key: "siret", value: club.legalPresidentName },
+    { key: "federation", value: "FFAAA" },
+  ];
+
   const link =
     "text-white/85 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white";
 

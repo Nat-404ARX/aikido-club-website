@@ -14,8 +14,10 @@ import {
 import ScrollReveal from "../../components/ui/ScrollReveal";
 import { useTranslation } from "react-i18next";
 
-import { useWeeklySchedule, usePricing } from "../../data/cours.ts"
+import { useWeeklySchedule } from "../../data/cours.ts";
 import { useClubInformation } from "../../hooks/useClubInformation.tsx";
+import { usePricing } from "../../hooks/usePrincing.tsx";
+import GoogleMapEmbed from "../../components/ui/GoogleMapEmbed.tsx";
 
 
 function getCurrentDayIndex() {
@@ -34,8 +36,6 @@ export default function HorairesTarifs() {
   const weeklySchedule = useWeeklySchedule();
   const { club } = useClubInformation();
   const { annualSchedule } = useClubInformation();
-  console.log(club);
-  console.log(annualSchedule);
   const pricing = usePricing()[0];
   const [selectedDay, setSelectedDay] = useState(getCurrentDayIndex);
   const [showAnnualImage, setShowAnnualImage] = useState(false);
@@ -436,20 +436,9 @@ export default function HorairesTarifs() {
               </div>
             </div>
           </div>
+          <GoogleMapEmbed />
+          
 
-          <div className="relative flex min-h-[320px] items-center justify-center rounded-2xl border border-dashed border-neutral-300 bg-[#f5f3ee] p-8 text-center">
-            <iframe
-              src={club.miniMapsUrl}
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen={true}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Emplacement du dojo"
-              className="absolute inset-0 h-full w-full min-h-[320px] rounded-2xl"
-            />
-          </div>
         </div>
       </section>
 

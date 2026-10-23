@@ -441,3 +441,62 @@ section:hover .title-underline::after {
     transform: scaleY(1);
   }
 }
+
+
+@keyframes cover-zoom {
+  from {
+    transform: scale(1.12);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.cover-zoom img {
+  animation: cover-zoom 2.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+/* Visionneuse */
+@keyframes lightbox-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.lightbox-in {
+  animation: lightbox-in 0.3s ease both;
+}
+
+/* Pastille « à venir » qui pulse */
+@keyframes live-pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, currentColor 55%, transparent);
+  }
+
+  100% {
+    box-shadow: 0 0 0 9px transparent;
+  }
+}
+
+.live-dot {
+  display: inline-block;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 9999px;
+  background: currentColor;
+  animation: live-pulse 1.8s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .cover-zoom img,
+  .lightbox-in,
+  .live-dot {
+    animation: none;
+  }
+}

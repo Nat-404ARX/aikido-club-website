@@ -343,7 +343,7 @@
       "title": "The association",
       "status": "Status",
       "rna": "RNA no.",
-      "siret": "SIRET no.",
+      "siret": "Club President",
       "federation": "Federation"
     },
     "contact": {
@@ -776,6 +776,59 @@
       "text": "You now have the keys to understanding aikido. The best way to grasp its spirit is still to try it: discover our classes, schedules and the levels on offer.",
       "button": "See the classes",
       "contact": "Contact us"
+    }
+  },
+  "evenements": {
+    "about": "Club life",
+    "titleA": "Events",
+    "titleB": "& club life",
+    "intro": "Seminars, grading sessions, demonstrations, get-togethers: find everything that shapes life at the dojo, upcoming and past.",
+    "explore": "See the index",
+    "next": "Next event",
+    "now": "Happening now",
+    "inDays_one": "In {{count}} day",
+    "inDays_other": "In {{count}} days",
+    "discover": "Discover",
+    "upcoming": "Upcoming",
+    "all": "All",
+    "filterLabel": "Filter by category",
+    "search": "Search for an event",
+    "indexTitle": "The index",
+    "count_one": "{{count}} event",
+    "count_other": "{{count}} events",
+    "noResult": "No event matches your search.",
+    "emptyTitle": "No events yet",
+    "emptyText": "Upcoming seminars and get-togethers will be announced here. Check back soon!",
+    "error": "Unable to load events.",
+    "retry": "Try again",
+    "ctaTitle": "A question about an event?",
+    "ctaText": "Registration, access, accommodation: write to us, we'll be happy to help.",
+    "ctaButton": "Contact us",
+    "categories": {
+      "stage": "Seminar",
+      "grading": "Grading",
+      "demo": "Demonstration",
+      "club": "Club life",
+      "other": "Other"
+    },
+    "detail": {
+      "back": "All events",
+      "allEvents": "All events",
+      "draft": "Draft: this page is only visible to administrators.",
+      "when": "Date",
+      "where": "Location",
+      "gallery": "Gallery",
+      "prev": "Previous event",
+      "next": "Next event",
+      "open": "Enlarge photo",
+      "close": "Close",
+      "prevPhoto": "Previous photo",
+      "nextPhoto": "Next photo",
+      "photoOf": "Photo {{n}} of {{total}}",
+      "missingTitle": "Event not found",
+      "missingText": "This page doesn't exist or is no longer published.",
+      "errorTitle": "Unable to load",
+      "errorText": "Something went wrong. Please try again in a moment."
     }
   }
 }

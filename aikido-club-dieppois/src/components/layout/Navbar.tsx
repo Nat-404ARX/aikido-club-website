@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { useEventNavLinks } from "../../services/eventsService.ts"
 import { useTranslation } from "react-i18next";
 
 import LanguageSwitcher from "../ui/LanguageSwitcher";
@@ -9,11 +10,6 @@ import {
   X,
   ChevronDown,
 } from "lucide-react";
-
-const eventLinks = [
-  { to: "/evenements", labelKey: "nav.allEvents" },
-  // Ajouter ici les pages d'événements une fois définies.
-];
 
 const socialLinks = [
   {
@@ -86,6 +82,11 @@ function SocialLinks() {
 function EventDropdown({ onNavigate }: { onNavigate?: () => void }) {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
+  const dynamicLinks = useEventNavLinks();
+  const eventLinks = [
+    { to: "/evenements", labelKey: "nav.allEvents" },
+    ...dynamicLinks,
+  ];
 
   return (
     <div
@@ -134,6 +135,9 @@ function EventDropdown({ onNavigate }: { onNavigate?: () => void }) {
                 }`
               }
             >
+              {/*
+              {"label" in l ? l.label : t(l.labelKey)}
+              */}
               {t(eventLink.labelKey)}
             </NavLink>
           ))}
@@ -147,6 +151,11 @@ export default function Navbar() {
   const { t } = useTranslation();
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const dynamicLinks = useEventNavLinks();
+  const eventLinks = [
+    { to: "/evenements", labelKey: "nav.allEvents" },
+    ...dynamicLinks,
+  ];
 
   useEffect(() => {
     setMobileOpen(false);

@@ -10,6 +10,7 @@ import Aikido from "./pages/public/Aikido.tsx";
 import Cours from "./pages/public/Cours.tsx";
 import Horaires from "./pages/public/Horaire.tsx";
 import Evenements from "./pages/public/Evenement.tsx";
+import EvenementDetail from "./pages/public/EvenementDetail.tsx";
 import Actualite from "./pages/public/Actualite.tsx";
 import Contact from "./pages/public/Contact.tsx";
 
@@ -56,6 +57,7 @@ export default function App() {
         <Route path="cours" element={<Cours />} />
         <Route path="horaires" element={<Horaires />} />
         <Route path="evenements" element={<Evenements />} />
+        <Route path="/evenements/:slug" element={<EvenementDetail />} />
         <Route path="actualite" element={<Actualite />} />
         <Route path="contact" element={<Contact />} />
 

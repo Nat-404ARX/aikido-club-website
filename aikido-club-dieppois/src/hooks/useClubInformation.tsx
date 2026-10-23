@@ -16,6 +16,20 @@ export type ClubInfo = {
   address: string[];
   mapsUrl: string;
   miniMapsUrl: string;
+
+  legalClubNumber: string;
+  legalAssociationType: string;
+  legalDiscipline: string;
+  legalPresidentName: string;
+  legalSocialObject: string;
+  legalPracticeAddress: string;
+  legalRegisteredOffice: string;
+  legalPublicationDirector: string;
+  legalHostName: string;
+  legalHostCompany: string;
+  legalHostAddress: string;
+  legalHostContact: string;
+  legalPartnerUrl: string;
 };
 
 export type AnnualScheduleInfo = {
@@ -37,6 +51,21 @@ function mapInformation(data: ClubInformationInput) {
       address: [...data.address],
       mapsUrl: data.maps_url,
       miniMapsUrl: data.mini_maps_url,
+
+      // Informations légales
+      legalClubNumber: data.legal_club_number,
+      legalAssociationType: data.legal_association_type,
+      legalDiscipline: data.legal_discipline,
+      legalPresidentName: data.legal_president_name,
+      legalSocialObject: data.legal_social_object,
+      legalPracticeAddress: data.legal_practice_address,
+      legalRegisteredOffice: data.legal_registered_office,
+      legalPublicationDirector: data.legal_publication_director,
+      legalHostName: data.legal_host_name,
+      legalHostCompany: data.legal_host_company,
+      legalHostAddress: data.legal_host_address,
+      legalHostContact: data.legal_host_contact,
+      legalPartnerUrl: data.legal_partner_url,
     },
     annualSchedule: {
       season: data.season,
