@@ -135,13 +135,6 @@
     "primaryCta": "Discover the club",
     "secondaryCta": "Contact us"
   },
-  "club": {
-    "club": "The club",
-    "ourstory": "Learn about the club's history",
-    "chronologie": "Timeline",
-    "title": "Our story",
-    "intro": "“More than a martial art, it is a philosophy of life. There is no opponent, only a partner. There is no competition. Practitioners seek harmony and self-control. [...] Every gesture is precise, every movement calculated. Each person takes turns being the attacker and then the defender, giving and receiving. Aikido is a silent dialogue in which one learns to know oneself through the other. Aikido is much more than just physical training; it is an inner quest, a path toward harmony.” Florent Boucher"
-  },
   "horaire": {
     "about": "Practical Information",
     "hours": "Hours",
@@ -829,6 +822,29 @@
       "missingText": "This page doesn't exist or is no longer published.",
       "errorTitle": "Unable to load",
       "errorText": "Something went wrong. Please try again in a moment."
+    }
+  },
+  "club": {
+    "about": "The club",
+    "titleA": "The club",
+    "titleB": "history & values",
+    "intro": "From the very first class to today's dojo: discover the people who keep the club alive, the places and the values that bring us together.",
+    "explore": "Discover the club",
+    "nav": "Page sections",
+    "error": "Unable to load the club page.",
+    "retry": "Try again",
+    "emptyTitle": "Page in preparation",
+    "emptyText": "The story of the club will soon be told here.",
+    "ctaTitle": "Want to join us?",
+    "ctaText": "The best way to get to know the club is to step onto the tatami. Check our classes or write to us.",
+    "ctaButton": "See the classes",
+    "ctaContact": "Contact us",
+    "lightbox": {
+      "open": "Enlarge photo",
+      "close": "Close",
+      "prev": "Previous photo",
+      "next": "Next photo",
+      "photoOf": "Photo {{n}} of {{total}}"
     }
   }
 }

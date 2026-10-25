@@ -111,9 +111,7 @@ const weapons = [
 
 const faq = ["sport", "comp", "defense", "age", "outfit", "progress"];
 
-/* ------------------------------------------------------------------ */
-/*  Hooks                                                              */
-/* ------------------------------------------------------------------ */
+
 function useInView<T extends Element>(threshold = 0.2) {
   const ref = useRef<T>(null);
   const [inView, setInView] = useState(false);
@@ -179,10 +177,6 @@ function useScrollProgress(ref: RefObject<HTMLElement | null>) {
 
 const vi = (i: number) => ({ "--i": i }) as CSSProperties;
 
-/* ------------------------------------------------------------------ */
-/*  Petits composants                                                  */
-/* ------------------------------------------------------------------ */
-/** Grille dont les enfants (.rise) apparaissent en cascade */
 function Stagger({ className = "", children }: { className?: string; children: ReactNode }) {
   const [ref, inView] = useInView<HTMLDivElement>(0.15);
   return (

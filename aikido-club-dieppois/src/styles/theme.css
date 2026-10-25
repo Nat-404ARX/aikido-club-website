@@ -500,3 +500,21 @@ section:hover .title-underline::after {
     animation: none;
   }
 }
+
+.ink-wipe {
+  clip-path: inset(-1rem -2rem -1rem -1rem);
+  transition: clip-path 1.1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.ink-wipe[data-in="false"] {
+  clip-path: inset(-1rem 100% -1rem -1rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ink-wipe,
+  .ink-wipe[data-in="false"] {
+    clip-path: none;
+    transition: none;
+  }
+}

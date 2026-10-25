@@ -135,13 +135,6 @@
     "primaryCta": "Découvrir le club",
     "secondaryCta": "Nous contacter"
   },
-  "club": {
-    "club": "Le club",
-    "ourstory": "Découvrez l'histoire du club",
-    "chronologie": "Chronologie",
-    "title": "Notre histoire",
-    "intro": "“Plus qu’un art martial, c’est une philosophie de vie. Il n’y a pas d’adversaire mais un partenaire. Il n’y a pas de compétition. Les pratiquants recherchent l’harmonie et la maîtrise de soi. [...] Chaque geste est précis, chaque mouvement calculé. Chacun est à tour de rôle attaquant puis défenseur, donnant et recevant. L’aïkido est un dialogue silencieux où l’on apprend à se connaître soi-même à travers l’autre. L’aïkido est bien plus qu’un simple entraînement physique, c'est une quête intérieure, un chemin vers l’harmonie.” Florent Boucher"
-  },
   "horaire": {
     "about": "Informations pratiques",
     "hours": "Horaires",
@@ -829,6 +822,29 @@
       "missingText": "Cette page n'existe pas ou n'est plus publiée.",
       "errorTitle": "Chargement impossible",
       "errorText": "Un problème est survenu. Réessayez dans un instant."
+    }
+  },
+  "club": {
+    "about": "Le club",
+    "titleA": "Le club",
+    "titleB": "histoire & valeurs",
+    "intro": "Du premier cours au dojo d'aujourd'hui : découvrez ceux qui font vivre le club, les lieux et les valeurs qui nous rassemblent.",
+    "explore": "Découvrir le club",
+    "nav": "Sections de la page",
+    "error": "Impossible de charger la page du club.",
+    "retry": "Réessayer",
+    "emptyTitle": "Page en préparation",
+    "emptyText": "L'histoire du club sera bientôt racontée ici.",
+    "ctaTitle": "Envie de nous rejoindre ?",
+    "ctaText": "La meilleure façon de découvrir le club, c'est de venir sur le tatami. Consultez nos cours ou écrivez-nous.",
+    "ctaButton": "Voir les cours",
+    "ctaContact": "Nous contacter",
+    "lightbox": {
+      "open": "Agrandir la photo",
+      "close": "Fermer",
+      "prev": "Photo précédente",
+      "next": "Photo suivante",
+      "photoOf": "Photo {{n}} sur {{total}}"
     }
   }
 }

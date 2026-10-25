@@ -31,3 +31,20 @@ export function Stagger({ className = "", children }: { className?: string; chil
 }
 
 export const vi = (i: number) => ({ "--i": i }) as CSSProperties;
+
+export function useActiveSection(ids: string[]) {
+  const [active, setActive] = useState(ids[0] ?? "");
+  useEffect(() => {
+    if (ids.length === 0) return;
+    const obs = new IntersectionObserver(
+      (entries) => entries.forEach((e) => e.isIntersecting && setActive(e.target.id)),
+      { rootMargin: "-45% 0px -50% 0px" },
+    );
+    ids.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) obs.observe(el);
+    });
+    return () => obs.disconnect();
+  }, [ids]);
+  return active;
+}
