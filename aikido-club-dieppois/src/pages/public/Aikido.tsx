@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { ArrowDown, ArrowUpRight, ChevronDown } from "lucide-react";
 import ScrollReveal from "../../components/ui/ScrollReveal";
 
-type TLEvent = { id: string; kanji: string; year?: string; photo?: boolean };
+type TLEvent = { id: string; kanji: string; year?: string; photo?: boolean; src?: string; miror?: bool; };
 
 const sections = [
   { id: "essence", kanji: "心" },
@@ -30,32 +30,32 @@ const benefits = [
 ];
 
 const rootsEvents: TLEvent[] = [
-  { id: "kamakura", year: "1185", kanji: "武", photo: true },
-  { id: "edo", year: "1603", kanji: "道", photo: true },
+  { id: "kamakura", year: "1185", kanji: "武", photo: true, src: "/assets/images/aikido/samourai-armor.png" },
+  { id: "edo", year: "1603", kanji: "道", photo: true, src: "/assets/images/aikido/dojo.jpg", miror: true },
   { id: "meiji", year: "1868", kanji: "新" },
-  { id: "daito", year: "1900", kanji: "合", photo: true },
+  { id: "daito", year: "1900", kanji: "合", photo: true, src: "/assets/images/aikido/takeda-sokaku.jpg" },
 ];
 
 const ueshibaFacts = ["born", "died", "titles", "motto"];
 
 const ueshibaEvents: TLEvent[] = [
-  { id: "birth", year: "1883", kanji: "生", photo: true },
+  { id: "birth", year: "1883", kanji: "生", photo: true, src: "/assets/images/aikido/cote-rocheuse-tanabe.jpg" },
   { id: "youth", year: "1903", kanji: "鍛" },
-  { id: "hokkaido", year: "1912", kanji: "北", photo: true },
+  { id: "hokkaido", year: "1912", kanji: "北", photo: true, src: "/assets/images/aikido/paysage-enneige-shirataki.jpg" },
   { id: "takeda", year: "1915", kanji: "師" },
-  { id: "ayabe", year: "1920", kanji: "神", photo: true },
+  { id: "ayabe", year: "1920", kanji: "神", photo: true, src: "/assets/images/aikido/sanctuaire-omoto.webp" },
   { id: "mongolia", year: "1924", kanji: "蒙" },
   { id: "light", year: "1925", kanji: "光" },
-  { id: "kobukan", year: "1931", kanji: "館", photo: true },
-  { id: "iwama", year: "1942", kanji: "岩", photo: true },
+  { id: "kobukan", year: "1931", kanji: "館", photo: true, src: "/assets/images/aikido/mueshiba-1930.jpg" },
+  { id: "iwama", year: "1942", kanji: "岩", photo: true, src: "/assets/images/aikido/sanctuaire-riziere.jpg" },
   { id: "aikikai", year: "1948", kanji: "会" },
-  { id: "legacy", year: "1969", kanji: "遺", photo: true },
+  { id: "legacy", year: "1969", kanji: "遺", photo: true, src: "/assets/images/aikido/technique-ueshiba.jpg" },
 ];
 
 const worldEvents: TLEvent[] = [
-  { id: "france", year: "1951", kanji: "仏", photo: true },
+  { id: "france", year: "1951", kanji: "仏", photo: true, src: "/assets/images/aikido/aikido-france-1950.gif" },
   { id: "styles", year: "1955", kanji: "派" },
-  { id: "today", kanji: "今", photo: true }, // année = texte traduit (aikido.world.today.year)
+  { id: "today", kanji: "今", photo: true, src: "/assets/images/aikido/pratiquant-aujourdhui.png" }, // année = texte traduit (aikido.world.today.year)
 ];
 
 const principles = [
@@ -201,15 +201,21 @@ function BlockTitle({ kanji, title, lead }: { kanji: string; title: string; lead
 }
 
 /** Placeholder photo (révélée par une « coupe de sabre ») — remplace le bloc role="img" par un <img> */
-function Photo({ alt, kanji, ratio = "aspect-[4/3]" }: { alt: string; kanji: string; ratio?: string }) {
+function Photo({ src, alt, kanji, ratio = "aspect-[4/3]", miror = false }: { src: string; alt: string; kanji: string; ratio?: string; miror: bool; }) {
   const [ref, inView] = useInView<HTMLElement>(0.2);
+  let align;
+  let position;
+  miror ? align = "group relative flex justify-start-safe items-end" : align = "group relative flex justify-end-safe items-end";
+  miror ? position = "absolute -bottom-5 left-5 flex h-16 w-16 -rotate-6 items-center justify-center rounded-lg bg-[var(--color-accent)] text-3xl font-semibold text-white shadow-lg transition-transform duration-500 group-hover:rotate-0 sm:-left-7" : position = "absolute -bottom-5 right-5 flex h-16 w-16 rotate-6 items-center justify-center rounded-lg bg-[var(--color-accent)] text-3xl font-semibold text-white shadow-lg transition-transform duration-500 group-hover:rotate-0 sm:-right-7";
   return (
-    <figure ref={ref} className="group relative">
-      {/* <div data-in={inView} className="cut-reveal overflow-hidden rounded-[2rem]"><img src="/images/aikido/xxx.jpg" alt={alt} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" /></div> */}
+    <figure ref={ref} className={align}>
+      <div data-in={inView} className="cut-reveal overflow-hidden rounded-[2rem] max-h-125"><img src={src} alt={alt} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" /></div>
+      {/* 
       <div role="img" aria-label={alt} data-in={inView} className={`photo-placeholder cut-reveal relative flex ${ratio} items-end overflow-hidden rounded-[2rem] border border-[var(--color-border)] p-6`}>
         <p className="relative z-10 max-w-[20rem] text-xs leading-relaxed text-[var(--color-text-muted)]">{alt}</p>
       </div>
-      <span aria-hidden className="absolute -bottom-5 -right-3 flex h-16 w-16 rotate-6 items-center justify-center rounded-lg bg-[var(--color-accent)] text-3xl font-semibold text-white shadow-lg transition-transform duration-500 group-hover:rotate-0 sm:-right-5">
+      */}
+      <span aria-hidden className={position}>
         {kanji}
       </span>
     </figure>
@@ -264,7 +270,7 @@ function TimelineItem({ ev, base, flip }: { ev: TLEvent; base: string; flip: boo
         </div>
         {ev.photo && (
           <div className={flip ? "lg:order-first" : ""}>
-            <Photo alt={t(`${base}.alt`)} kanji={ev.kanji} />
+            <Photo src={ev.src} alt={t(`${base}.alt`)} kanji={ev.kanji} miror={ev.miror} />
           </div>
         )}
       </div>
@@ -354,7 +360,7 @@ export default function Aikido() {
   return (
     <main className="bg-[var(--color-background)] text-[var(--color-text)]">
       {/* ============ HERO ============ */}
-      <section className="relative overflow-hidden px-6 pb-16 pt-16 sm:pb-20 lg:pt-20">
+      <section className="relative overflow-hidden px-6 pb-12 pt-12 sm:pb-16 lg:pt-16">
         <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-8">
             <ScrollReveal>
@@ -474,7 +480,7 @@ export default function Aikido() {
           <aside className="lg:relative lg:top-40 lg:col-span-4 lg:self-start">  {/*mettre en lg:sticky et corrigé la zone d'arrêt qui est trop basse  */}
             <BlockTitle kanji="翁" title={t("aikido.ueshiba.title")} lead={t("aikido.ueshiba.lead")} />
             <div className="mt-10">
-              <Photo alt={t("aikido.ueshiba.alt")} kanji="翁" ratio="aspect-[4/5]" />
+              <Photo src={"/assets/images/aikido/morihei-ueshiba.jpg"} alt={t("aikido.ueshiba.alt")} kanji="翁" ratio="aspect-[4/5]" />
             </div>
             <dl className="mt-12 divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
               {ueshibaFacts.map((f) => (
@@ -573,7 +579,7 @@ export default function Aikido() {
             <div>
               <BlockTitle kanji="衣" title={t("aikido.gear.title")} lead={t("aikido.gear.lead")} />
               <div className="mt-10">
-                <Photo alt={t("aikido.gear.alt")} kanji="袴" />
+                {/*<Photo src={"/assets/images/tenu.jpg"} alt={t("aikido.gear.alt")} kanji="袴" />*/}
               </div>
               <ul className="mt-12 divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
                 {gear.map((g) => (

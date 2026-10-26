@@ -31,7 +31,7 @@ export default function Footer() {
 
   const associationInfo = [
     { key: "status", value: "Association loi 1901" },
-    { key: "rna", value: "W000000000" },
+    { key: "rna", value: "W761001747" },
     { key: "siret", value: club.legalPresidentName },
     { key: "federation", value: "FFAAA" },
   ];
