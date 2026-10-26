@@ -10,14 +10,30 @@ import Aikido from "./pages/public/Aikido.tsx";
 import Cours from "./pages/public/Cours.tsx";
 import Horaires from "./pages/public/Horaire.tsx";
 import Evenements from "./pages/public/Evenement.tsx";
+import EvenementDetail from "./pages/public/EvenementDetail.tsx";
 import Actualite from "./pages/public/Actualite.tsx";
 import Contact from "./pages/public/Contact.tsx";
+
+import MentionLegal from "./pages/public/MentionLegal.tsx";
+import Cookie from "./pages/public/Cookie.tsx";
+import Confidentialite from "./pages/public/Confidentialite.tsx";
+import Engagement from "./pages/public/Engagement.tsx";
+import Reglement from "./pages/public/Reglement.tsx";
 
 import AdminLogin from "./pages/admin/AdminLogin.tsx";
 import AdminDashboard from "./pages/admin/AdminDashboard.tsx";
 import AdminPages from "./pages/admin/AdminPages.tsx";
+import AdminComptes from "./pages/admin/AdminComptes.tsx";
+import AdminEvenement from "./pages/admin/AdminEvenement";
+import AdminCours from "./pages/admin/AdminCours";
+import AdminHoraire from "./pages/admin/AdminHoraire";
+import AdminMedia from "./pages/admin/AdminMedia";
+import Message from "./pages/admin/AdminMessage.tsx";
 
 import AdminAccueil from "./components/admin/AdminAccueil.tsx";
+import AdminProfesseurs from "./components/admin/AdminTeacher.tsx";
+import AdminInformationsClub from "./components/admin/AdminInformationClub.tsx";
+import AdminClub from "./components/admin/AdminClub.tsx";
 
 
 
@@ -41,9 +57,16 @@ export default function App() {
         <Route path="aikido" element={<Aikido />} />
         <Route path="cours" element={<Cours />} />
         <Route path="horaires" element={<Horaires />} />
-        <Route path="actualite" element={<Actualite />} />
         <Route path="evenements" element={<Evenements />} />
+        <Route path="evenements/:slug" element={<EvenementDetail />} />
+        <Route path="actualite" element={<Actualite />} />
         <Route path="contact" element={<Contact />} />
+
+        <Route path="mention-legal" element={<MentionLegal />} />
+        <Route path="confidentialite" element={<Confidentialite />} />
+        <Route path="cookies" element={<Cookie />} />
+        <Route path="engagement" element={<Engagement />} />
+        <Route path="reglement-interieur" element={<Reglement />} />
       </Route>
       
       {/* Connexion : accessible sans être connecté */}
@@ -56,35 +79,20 @@ export default function App() {
 
           <Route path="pages" element={<AdminPages />} />
           <Route path="pages/accueil" element={<AdminAccueil />} />
+          <Route path="pages/professeurs" element={<AdminProfesseurs />} />
+          <Route path="pages/informations-club" element={<AdminInformationsClub />} />
+          <Route path="pages/club" element={<AdminClub />} />
 
-          <Route
-            path="cours"
-            element={<PageEnConstruction titre="Gestion des cours" />}
-          />
-          <Route
-            path="horaires"
-            element={<PageEnConstruction titre="Horaires et tarifs" />}
-          />
-          <Route
-            path="actualite"
-            element={<PageEnConstruction titre="Actualités" />}
-          />
-          <Route
-            path="evenements"
-            element={<PageEnConstruction titre="Gestion des événements" />}
-          />
-          <Route
-            path="medias"
-            element={<PageEnConstruction titre="Bibliothèque de médias" />}
-          />
-          <Route
-            path="messages"
-            element={<PageEnConstruction titre="Messages reçus" />}
-          />
-          <Route
-            path="comptes"
-            element={<PageEnConstruction titre="Comptes administrateurs" />}
-          />
+          <Route path="cours" element={<AdminCours />} />
+          <Route path="horaires" element={<AdminHoraire />} />
+          <Route path="evenements" element={<AdminEvenement />} />
+          <Route path="medias" element={<AdminMedia />} />
+
+          <Route path="messages" element={<Message />} />
+
+          <Route element={<ProtectedAdminRoute requiredRole="super_admin" />}>
+            <Route path="comptes" element={<AdminComptes />} />
+          </Route>
         </Route>
       </Route>
 

@@ -7,57 +7,51 @@ import {
   type HeroBannerData,
 } from "../../services/heroBannerService";
 
-
-export default function AdminAccueil() {return(<></>)} 
-
-{/*
-const [banner, setBanner] = useState<HeroBannerData>(defaultHeroBanner);
-const [isLoading, setIsLoading] = useState(true);
-const [isSaving, setIsSaving] = useState(false);
-const [statusMessage, setStatusMessage] = useState("");
-const [errorMessage, setErrorMessage] = useState("");
-
-useEffect(() => {
-  let active = true;
-
-  getHeroBanner()
-    .then((data) => {
-      if (active) setBanner(data);
-    })
-    .catch(() => {
-      if (active) {
-        setErrorMessage("Impossible de charger la bannière.");
-      }
-    })
-    .finally(() => {
-      if (active) setIsLoading(false);
-    });
-
-  return () => {
-    active = false;
-  };
-}, []);
-
-
-async function handleSave() {
-  setIsSaving(true);
-  setErrorMessage("");
-  setStatusMessage("");
-
-  try {
-    await saveHeroBanner(banner);
-    setStatusMessage("Bannière enregistrée avec succès.");
-  } catch {
-    setErrorMessage(
-      "Enregistrement impossible. Vérifie la connexion et les autorisations Supabase.",
-    );
-  } finally {
-    setIsSaving(false);
-  }
-}
-
 export default function AdminAccueil() {
   const [banner, setBanner] = useState<HeroBannerData>(defaultHeroBanner);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isSaving, setIsSaving] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  useEffect(() => {
+    let active = true;
+
+    getHeroBanner()
+      .then((data) => {
+        if (active) setBanner(data);
+      })
+      .catch(() => {
+        if (active) {
+          setErrorMessage("Impossible de charger la bannière.");
+        }
+      })
+      .finally(() => {
+        if (active) setIsLoading(false);
+      });
+
+    return () => {
+      active = false;
+    };
+  }, []);
+
+
+  async function handleSave() {
+    setIsSaving(true);
+    setErrorMessage("");
+    setStatusMessage("");
+
+    try {
+      await saveHeroBanner(banner);
+      setStatusMessage("Bannière enregistrée avec succès.");
+    } catch {
+      setErrorMessage(
+        "Enregistrement impossible. Vérifie la connexion et les autorisations Supabase.",
+      );
+    } finally {
+      setIsSaving(false);
+    }
+  }
 
   function updateField<K extends keyof HeroBannerData>(
     field: K,
@@ -327,4 +321,3 @@ export default function AdminAccueil() {
     </section>
   );
 }
-*/}

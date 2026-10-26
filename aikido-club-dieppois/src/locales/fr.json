@@ -6,6 +6,7 @@
     "courses": "Les cours",
     "schedule": "Horaires et tarifs",
     "events": "Événements",
+    "actu": "Actualitées",
     "allEvents": "Tous les événements",
     "contact": "Contact",
     "language": "Choisir la langue",
@@ -20,7 +21,7 @@
   "hero": {
     "label": "Présentation du club",
     "eyebrow": "Aïkido Club Dieppois",
-    "title": "L'art du mouvement.",
+    "title": "Découvrez l'aïkido : un art martial et une philosophie de vie.",
     "subtitle": "La voie de l'harmonie.",
     "description": "Découvrez l'aïkido, une discipline martiale fondée sur le mouvement, la maîtrise de soi et le respect du partenaire.",
     "scheduleCta": "Découvrir nos horaires",
@@ -133,5 +134,717 @@
     "description": "Découvrez notre pratique, nos cours et la vie du club.",
     "primaryCta": "Découvrir le club",
     "secondaryCta": "Nous contacter"
+  },
+  "horaire": {
+    "about": "Informations pratiques",
+    "hours": "Horaires",
+    "tarifs": "Tarifs",
+    "intro": "Retrouvez les horaires de nos cours, le planning de la saison et les informations tarifaires du club.",
+    "checkHour": "Consulter les horaires",
+    "eachWeek": "Chaque semaine",
+    "classHours": "Les horaires de cours",
+    "selectedDay": "Sélectionnez une journée pour découvrir les séances proposées.",
+    "today": "Aujourd'hui",
+    "plan": "Planning hebdomadaire",
+    "noclass": "Aucun cours renseigné",
+    "checkYear": "Consultez le planning annuel pour connaître les éventuelles activités ou exceptions.",
+    "confirmHours": "Les horaires affichés sont à confirmer avec le planning officiel du club. Les séances peuvent être modifiées pendant les vacances.",
+    "seasonCalendar": "Calendrier de la saison",
+    "yearCalendar": "Le planning annuel",
+    "season": "Saison",
+    "downloadCalendar": "Télécharger le planning",
+    "maximize": "Agrandir l’affiche",
+    "addCalendar": "Planning annuel à ajouter",
+    "soonCalendar": "L’affiche officielle de la saison sera disponible ici dès qu’elle aura été récupérée.",
+    "joinClub": "Inscription au club",
+    "tarif": "Tarifs et cotisations",
+    "officialDoc": "Document officiel de la saison",
+    "formule": "Formule",
+    "allTarif": "Tous les détails des tarifs",
+    "joinCondition": "Retrouvez les conditions d’inscription et les informations officielles dans le document du club.",
+    "downloadPDF": "Télécharger le PDF",
+    "note": "Tarif à titre indicatif, consulté le document pour connaitre le prix de votre licence en fonction de votre situation.",
+    "seeYouSoon": "À bientôt au dojo",
+    "question": "Une question avant de commencer ?",
+    "contactus": "Contacter nous par mail, téléphone ou directement sur notre site."
+  },
+  "location": {
+    "eyebrow": "Nous rejoindre",
+    "title": "Retrouvez-nous au dojo",
+    "description": "Que vous veniez découvrir l’aïkido ou pratiquer régulièrement, nous vous accueillons au dojo du club.",
+    "addressTitle": "Adresse du dojo",
+    "mapPlaceholder": "Emplacement de la carte",
+    "mapDescription": "Une carte interactive pourra être ajoutée ici."
+  },
+  "contact": {
+    "eyebrow": "Restons en contact",
+    "title": "Contact",
+    "description": "Une question sur l’aïkido, les cours ou les inscriptions ? Retrouvez les coordonnées du club ou écrivez-nous grâce au formulaire.",
+    "cta": "Nous écrire"
+  },
+  "details": {
+    "eyebrow": "Nos coordonnées",
+    "title": "Parlons ensemble.",
+    "description": "Choisissez le moyen de contact qui vous convient. Retrouvez-nous également sur nos réseaux sociaux pour suivre la vie du club.",
+    "toComplete": "À compléter",
+    "locationTitle": "Le dojo",
+    "channels": {
+      "email": "Adresse e-mail",
+      "phone": "Téléphone",
+      "facebook": "Facebook",
+      "youtube": "YouTube",
+      "whatsapp": "WhatsApp",
+      "instagram": "Instagram"
+    }
+  },
+  "form": {
+    "eyebrow": "Une demande d’information",
+    "title": "Comment pouvons-nous vous aider ?",
+    "description": "Remplissez le formulaire ci-dessous pour préparer votre demande. Tous les champs sont obligatoires.",
+    "requiredNote": "Les champs marqués d’un astérisque sont obligatoires.",
+    "fields": {
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "phone": "Numéro de téléphone",
+      "message": "Votre message"
+    },
+    "placeholders": {
+      "name": "Votre nom et prénom",
+      "email": "vous@exemple.fr",
+      "phone": "06 00 00 00 00",
+      "message": "Comment pouvons-nous vous renseigner ?"
+    },
+    "submit": "Préparer ma demande",
+    "successNotice": "Votre message a bien été envoyé. Le club vous répondra dès que possible.",
+    "demoNotice": "La validation du formulaire fonctionne, mais l’envoi n’est pas encore configuré. Votre message n’a pas été transmis au club."
+  },
+  "actu": {
+    "eyebrow": "La vie du club",
+    "title": "Actualités",
+    "description": "Retrouvez les nouvelles du club, les moments partagés sur les tatamis et les dernières publications de notre communauté.",
+    "cta": "Découvrir les actualités",
+    "facebook": "Suivre le club sur Facebook"
+  },
+  "feed": {
+    "eyebrow": "Au fil des jours",
+    "title": "Les dernières nouvelles",
+    "description": "Les publications du club, rassemblées ici pour retrouver facilement les textes et les photos.",
+    "loading": "Chargement des actualités…",
+    "errorTitle": "Les actualités sont indisponibles",
+    "errorDescription": "Impossible de récupérer les publications pour le moment. Vous pouvez réessayer dans quelques instants.",
+    "retry": "Réessayer",
+    "emptyTitle": "Le fil se prépare",
+    "emptyDescription": "Les publications du club apparaîtront ici dès que la connexion aux actualités sera configurée.",
+    "visitFacebook": "Consulter Facebook"
+  },
+  "post": {
+    "clubName": "Aïkido Club Dieppois",
+    "openOriginal": "Ouvrir la publication originale",
+    "openImage": "Ouvrir la photo en grand format",
+    "imageAlt": "Photo publiée par le club",
+    "noPhotos": "Publication textuelle",
+    "photoCount_one": "{{count}} photo",
+    "photoCount_other": "{{count}} photos",
+    "viewOnFacebook": "Voir sur Facebook"
+  },
+  "sidebar": {
+    "title": "Suivez la vie du club",
+    "description": "Retrouvez également nos publications et les échanges avec la communauté sur Facebook.",
+    "link": "Retrouver le club"
+  },
+  "cours": {
+    "about": "Pratique",
+    "titleA": "Les cours",
+    "titleB": "du dojo",
+    "intro": "Du débutant au gradé, du corps à mains nues aux armes : trouve le cours qui correspond à ton rythme et à ton niveau.",
+    "explore": "Découvrir les cours",
+    "nav": "Types de cours",
+    "schedule": "Horaires",
+    "tba": "À compléter",
+    "trial": "Essayer un cours",
+    "ctaTitle": "Prêt à monter sur le tatami ?",
+    "ctaText": "Le premier cours d'essai est offert. Viens en tenue de sport, on s'occupe du reste.",
+    "ctaButton": "Nous contacter",
+    "from": "De ",
+    "to": " jusqu'à ",
+    "maj": "Adulte",
+    "min": "Enfant",
+    "days": {
+      "mon": "Lundi",
+      "tue": "Mardi",
+      "wed": "Mercredi",
+      "thu": "Jeudi",
+      "fri": "Vendredi",
+      "sat": "Samedi",
+      "sun": "Dimanche"
+    },
+    "items": {
+      "all": {
+        "name": "Cours tous grades",
+        "audience": "À partir de 14 ans",
+        "tag": "Tous grades",
+        "description": "Le cœur de la pratique. Débutants et pratiquants confirmés travaillent ensemble : techniques de base, déplacements, chutes et enchaînements. À compléter.",
+        "alt": "Photo large du tatami pendant un cours collectif : pratiquants en keikogi blanc et hakama, deux binômes en pleine technique, lumière douce du matin."
+      },
+      "teen": {
+        "name": "Cours ados",
+        "audience": "À partir de 10 ans",
+        "tag": "Découverte",
+        "description": "Un cours pensé pour les adolescents : confiance en soi, coordination, respect et esprit d'équipe. À compléter.",
+        "alt": "Groupe d'ados souriants au centre du tatami, saluant le professeur, ambiance dynamique et bienveillante."
+      },
+      "weapons": {
+        "name": "Cours d'armes",
+        "audience": "À partir de 14 ans",
+        "tag": "Bokken · Jo · Tanto",
+        "description": "Travail du bokken, du jo et du tanto pour affiner distance, précision et justesse du geste. À compléter.",
+        "alt": "Gros plan sur deux bokken qui se croisent, mains en premier plan, fond de dojo flou."
+      },
+      "taiso": {
+        "name": "Aïki Taïso",
+        "audience": "Tous publics",
+        "tag": "Préparation physique",
+        "description": "Cours d'aïkido adapté. Sans chute (ou très peu) et peu de contraintes articulaires, ces cours sont particulièrement adaptés aux personnes ayant des difficultés physiques ou appréhendant de se faire mal.",
+        "alt": "Pratiquants de tous âges réalisant un exercice d'étirement ou de mobilité sur le tatami, geste lent et fluide, ambiance calme."
+      },
+      "advanced": {
+        "name": "Cours gradés",
+        "audience": "Hakama",
+        "tag": "Perfectionnement",
+        "description": "Un cours exigeant pour approfondir les principes, affiner les détails et préparer les passages de grade. À compléter.",
+        "alt": "Pratiquant en hakama noir exécutant une projection ample, vue de côté, mouvement figé en pleine action."
+      },
+      "themed": {
+        "name": "Cours thématique",
+        "audience": "Tous publics",
+        "tag": "Thème du mois",
+        "description": "Un thème différent chaque mois : une technique, un principe, une arme, une approche. À compléter.",
+        "alt": "Le professeur montrant un détail technique à un groupe rassemblé en demi-cercle autour de lui sur le tatami."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Un dojo ouvert à toutes et tous, pour pratiquer l'aïkido dans le respect, l'écoute et la bienveillance.",
+    "nav": {
+      "title": "Navigation",
+      "home": "Accueil",
+      "courses": "Les cours",
+      "schedule": "Horaires & tarifs",
+      "contact": "Contact"
+    },
+    "info": {
+      "title": "L'association",
+      "status": "Statut",
+      "rna": "N° RNA",
+      "siret": "Président du club",
+      "federation": "Fédération"
+    },
+    "contact": {
+      "title": "Nous trouver"
+    },
+    "legal": {
+      "legal": "Mentions légales",
+      "privacy": "Confidentialité",
+      "cookies": "Cookies",
+      "rules": "Règlement intérieur",
+      "engagement": "Engagement du club"
+    },
+    "rights": "Tous droits réservés.",
+    "backToTop": "Haut de page"
+  },
+  "aikido": {
+    "about": "L'art de la paix",
+    "titleA": "L'aïkido",
+    "titleB": "la voie de l'harmonie",
+    "intro": "Un art martial japonais sans compétition, né de la tradition des samouraïs, où l'on apprend à accueillir la force de l'autre plutôt qu'à s'y opposer.",
+    "explore": "Découvrir l'aïkido",
+    "nav": "Sections de la page",
+    "navItems": {
+      "essence": "L'essentiel",
+      "histoire": "Les origines",
+      "ueshiba": "Ō-Sensei",
+      "aujourdhui": "Aujourd'hui"
+    },
+    "aikiLabel": "Et l'aïkido dans tout ça ?",
+    "essence": {
+      "title": "Ce que l'aïkido vous apporte",
+      "lead": "Pas de tournoi, pas de podium, pas d'adversaire : en aïkido, on s'entraîne avec un partenaire, jamais contre lui. Cette approche change tout, sur le tatami comme en dehors.",
+      "benefits": {
+        "body": {
+          "title": "Un corps souple et solide",
+          "text": "Chutes, rotations, déplacements : on travaille la mobilité, l'équilibre, la coordination et la posture, sans jamais chercher la performance."
+        },
+        "mind": {
+          "title": "Un esprit posé",
+          "text": "Rester calme face à une attaque, respirer, se recentrer. Beaucoup de pratiquants y trouvent un précieux contrepoids au stress du quotidien."
+        },
+        "respect": {
+          "title": "Respect et attention",
+          "text": "Le salut, l'écoute du partenaire, le soin du dojo : l'étiquette fait partie intégrante de la pratique."
+        },
+        "defense": {
+          "title": "Se protéger sans nuire",
+          "text": "Les techniques cherchent à neutraliser une attaque tout en préservant, autant que possible, celui qui attaque."
+        },
+        "everyone": {
+          "title": "Accessible à tous",
+          "text": "Jeunes, moins jeunes, sportifs ou non : la pratique s'adapte à chacun et n'exige ni force ni souplesse préalable."
+        },
+        "harmony": {
+          "title": "Sans compétition",
+          "text": "On progresse ensemble. Chacun apprend autant en recevant la technique qu'en la réalisant."
+        }
+      }
+    },
+    "name": {
+      "title": "Trois caractères, une philosophie",
+      "lead": "Le mot aïkidō (合気道) se compose de trois idéogrammes. Ensemble, ils résument l'esprit de l'art.",
+      "chars": {
+        "ai": {
+          "meaning": "unir, harmoniser",
+          "text": "S'accorder au mouvement du partenaire plutôt que de le heurter."
+        },
+        "ki": {
+          "meaning": "énergie, souffle, esprit",
+          "text": "Cette dynamique vitale, faite d'intention, de présence et de respiration, que l'on apprend à sentir et à guider."
+        },
+        "do": {
+          "meaning": "la Voie",
+          "text": "Un chemin d'apprentissage sans fin : l'aïkido est autant une école de vie qu'une technique."
+        }
+      },
+      "sum": "合気道 se traduit souvent par « la voie de l'harmonie des énergies ».",
+      "motto": "« La vraie victoire est la victoire sur soi-même. » Cette maxime, chère au fondateur, résume l'aïkido : le véritable adversaire, ce sont nos propres peurs et notre ego."
+    },
+    "history": {
+      "title": "Des samouraïs à l'aïkido",
+      "lead": "L'aïkido n'est pas né dans une salle de sport, mais de huit siècles de tradition guerrière, puis du parcours singulier d'un homme. Remontons le fil.",
+      "roots": {
+        "kamakura": {
+          "title": "L'âge des guerriers",
+          "text": "À la fin du XIIe siècle, les bushi, guerriers qui deviendront les samouraïs, prennent le pouvoir au Japon. Ils s'entraînent aux arts du champ de bataille : sabre, lance, arc, combat à mains nues en armure. Ces techniques, regroupées sous le nom de bujutsu, sont conçues pour survivre.",
+          "aiki": "C'est dans ce terreau que naissent les projections, les clés articulaires et les désarmements dont l'aïkido hérite.",
+          "alt": "Samouraï en armure traditionnelle (yoroi) et casque kabuto, debout dans un paysage brumeux — estampe ancienne ou reconstitution photographique."
+        },
+        "edo": {
+          "title": "La paix d'Edo : du combat à la Voie",
+          "text": "Sous les shōgun Tokugawa (1603-1868), le Japon connaît plus de deux siècles et demi de paix. Les samouraïs deviennent administrateurs et lettrés. Les écoles (ryū) codifient leurs techniques et y ajoutent une dimension morale et spirituelle, nourrie de bouddhisme zen, de shintō et de confucianisme. Le bushidō, « la voie du guerrier », prend forme.",
+          "aiki": "L'idée que l'entraînement martial est un chemin de perfectionnement personnel, le dō, est la graine de tous les budō modernes.",
+          "alt": "Intérieur d'un ancien dojo en bois : sol de planches, râtelier de bokken, calligraphie au mur — ou estampe ukiyo-e d'un entraînement au sabre."
+        },
+        "meiji": {
+          "title": "Meiji : la fin d'un monde",
+          "text": "La restauration de Meiji met fin à la société féodale. Les samouraïs perdent leurs privilèges et, en 1876, le port du sabre leur est interdit. Beaucoup d'écoles disparaissent. Celles qui survivent se transforment : à côté des arts du combat (bujutsu) émergent des « voies » (budō) tournées vers l'éducation, comme le judo de Kanō Jigorō (1882)."
+        },
+        "daito": {
+          "title": "Takeda Sōkaku et le Daitō-ryū",
+          "text": "Né en 1859, Takeda Sōkaku est l'un des derniers grands maîtres de l'ancien monde. Il enseigne le Daitō-ryū aiki-jūjutsu, un art qu'il dit hérité de la lignée des Minamoto et transmis dans le clan Takeda d'Aizu. Voyageant de dojo en dojo, il forme des élèves choisis. L'un d'eux, un jeune homme originaire de Wakayama, va changer l'histoire : Morihei Ueshiba.",
+          "aiki": "Le terme aiki, « unir les énergies », est au cœur du Daitō-ryū. Ueshiba en fera le principe de son propre art.",
+          "alt": "Portrait d'archive de Takeda Sōkaku : petit homme au regard perçant, en kimono et hakama, début du XXe siècle."
+        }
+      }
+    },
+    "ueshiba": {
+      "title": "Morihei Ueshiba, « Ō-Sensei »",
+      "lead": "Fondateur de l'aïkido, Morihei Ueshiba (1883-1969) est appelé par ses élèves Ō-Sensei, le « Grand Maître ». Son parcours mêle arts martiaux, aventure, spiritualité et quête de paix.",
+      "alt": "Portrait de Morihei Ueshiba âgé : barbe blanche, hakama sombre, regard calme — photographie d'archive.",
+      "facts": {
+        "born": {
+          "label": "Naissance",
+          "value": "14 décembre 1883, Tanabe (Wakayama)"
+        },
+        "died": {
+          "label": "Décès",
+          "value": "26 avril 1969, Tokyo"
+        },
+        "titles": {
+          "label": "Titres",
+          "value": "Ō-Sensei · Kaiso (fondateur)"
+        },
+        "motto": {
+          "label": "Maxime",
+          "value": "Masakatsu Agatsu"
+        }
+      },
+      "events": {
+        "birth": {
+          "title": "Un enfant frêle au bord de la mer",
+          "text": "Morihei naît à Tanabe, port de la côte de Wakayama, dans une famille de propriétaires terriens. Petit et de santé fragile, il préfère les livres. Son père, Yoroku, l'encourage à nager et à pratiquer le sumo. Un jour, il voit ce père, élu local, se faire frapper par des hommes de main d'adversaires politiques : il décide de devenir fort.",
+          "aiki": "La mer, les montagnes et les sanctuaires de la région de Kumano marquent durablement sa sensibilité spirituelle.",
+          "alt": "Côte rocheuse de Tanabe (Wakayama) au lever du soleil, mer calme et petit port de pêche — photographie de paysage."
+        },
+        "youth": {
+          "title": "Jūjutsu, sabre et baïonnette",
+          "text": "Jeune adulte, il étudie plusieurs écoles de jūjutsu et de sabre, notamment le Kitō-ryū et le Yagyū Shingan-ryū, et s'endurcit physiquement. Engagé dans l'armée, il sert pendant la guerre russo-japonaise (1904-1905) et s'y fait une réputation de combattant redoutable malgré sa petite taille, à peine plus d'1,50 m.",
+          "aiki": "Ses techniques à mains nues gardent la logique du sabre et du bâton : c'est pourquoi on pratique aussi les armes en aïkido."
+        },
+        "hokkaido": {
+          "title": "Pionnier à Hokkaidō",
+          "text": "En 1912, Ueshiba prend la tête d'un groupe de familles qui part coloniser les terres glacées et sauvages de Shirataki, à Hokkaidō. Il y défriche, abat des arbres, travaille avec les villageois : une vie rude qui forge son corps comme son caractère.",
+          "aiki": "Ce lien à la terre ne le quittera plus : plus tard, il verra dans l'agriculture une part à part entière de sa pratique.",
+          "alt": "Paysage enneigé de Shirataki, Hokkaidō : forêt de bouleaux et cabane en rondins sous la neige."
+        },
+        "takeda": {
+          "title": "La rencontre avec Takeda Sōkaku",
+          "text": "En 1915, dans une auberge d'Engaru, Ueshiba croise Takeda Sōkaku. Bouleversé par sa maîtrise, il laisse tout de côté pour étudier le Daitō-ryū : il fait construire un dojo chez lui, héberge le maître pendant des mois et le suit dans ses déplacements. Il recevra plus tard une licence d'enseignement."
+        },
+        "ayabe": {
+          "title": "Ayabe et la religion Ōmoto",
+          "text": "Appelé au chevet de son père, il quitte Hokkaidō en 1919. En chemin, il rencontre à Ayabe, près de Kyōto, Deguchi Onisaburō, chef spirituel du mouvement Ōmoto. Son père meurt peu après. En 1920, Ueshiba s'installe à Ayabe, y ouvre un dojo et partage sa vie entre entraînement, agriculture et pratiques spirituelles.",
+          "aiki": "Chez Deguchi, il découvre une vision où l'art du combat devient un chemin de paix et d'harmonie universelle : un tournant décisif.",
+          "alt": "Sanctuaire Ōmoto d'Ayabe : bâtiments en bois et jardin sous la brume, ambiance spirituelle."
+        },
+        "mongolia": {
+          "title": "L'expédition en Mongolie",
+          "text": "En 1924, Ueshiba accompagne Deguchi dans une expédition en Mongolie, un projet utopique de royaume de paix. L'aventure tourne court : le groupe est arrêté et frôle l'exécution. Ueshiba racontera avoir senti, par des éclats de lumière, d'où partaient les balles avant même le tir."
+        },
+        "light": {
+          "title": "L'illumination",
+          "text": "En 1925, un officier de marine, maître de sabre, le défie. Désarmé, Ueshiba esquive toutes ses attaques sans être touché, jusqu'à l'épuisement de l'adversaire. Peu après, dans son jardin, il vit une expérience spirituelle intense : l'univers semble trembler et une lumière dorée l'envahit. Il en tire la conviction que la vraie voie du guerrier n'est pas de vaincre, mais de protéger la vie.",
+          "aiki": "C'est le véritable acte de naissance de l'aïkido : d'une technique de combat, l'art devient une voie de paix."
+        },
+        "kobukan": {
+          "title": "Le Kōbukan, à Tokyo",
+          "text": "Installé à Tokyo à partir de 1927, Ueshiba ouvre en 1931 son propre dojo, le Kōbukan, à Shinjuku. Son art, alors appelé aiki-bujutsu ou aiki-budō, attire militaires, policiers, personnalités et élèves qui deviendront eux-mêmes de grands maîtres, comme Shioda Gōzō ou Tomiki Kenji.",
+          "alt": "Intérieur d'un dojo des années 1930 : grand tatami, élèves en keikogi alignés, Ueshiba au centre — photographie d'archive en noir et blanc."
+        },
+        "iwama": {
+          "title": "Iwama : le nom « aïkidō » est adopté",
+          "text": "En 1942, alors que la guerre fait rage, Ueshiba se retire à Iwama (préfecture d'Ibaraki), où il cultive la terre et fonde un dojo et un sanctuaire dédiés à son art. Le nom aïkidō (合気道) est officiellement adopté la même année. Il y approfondit une pratique centrée sur l'harmonie, le souffle et la dimension spirituelle, qu'il appelle parfois takemusu aiki, l'aiki créatif et spontané.",
+          "aiki": "À Iwama, armes (ken, jō) et mains nues sont étudiés comme un tout cohérent : un héritage encore très présent dans l'enseignement actuel.",
+          "alt": "Dojo et sanctuaire d'Iwama entourés de rizières et de bocage, lumière dorée de fin de journée."
+        },
+        "aikikai": {
+          "title": "L'Aikikai et la renaissance",
+          "text": "Après la guerre, les arts martiaux sont d'abord restreints sous l'Occupation. En 1948, la Fondation Aikikai est reconnue par le ministère de l'Éducation et le Hombu Dōjō rouvre à Tokyo, sous la direction de Kisshōmaru Ueshiba, fils du fondateur. L'aïkido, art de réconciliation, est prêt à se faire connaître."
+        },
+        "legacy": {
+          "title": "L'héritage d'Ō-Sensei",
+          "text": "Dans les années 1950-1960, Ueshiba voyage, donne des démonstrations et reçoit des distinctions officielles. Il s'éteint le 26 avril 1969, à 85 ans, laissant un art qui se pratique aujourd'hui dans le monde entier. Son message tient en une idée : l'aïkido sert à réconcilier, pas à diviser.",
+          "alt": "Ueshiba âgé exécutant une technique face à plusieurs partenaires lors d'une démonstration — photographie d'archive."
+        }
+      }
+    },
+    "world": {
+      "title": "Du Japon au monde",
+      "lead": "Après la mort du fondateur, ses élèves essaiment sur tous les continents. Chacun transmet l'art avec sa sensibilité.",
+      "france": {
+        "title": "L'arrivée en Europe",
+        "text": "L'aïkido s'exporte à partir des années 1950. En France, il est présenté dès 1951 par Mochizuki Minoru, puis développé par des maîtres venus du Japon comme Abe Tadashi, Noro Masamichi ou Tamura Nobuyoshi, qui forment des générations de pratiquants.",
+        "alt": "Démonstration d'aïkido en France dans les années 1950-1960, photographie d'archive en noir et blanc, public en cercle."
+      },
+      "styles": {
+        "title": "Plusieurs écoles, une même source",
+        "text": "Chaque élève de Ueshiba prolonge l'art à sa manière : l'Aikikai, courant le plus répandu, le Yoshinkan de Shioda Gōzō (1955), plus rigoureux, le style Tomiki, qui introduit une forme de compétition, ou la Ki Society de Tōhei Kōichi, centrée sur la coordination du ki. Les formes diffèrent, l'esprit reste le même."
+      },
+      "today": {
+        "year": "Aujourd'hui",
+        "title": "Un art vivant",
+        "text": "L'aïkido se pratique aujourd'hui dans une centaine de pays, par des personnes de tous âges. Il inspire même des formations pour forces de l'ordre, comme celle de la police anti-émeute de Tokyo, longtemps formée au style Yoshinkan. Mais l'essentiel se vit dans les dojos de quartier, comme le nôtre.",
+        "alt": "Pratiquants de tous âges réunis sur le tatami du club, saluts et sourires, lumière chaleureuse — photographie d'ambiance du dojo."
+      }
+    },
+    "today": {
+      "title": "L'aïkido aujourd'hui",
+      "lead": "Que fait-on concrètement sur un tatami ? Voici l'essentiel pour comprendre, ou pour se préparer à venir essayer."
+    },
+    "principles": {
+      "title": "Les grands principes",
+      "lead": "Six idées reviennent sans cesse dans la pratique. Les saisir, c'est déjà comprendre l'aïkido.",
+      "items": {
+        "maai": {
+          "title": "Ma-ai · la distance juste",
+          "text": "Ni trop près, ni trop loin : tout commence par la bonne distance avec le partenaire."
+        },
+        "irimi": {
+          "title": "Irimi & tenkan · entrer et pivoter",
+          "text": "Entrer dans l'attaque ou pivoter pour l'esquiver : deux mouvements de base pour quitter la ligne d'attaque et garder le contrôle."
+        },
+        "kuzushi": {
+          "title": "Kuzushi · déséquilibrer",
+          "text": "On ne lutte pas contre la force du partenaire : on la guide jusqu'à rompre son équilibre, et la technique devient presque sans effort."
+        },
+        "hara": {
+          "title": "Hara · le centre",
+          "text": "Le mouvement part du bas-ventre, centre du corps. Un centre stable, c'est un corps stable."
+        },
+        "kokyu": {
+          "title": "Kokyū · le souffle",
+          "text": "Respiration et mouvement vont ensemble : le souffle rythme le geste et aide à rester calme sous pression."
+        },
+        "zanshin": {
+          "title": "Zanshin · l'esprit qui demeure",
+          "text": "Rester attentif jusqu'à la fin de la technique, et même après. Une présence sereine, toujours en éveil."
+        }
+      }
+    },
+    "partners": {
+      "title": "Tori et uke : un duo",
+      "text": "On s'entraîne toujours à deux. Tori (ou nage) conduit la technique ; uke attaque puis reçoit, et chute si nécessaire. Les rôles s'inversent sans cesse : être uke, c'est apprendre à sentir, à réagir et à tomber sans se faire mal.",
+      "ukemi": "Les chutes (ukemi) s'apprennent très progressivement, à son rythme. Pour celles et ceux qui préfèrent éviter les chutes, des cours adaptés comme l'Aïki Taïso existent.",
+      "attacksTitle": "Quelques attaques classiques",
+      "attacks": {
+        "shomen": {
+          "name": "Shōmen-uchi",
+          "meaning": "frappe verticale à la tête"
+        },
+        "yokomen": {
+          "name": "Yokomen-uchi",
+          "meaning": "frappe oblique sur le côté de la tête"
+        },
+        "tsuki": {
+          "name": "Tsuki",
+          "meaning": "coup droit, estoc"
+        },
+        "katate": {
+          "name": "Katate-dori",
+          "meaning": "saisie d'un poignet"
+        },
+        "ryote": {
+          "name": "Ryōte-dori",
+          "meaning": "saisie des deux poignets"
+        },
+        "ushiro": {
+          "name": "Ushiro-dori",
+          "meaning": "saisie par derrière"
+        }
+      }
+    },
+    "flow": {
+      "title": "Le déroulement d'un cours",
+      "lead": "Un cours dure en général entre une heure et une heure et demie. Voici un déroulé type, avec des durées indicatives pour 1 h 30. Cliquez sur chaque étape.",
+      "step": "Étape {{n}} sur {{total}}",
+      "steps": {
+        "rei": {
+          "title": "Le salut",
+          "text": "On salue en montant sur le tatami, puis le cours s'ouvre par un salut collectif en seiza (à genoux), face au kamiza, le côté d'honneur du dojo, et au professeur. Une manière de laisser les soucis à l'extérieur."
+        },
+        "warmup": {
+          "title": "L'échauffement",
+          "text": "Rotations des articulations, étirements, respiration et déplacements (taï-sabaki) : on prépare les poignets, les épaules, le dos, et on réveille le centre."
+        },
+        "ukemi": {
+          "title": "Les chutes",
+          "text": "Roulades avant et arrière, chutes sur le côté : on apprend à tomber en douceur, avec une progression adaptée à chacun."
+        },
+        "waza": {
+          "title": "Les techniques",
+          "text": "Le professeur montre une technique ; les pratiquants la travaillent en binôme, en alternant tori et uke. Beaucoup de répétition, d'écoute et de corrections amicales."
+        },
+        "free": {
+          "title": "Armes ou pratique libre",
+          "text": "Selon le jour : travail au bokken ou au jō, défense contre armes, ou pratique plus libre face à plusieurs partenaires (randori) pour les plus avancés."
+        },
+        "calm": {
+          "title": "Retour au calme",
+          "text": "Respiration, salut final, remerciements au partenaire et au professeur, puis on remet le dojo en ordre ensemble."
+        }
+      }
+    },
+    "techniques": {
+      "title": "Les techniques de base",
+      "lead": "Les noms japonais peuvent impressionner ; derrière chacun se cache une idée simple. Chaque technique se décline sur de nombreuses attaques, debout, à genoux ou face à plusieurs partenaires.",
+      "note": "Au total, plusieurs dizaines de techniques fondamentales, qui se déclinent presque à l'infini. On les approfondit toute une vie.",
+      "items": {
+        "ikkyo": {
+          "name": "Ikkyō",
+          "meaning": "première technique",
+          "text": "Contrôle du bras et du coude qui conduit le partenaire au sol. La technique fondamentale, celle qu'on travaille toute sa vie."
+        },
+        "nikyo": {
+          "name": "Nikyō",
+          "meaning": "deuxième technique",
+          "text": "Contrôle du poignet par une rotation qui immobilise sans force brute. Précis, subtil, très formateur."
+        },
+        "sankyo": {
+          "name": "Sankyō",
+          "meaning": "troisième technique",
+          "text": "Torsion en spirale du poignet et de l'avant-bras, qui traverse tout le bras et oblige le partenaire à suivre le mouvement."
+        },
+        "shihonage": {
+          "name": "Shihōnage",
+          "meaning": "projection dans les quatre directions",
+          "text": "Le bras est levé comme un sabre puis ramené derrière le partenaire : une grande coupe qui projette ou immobilise. Très emblématique."
+        },
+        "iriminage": {
+          "name": "Iriminage",
+          "meaning": "projection en entrant",
+          "text": "On entre dans le mouvement de l'attaquant et on le guide vers l'arrière dans un geste ample, comme un balancier."
+        },
+        "kotegaeshi": {
+          "name": "Kote-gaeshi",
+          "meaning": "retournement du poignet",
+          "text": "Le poignet est retourné vers l'extérieur : le partenaire chute en suivant le mouvement. Facile à voir, subtil à réussir."
+        },
+        "kaitenage": {
+          "name": "Kaiten-nage",
+          "meaning": "projection rotative",
+          "text": "Le bras de l'attaquant est guidé en un grand cercle : il tourne autour de nous avant la chute. Rotation et fluidité."
+        },
+        "kokyunage": {
+          "name": "Kokyū-nage",
+          "meaning": "projection par le souffle",
+          "text": "Pas de clé : seulement le centre, le timing et le souffle. Parfois la plus difficile à réaliser."
+        }
+      }
+    },
+    "gear": {
+      "title": "La tenue",
+      "lead": "Simple et sobre, elle est pensée pour les saisies, les roulades et… le respect du lieu.",
+      "alt": "Nature morte sur un tatami : keikogi blanc plié, hakama sombre, ceinture et bokken posés côte à côte, lumière douce.",
+      "items": {
+        "keikogi": {
+          "name": "Keikogi",
+          "sub": "la tenue",
+          "text": "Veste et pantalon blancs en coton épais, résistants aux saisies et aux frottements. Un débutant peut commencer en simple survêtement."
+        },
+        "obi": {
+          "name": "Obi",
+          "sub": "la ceinture",
+          "text": "Blanche pour les débutants, noire pour les dan. Les couleurs varient selon les fédérations et pour les enfants."
+        },
+        "hakama": {
+          "name": "Hakama",
+          "sub": "le pantalon large plissé ",
+          "text": "Plissée et portée sur le keikogi, souvent à partir d'un certain grade selon les dojos. Ses sept plis rappellent, selon la tradition, les vertus du budō."
+        },
+        "zori": {
+          "name": "Zōri",
+          "sub": "les sandales",
+          "text": "On pratique pieds nus ; on garde les sandales pour circuler hors du tatami, afin de garder le tapis propre."
+        }
+      }
+    },
+    "weapons": {
+      "title": "Les armes",
+      "lead": "Elles ne servent pas à combattre mais à comprendre : la distance, l'axe, le tranchant du geste. Beaucoup de mouvements à mains nues prolongent ceux du sabre.",
+      "note": "Toutes les armes d'entraînement sont en bois, et jamais tranchantes.",
+      "bokken": {
+        "name": "Bokken",
+        "sub": "sabre en bois",
+        "text": "Réplique du sabre japonais, en chêne. Il enseigne la coupe, la distance et la posture."
+      },
+      "jo": {
+        "name": "Jō",
+        "sub": "bâton",
+        "text": "Bâton en bois d'environ 1,27 m. Il apprend frappes, estocs et projections, avec une grande liberté de mouvement."
+      },
+      "tanto": {
+        "name": "Tantō",
+        "sub": "couteau",
+        "text": "Couteau en bois, pour travailler les défenses contre arme courte, avec prudence et précision."
+      }
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": {
+        "sport": {
+          "q": "Faut-il être sportif ou souple ?",
+          "a": "Non. Les cours s'adaptent à votre condition : souplesse et endurance viennent avec la pratique. Pour une approche plus douce, l'Aïki Taïso est justement conçu pour cela."
+        },
+        "comp": {
+          "q": "Y a-t-il des compétitions ?",
+          "a": "Pas dans l'aïkido tel que l'a transmis Ueshiba, à l'exception du style Tomiki. On s'entraîne ensemble, pas les uns contre les autres."
+        },
+        "defense": {
+          "q": "L'aïkido permet-il de se défendre ?",
+          "a": "C'est avant tout un art martial, qui cultive la lucidité, la gestion de la distance et le calme face à l'agression. Son efficacité dépend du temps de pratique, mais son but premier reste le perfectionnement de soi."
+        },
+        "age": {
+          "q": "À partir de quel âge peut-on pratiquer ?",
+          "a": "Il n'y a pas d'âge limite pour commencer. Nous proposons des cours pour adolescents, pour adultes et un cours adapté pour toutes et tous : consultez la page des cours."
+        },
+        "outfit": {
+          "q": "Que porter pour un premier essai ?",
+          "a": "Une tenue de sport souple (pantalon sans fermeture éclair, t-shirt), sans bijoux, pieds nus sur le tatami. Le keikogi viendra plus tard."
+        },
+        "progress": {
+          "q": "Comment progresse-t-on ?",
+          "a": "Par grades : les kyu, puis les dan, dont le premier est la « ceinture noire ». Le rythme dépend de la fédération et de votre régularité, mais l'essentiel est de progresser à son propre rythme."
+        }
+      }
+    },
+    "cta": {
+      "title": "Prêt à fouler le tatami ?",
+      "text": "Vous avez maintenant les clés pour comprendre l'aïkido. La meilleure façon d'en saisir l'esprit reste d'essayer : découvrez nos cours, nos horaires et les niveaux proposés.",
+      "button": "Voir les cours",
+      "contact": "Nous contacter"
+    }
+  },
+  "evenements": {
+    "about": "Vie du club",
+    "titleA": "Évènements",
+    "titleB": "& vie du club",
+    "intro": "Stages, passages de grade, démonstrations, rencontres : retrouvez tout ce qui rythme la vie du dojo, à venir comme passés.",
+    "explore": "Voir l'index",
+    "next": "Prochain évènement",
+    "now": "En ce moment",
+    "inDays_one": "Dans {{count}} jour",
+    "inDays_other": "Dans {{count}} jours",
+    "discover": "Découvrir",
+    "upcoming": "À venir",
+    "all": "Tous",
+    "filterLabel": "Filtrer par catégorie",
+    "search": "Rechercher un évènement",
+    "indexTitle": "L'index",
+    "count_one": "{{count}} évènement",
+    "count_other": "{{count}} évènements",
+    "noResult": "Aucun évènement ne correspond à votre recherche.",
+    "emptyTitle": "Aucun évènement pour le moment",
+    "emptyText": "Les prochains stages et rencontres seront annoncés ici. Revenez bientôt !",
+    "error": "Impossible de charger les évènements.",
+    "retry": "Réessayer",
+    "ctaTitle": "Une question sur un évènement ?",
+    "ctaText": "Inscriptions, accès, hébergement : écrivez-nous, nous vous répondrons avec plaisir.",
+    "ctaButton": "Nous contacter",
+    "categories": {
+      "stage": "Stage",
+      "grading": "Passage de grade",
+      "demo": "Démonstration",
+      "club": "Vie du club",
+      "other": "Autre"
+    },
+    "detail": {
+      "back": "Tous les évènements",
+      "allEvents": "Tous les évènements",
+      "draft": "Brouillon : cette page n'est visible que par les administrateurs.",
+      "when": "Date",
+      "where": "Lieu",
+      "gallery": "Galerie",
+      "prev": "Évènement précédent",
+      "next": "Évènement suivant",
+      "open": "Agrandir la photo",
+      "close": "Fermer",
+      "prevPhoto": "Photo précédente",
+      "nextPhoto": "Photo suivante",
+      "photoOf": "Photo {{n}} sur {{total}}",
+      "missingTitle": "Évènement introuvable",
+      "missingText": "Cette page n'existe pas ou n'est plus publiée.",
+      "errorTitle": "Chargement impossible",
+      "errorText": "Un problème est survenu. Réessayez dans un instant."
+    }
+  },
+  "club": {
+    "about": "Le club",
+    "titleA": "Le club",
+    "titleB": "histoire & valeurs",
+    "intro": "Du premier cours au dojo d'aujourd'hui : découvrez ceux qui font vivre le club, les lieux et les valeurs qui nous rassemblent.",
+    "explore": "Découvrir le club",
+    "nav": "Sections de la page",
+    "error": "Impossible de charger la page du club.",
+    "retry": "Réessayer",
+    "emptyTitle": "Page en préparation",
+    "emptyText": "L'histoire du club sera bientôt racontée ici.",
+    "ctaTitle": "Envie de nous rejoindre ?",
+    "ctaText": "La meilleure façon de découvrir le club, c'est de venir sur le tatami. Consultez nos cours ou écrivez-nous.",
+    "ctaButton": "Voir les cours",
+    "ctaContact": "Nous contacter",
+    "lightbox": {
+      "open": "Agrandir la photo",
+      "close": "Fermer",
+      "prev": "Photo précédente",
+      "next": "Photo suivante",
+      "photoOf": "Photo {{n}} sur {{total}}"
+    }
   }
 }

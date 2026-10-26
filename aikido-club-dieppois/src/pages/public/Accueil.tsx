@@ -4,6 +4,7 @@ import HeroBanner from "../../components/layout/HeroBanner.tsx"
 import { useTranslation } from "react-i18next";
 import { ArrowUpRight, ArrowRight, ArrowLeft } from "lucide-react";
 import ScrollReveal from "../../components/ui/ScrollReveal.tsx";
+import { useTeachers } from "../../data/profs.ts";
 
 export default function Accueil() {
 
@@ -11,36 +12,11 @@ export default function Accueil() {
   const { t } = useTranslation();
 
   const historyMilestones = [
-    { year: "1980", key: "discovery" },
     { year: "1981", key: "foundation" },
-    { year: "1985", key: "transmission" },
-    { year: "2008", key: "independence" },
-    { year: "2022", key: "teaching" },
     { year: "2025", key: "newChapter" },
   ] as const;
 
-  const teachers = [
-    {
-      key: "gilles",
-      number: "01",
-      image: "/assets/images/prof/gilles.png",
-    },
-    {
-      key: "florent",
-      number: "02",
-      image: "/assets/images/prof/florent.png",
-    },
-    {
-      key: "patrick",
-      number: "03",
-      image: "/assets/images/prof/patrick.png",
-    },
-    {
-      key: "jose",
-      number: "04",
-      image: "/assets/images/prof/jose.png",
-    },
-  ] as const;
+  const teachers = useTeachers();
 
   const teachersTrackRef = useRef<HTMLDivElement>(null);
   const [activeTeacher, setActiveTeacher] = useState(0);
@@ -82,7 +58,7 @@ export default function Accueil() {
                   1981
                 </div>
 
-                <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-neutral-200">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-neutral-200">
                   <img
                     src="/assets/images/quisommenous.png"
                     alt={t("about.imageAlt")}
@@ -195,7 +171,7 @@ export default function Accueil() {
 
             <div className="md:col-span-5">
               <ScrollReveal delay={150}>
-                <div className="relative aspect-[1/2] max-h-200 overflow-hidden rounded-sm bg-neutral-800">
+                <div className="relative aspect-[1/2] max-h-200 overflow-hidden rounded-xl bg-neutral-800">
                   <img
                     src="/assets/images/pratique-aikido.png"
                     alt={t("objective.imageAlt")}
@@ -224,7 +200,7 @@ export default function Accueil() {
                   {t("history.eyebrow")}
                 </p>
 
-                <h2 className="mt-6 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-7xl">
+                <h2 className="mt-6 max-w-3xl text-2xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-5xl">
                   {t("history.title")}
                 </h2>
               </div>
@@ -240,7 +216,7 @@ export default function Accueil() {
             <div className="lg:col-span-5">
               <ScrollReveal>
                 <div className="group relative lg:sticky lg:top-24">
-                  <div className="relative aspect-[4/5] overflow-hidden bg-neutral-200">
+                  <div className="relative aspect-[4/5] overflow-hidden bg-neutral-200 rounded-xl">
                     <img
                       src="/assets/images/accueil/histoire-club.jpg"
                       alt={t("history.imageAlt")}

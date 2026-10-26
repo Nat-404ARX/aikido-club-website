@@ -3,12 +3,11 @@ import { NavLink, Outlet } from "react-router-dom";
 
 const adminLinks = [
   { to: "/admin", label: "Tableau de bord", end: true },
-  { to: "/admin/pages", label: "Pages" },
-  { to: "/admin/cours", label: "Cours" },
-  { to: "/admin/horaires", label: "Horaires et tarifs" },
+  { to: "/admin/pages", label: "Pages et Contenues" },
+  { to: "/admin/cours", label: "Modifier l'organisation des cours" },
   { to: "/admin/evenements", label: "Événements" },
-  { to: "/admin/medias", label: "Médias" },
-  { to: "/admin/messages", label: "Messages" },
+  { to: "/admin/medias", label: "Gestions des Médias" },
+  { to: "/admin/messages", label: "Voir les demandes de renseignements" },
   { to: "/admin/comptes", label: "Comptes administrateurs" },
 ];
 

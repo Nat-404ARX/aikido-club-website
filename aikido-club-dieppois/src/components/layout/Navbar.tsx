@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { useEventNavLinks } from "../../services/eventsService.ts"
 import { useTranslation } from "react-i18next";
 
 import LanguageSwitcher from "../ui/LanguageSwitcher";
@@ -8,29 +9,17 @@ import {
   Menu,
   X,
   ChevronDown,
-  Globe,
-  House,
-  CalendarDays,
-  BookOpen,
-  Clock,
-  Users,
-  Mail,
 } from "lucide-react";
-
-const eventLinks = [
-  { to: "/evenements", labelKey: "nav.allEvents" },
-  // Ajouter ici les pages d'événements une fois définies.
-];
 
 const socialLinks = [
   {
     name: "Facebook",
-    href: "", // Remplacer par l'URL officielle du club.
+    href: "https://www.facebook.com/aikidodieppe",
     icon: "facebook",
   },
   {
     name: "Instagram",
-    href: "", // Remplacer par l'URL officielle du club.
+    href: "https://www.instagram.com/aikidoclubdieppois/", 
     icon: "instagram",
   },
 ];
@@ -39,6 +28,7 @@ const mainLinks = [
   { to: "/club", labelKey: "nav.club" },
   { to: "/aikido", labelKey: "nav.aikido" },
   { to: "/cours", labelKey: "nav.courses" },
+  { to: "/actualite", labelKey: "nav.actu" },
   { to: "/horaires", labelKey: "nav.schedule" },
   { to: "/contact", labelKey: "nav.contact" },
 ];
@@ -92,6 +82,11 @@ function SocialLinks() {
 function EventDropdown({ onNavigate }: { onNavigate?: () => void }) {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
+  const dynamicLinks = useEventNavLinks();
+  const eventLinks = [
+    { to: "/evenements", labelKey: "nav.allEvents" },
+    ...dynamicLinks,
+  ];
 
   return (
     <div
@@ -140,6 +135,9 @@ function EventDropdown({ onNavigate }: { onNavigate?: () => void }) {
                 }`
               }
             >
+              {/*
+              {"label" in l ? l.label : t(l.labelKey)}
+              */}
               {t(eventLink.labelKey)}
             </NavLink>
           ))}
@@ -153,6 +151,11 @@ export default function Navbar() {
   const { t } = useTranslation();
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const dynamicLinks = useEventNavLinks();
+  const eventLinks = [
+    { to: "/evenements", labelKey: "nav.allEvents" },
+    ...dynamicLinks,
+  ];
 
   useEffect(() => {
     setMobileOpen(false);
@@ -182,7 +185,7 @@ export default function Navbar() {
         >
           {/* Remplacer par le logo officiel quand il sera disponible */}
           <div className="flex size-13 items-center p-1 justify-center rounded-md bg-neutral-900 text-[#F2EFE8]">
-            <img src={"/assets/icons/aikido-club-dieppois.avif"} alt="Aïkido Club Dieppois Logo"/>
+            <img src={"/assets/logos/logo_club.png"} alt="Aïkido Club Dieppois Logo" className="rounded-3xl"/>
           </div>
 
           <span className="leading-tight">
@@ -272,7 +275,7 @@ export default function Navbar() {
           aria-label={t("nav.mobileNavigation")}
           aria-hidden={!mobileOpen}
           inert={!mobileOpen}
-          className={`absolute bottom-0 right-0 top-0 flex w-[min(88vw,380px)] flex-col overflow-y-auto bg-[#F2EFE8] p-6 shadow-2xl transition-transform duration-300 ${
+          className={`absolute bottom-0 right-0 top-0 flex w-[min(88vw,380px)] h-[90vh] flex-col overflow-y-auto bg-[#F2EFE8] p-6 shadow-2xl transition-transform duration-300 ${
             mobileOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
