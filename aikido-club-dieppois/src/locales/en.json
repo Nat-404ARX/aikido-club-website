@@ -154,8 +154,8 @@
     "season": "Season",
     "downloadCalendar": "Download the schedule",
     "maximize": "Enlarge the poster",
-    "addCalendar": "Annual schedule to be added",
-    "soonCalendar": "The official poster for the season will be available here as soon as it is received.",
+    "addCalendar": "Annual schedule",
+    "soonCalendar": "The official poster for the season will be available here as soon.",
     "joinClub": "Club Registration",
     "tarif": "Rates and Dues",
     "officialDoc": "Official Season Document",
@@ -166,7 +166,9 @@
     "note": "Prices are for reference only; please consult the document to find out the price of your license based on your situation.",
     "seeYouSoon": "See you soon at the dojo",
     "question": "Any questions before we begin ?",
-    "contactus": "Contact us by email, phone, or directly on our website."
+    "contactus": "Contact us by email, phone, or directly on our website.",
+    "scheduleError": "Unable to load the schedule.",
+    "retry": "Try again"
   },
   "location": {
     "eyebrow": "Join us",
@@ -267,6 +269,10 @@
     "ctaButton": "Contact us",
     "from": "From ",
     "to": " to ",
+    "error": "Unable to load the classes.",
+    "retry": "Try again",
+    "emptyTitle": "Classes coming soon",
+    "emptyText": "The programme will be published here shortly.",
     "maj": "Adult",
     "min": "Child",
     "days": {
@@ -277,50 +283,6 @@
       "fri": "Friday",
       "sat": "Saturday",
       "sun": "Sunday"
-    },
-    "items": {
-      "all": {
-        "name": "All-levels class",
-        "audience": "Ages 14 and up",
-        "tag": "All grades",
-        "description": "The heart of the practice. Beginners and experienced practitioners train together: basic techniques, movement, falling and sequences. To be completed.",
-        "alt": "Wide photo of the tatami during a group class: practitioners in white keikogi and hakama, two pairs mid-technique, soft morning light."
-      },
-      "teen": {
-        "name": "Teen class",
-        "audience": "Ages 10 and up",
-        "tag": "Discovery",
-        "description": "A class designed for teenagers: self-confidence, coordination, respect and team spirit. To be completed.",
-        "alt": "Group of smiling teens at the centre of the tatami, bowing to the teacher, lively and friendly atmosphere."
-      },
-      "weapons": {
-        "name": "Weapons class",
-        "audience": "Ages 14 and up",
-        "tag": "Bokken · Jo · Tanto",
-        "description": "Work with the bokken, jo and tanto to refine distance, precision and accuracy of movement. To be completed.",
-        "alt": "Close-up of two crossing bokken, hands in the foreground, blurred dojo background."
-      },
-      "taiso": {
-        "name": "Aiki Taiso",
-        "audience": "Everyone",
-        "tag": "Physical conditioning",
-        "description": "Adapted aikido class. With no falls (or very few) and little strain on the joints, these classes are especially suited to people with physical difficulties or who worry about getting hurt.",
-        "alt": "Practitioners of all ages doing a stretching or mobility exercise on the tatami, slow and fluid movement, calm atmosphere."
-      },
-      "advanced": {
-        "name": "Advanced class",
-        "audience": "Hakama",
-        "tag": "Refinement",
-        "description": "A demanding class to deepen principles, refine details and prepare for grading. To be completed.",
-        "alt": "Practitioner in black hakama performing a sweeping throw, side view, movement frozen mid-action."
-      },
-      "themed": {
-        "name": "Themed class",
-        "audience": "Everyone",
-        "tag": "Theme of the month",
-        "description": "A different theme each month: a technique, a principle, a weapon, an approach. To be completed.",
-        "alt": "The teacher showing a technical detail to a group gathered in a half-circle around them on the tatami."
-      }
     }
   },
   "footer": {

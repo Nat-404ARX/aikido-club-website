@@ -100,7 +100,7 @@ export default function MentionLegal() {
         </div>
       </header>
 
-      <div className="mx-auto max-w-5xl space-y-5 px-5 pt-8 sm:pt-12">
+      <div className="mx-auto max-w-5xl space-y-5 px-5 pt-8 mb-10 sm:pt-12">
         <LegalSection icon={Building2} title="L’association">
           <dl className="grid gap-5 sm:grid-cols-2">
             <LegalValue

@@ -154,8 +154,8 @@
     "season": "Saison",
     "downloadCalendar": "Télécharger le planning",
     "maximize": "Agrandir l’affiche",
-    "addCalendar": "Planning annuel à ajouter",
-    "soonCalendar": "L’affiche officielle de la saison sera disponible ici dès qu’elle aura été récupérée.",
+    "addCalendar": "Planning annuel",
+    "soonCalendar": "Le planning officielle de la saison sera disponible ici prochainement.",
     "joinClub": "Inscription au club",
     "tarif": "Tarifs et cotisations",
     "officialDoc": "Document officiel de la saison",
@@ -166,7 +166,9 @@
     "note": "Tarif à titre indicatif, consulté le document pour connaitre le prix de votre licence en fonction de votre situation.",
     "seeYouSoon": "À bientôt au dojo",
     "question": "Une question avant de commencer ?",
-    "contactus": "Contacter nous par mail, téléphone ou directement sur notre site."
+    "contactus": "Contacter nous par mail, téléphone ou directement sur notre site.",
+    "scheduleError": "Impossible de charger les horaires.",
+    "retry": "Réessayer"
   },
   "location": {
     "eyebrow": "Nous rejoindre",
@@ -267,6 +269,10 @@
     "ctaButton": "Nous contacter",
     "from": "De ",
     "to": " jusqu'à ",
+    "error": "Impossible de charger les cours.",
+    "retry": "Réessayer",
+    "emptyTitle": "Les cours arrivent bientôt",
+    "emptyText": "Le programme sera publié ici très prochainement.",
     "maj": "Adulte",
     "min": "Enfant",
     "days": {
@@ -277,50 +283,6 @@
       "fri": "Vendredi",
       "sat": "Samedi",
       "sun": "Dimanche"
-    },
-    "items": {
-      "all": {
-        "name": "Cours tous grades",
-        "audience": "À partir de 14 ans",
-        "tag": "Tous grades",
-        "description": "Le cœur de la pratique. Débutants et pratiquants confirmés travaillent ensemble : techniques de base, déplacements, chutes et enchaînements. À compléter.",
-        "alt": "Photo large du tatami pendant un cours collectif : pratiquants en keikogi blanc et hakama, deux binômes en pleine technique, lumière douce du matin."
-      },
-      "teen": {
-        "name": "Cours ados",
-        "audience": "À partir de 10 ans",
-        "tag": "Découverte",
-        "description": "Un cours pensé pour les adolescents : confiance en soi, coordination, respect et esprit d'équipe. À compléter.",
-        "alt": "Groupe d'ados souriants au centre du tatami, saluant le professeur, ambiance dynamique et bienveillante."
-      },
-      "weapons": {
-        "name": "Cours d'armes",
-        "audience": "À partir de 14 ans",
-        "tag": "Bokken · Jo · Tanto",
-        "description": "Travail du bokken, du jo et du tanto pour affiner distance, précision et justesse du geste. À compléter.",
-        "alt": "Gros plan sur deux bokken qui se croisent, mains en premier plan, fond de dojo flou."
-      },
-      "taiso": {
-        "name": "Aïki Taïso",
-        "audience": "Tous publics",
-        "tag": "Préparation physique",
-        "description": "Cours d'aïkido adapté. Sans chute (ou très peu) et peu de contraintes articulaires, ces cours sont particulièrement adaptés aux personnes ayant des difficultés physiques ou appréhendant de se faire mal.",
-        "alt": "Pratiquants de tous âges réalisant un exercice d'étirement ou de mobilité sur le tatami, geste lent et fluide, ambiance calme."
-      },
-      "advanced": {
-        "name": "Cours gradés",
-        "audience": "Hakama",
-        "tag": "Perfectionnement",
-        "description": "Un cours exigeant pour approfondir les principes, affiner les détails et préparer les passages de grade. À compléter.",
-        "alt": "Pratiquant en hakama noir exécutant une projection ample, vue de côté, mouvement figé en pleine action."
-      },
-      "themed": {
-        "name": "Cours thématique",
-        "audience": "Tous publics",
-        "tag": "Thème du mois",
-        "description": "Un thème différent chaque mois : une technique, un principe, une arme, une approche. À compléter.",
-        "alt": "Le professeur montrant un détail technique à un groupe rassemblé en demi-cercle autour de lui sur le tatami."
-      }
     }
   },
   "footer": {

@@ -1,11 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ArrowDown, ArrowUpRight, Clock } from "lucide-react";
 import ScrollReveal from "../../components/ui/ScrollReveal.tsx";
-
-import { courses } from "../../data/cours.ts"
-
-const courseIds = courses.map((c) => c.id);
+import { useCourses } from "../../hooks/useCourses.tsx";
 
 
 function useActiveSection(ids: string[]) {
@@ -39,13 +36,15 @@ function Enso() {
   );
 }
 
-function Photo({ alt, kanji }: { alt: string; kanji: string }) {
+function Photo({ src, alt, kanji }: {src: string; alt: string; kanji: string }) {
   return (
     <figure className="photo-frame group relative">
-      {/* <img src="/images/cours/xxx.jpg" alt={alt} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" /> */}
+      <img src={src} alt={alt} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-[2rem]" /> 
+      {/*
       <div role="img" aria-label={alt} className="photo-placeholder relative flex aspect-[4/5] items-end overflow-hidden rounded-[2rem] border border-[var(--color-border)] p-6">
         <p className="relative z-10 max-w-[18rem] text-xs leading-relaxed text-[var(--color-text-muted)]">{alt}</p>
       </div>
+      */}
       <span aria-hidden className="absolute -bottom-5 -right-3 flex h-16 w-16 rotate-6 items-center justify-center rounded-lg bg-[var(--color-accent)] text-3xl font-semibold text-white shadow-lg shadow-[var(--color-accent)]/25 transition-transform duration-500 group-hover:rotate-0 sm:-right-5 sm:h-20 sm:w-20 sm:text-4xl">
         {kanji}
       </span>
@@ -55,6 +54,8 @@ function Photo({ alt, kanji }: { alt: string; kanji: string }) {
 
 export default function Cours() {
   const { t } = useTranslation();
+  const { courses, state, reload } = useCourses();
+  const courseIds = useMemo(() => courses.map((c) => c.slug), [courses]);
   const active = useActiveSection(courseIds);
 
   return (
@@ -106,7 +107,7 @@ export default function Cours() {
                     }`}
                 >
                   <span aria-hidden className="text-base leading-none">{c.kanji}</span>
-                  {t(`cours.items.${c.id}.name`)}
+                  {c.name}
                 </a>
               </li>
             );
@@ -129,7 +130,7 @@ export default function Cours() {
             <div className="relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-12 lg:gap-20">
               <div className={`lg:col-span-5 ${flip ? "lg:order-2" : ""}`}>
                 <ScrollReveal>
-                  <Photo alt={t(`cours.items.${c.id}.alt`)} kanji={c.kanji} />
+                  <Photo src={c.image} alt={t(`cours.items.${c.id}.alt`)} kanji={c.kanji} />
                 </ScrollReveal>
               </div>
 
@@ -138,17 +139,17 @@ export default function Cours() {
                   <div className="flex flex-wrap gap-2">
                     {(["audience", "tag"] as const).map((k) => (
                       <span key={k} className="rounded-full border border-[var(--color-border)] bg-white px-3 py-1 text-xs font-medium text-[var(--color-text-muted)]">
-                        {t(`cours.items.${c.id}.${k}`)}
+                        {c[k]}
                       </span>
                     ))}
                   </div>
 
                   <h2 className="title-underline mt-6 text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-                    {t(`cours.items.${c.id}.name`)}
+                    {c.name}
                   </h2>
 
                   <p className="mt-8 max-w-xl text-base leading-relaxed text-neutral-600 sm:text-lg">
-                    {t(`cours.items.${c.id}.description`)}
+                    {c.description}
                   </p>
 
                   {/* Horaires */}

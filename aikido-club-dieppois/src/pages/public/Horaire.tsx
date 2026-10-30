@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   ArrowDown,
   ArrowDownToLine,
@@ -14,10 +14,11 @@ import {
 import ScrollReveal from "../../components/ui/ScrollReveal";
 import { useTranslation } from "react-i18next";
 
-import { useWeeklySchedule } from "../../data/cours.ts";
 import { useClubInformation } from "../../hooks/useClubInformation.tsx";
 import { usePricing } from "../../hooks/usePrincing.tsx";
 import GoogleMapEmbed from "../../components/ui/GoogleMapEmbed.tsx";
+
+import { useWeeklySchedule, useCourses } from "../../hooks/useCourses.tsx";
 
 
 function getCurrentDayIndex() {
@@ -33,9 +34,8 @@ function formatPrice(price: number) {
 }
 
 export default function HorairesTarifs() {
-  const weeklySchedule = useWeeklySchedule();
-  const { club } = useClubInformation();
-  const { annualSchedule } = useClubInformation();
+  const { schedule: weeklySchedule, state: scheduleState, reload } = useWeeklySchedule();
+  const { club, annualSchedule } = useClubInformation();
   const pricing = usePricing()[0];
   const [selectedDay, setSelectedDay] = useState(getCurrentDayIndex);
   const [showAnnualImage, setShowAnnualImage] = useState(false);
@@ -45,6 +45,8 @@ export default function HorairesTarifs() {
   const currentDay = weeklySchedule[selectedDay];
 
   const { t } = useTranslation();
+  const { courses, state } = useCourses();
+  const courseIds = useMemo(() => courses.map((c) => c.slug), [courses]);
 
   return (
     <main className="overflow-hidden bg-[#f5f3ee] text-neutral-950">
@@ -166,6 +168,7 @@ export default function HorairesTarifs() {
               )}
             </div>
 
+            
             <div className="mt-6 space-y-3">
               {currentDay.courses.length > 0 ? (
                 currentDay.courses.map((course, index) => (
@@ -213,6 +216,7 @@ export default function HorairesTarifs() {
                 </div>
               )}
             </div>
+            
 
             <p className="mt-5 text-xs leading-relaxed text-neutral-500">
               {t("horaire.confirmHours")}
