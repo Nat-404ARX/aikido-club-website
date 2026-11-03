@@ -578,9 +578,9 @@ export default function Aikido() {
           <div className="grid gap-14 lg:grid-cols-2 lg:gap-16">
             <div>
               <BlockTitle kanji="衣" title={t("aikido.gear.title")} lead={t("aikido.gear.lead")} />
-              <div className="mt-10">
-                {/*<Photo src={"/assets/images/tenu.jpg"} alt={t("aikido.gear.alt")} kanji="袴" />*/}
-              </div>
+                <div className="flex justify-center overflow-hidden rounded-[2rem] mt-10">
+                  <img src={"/assets/images/tenu.jpg"} alt={t("aikido.gear.alt")} className="max-h-140 max-w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </div>
               <ul className="mt-12 divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
                 {gear.map((g) => (
                   <li key={g.id} className="slot-row flex gap-5 py-5">
@@ -599,6 +599,12 @@ export default function Aikido() {
                 <Weapons />
               </div>
               <p className="mt-6 text-sm text-[var(--color-text-muted)]">{t("aikido.weapons.note")}</p>
+              <div className="flex justify-center overflow-hidden rounded-[2rem] mt-10">
+                <img src={"/assets/images/armes-aikido.jpg"} alt={t("aikido.gear.alt")} className="max-h-140 max-w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
+              <div className="flex justify-center overflow-hidden rounded-[2rem] mt-10">
+                <img src={"/assets/images/shinai.png"} alt={t("aikido.gear.alt")} className="max-h-140 max-w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
             </div>
           </div>
 
