@@ -163,6 +163,9 @@
     "allTarif": "Tous les détails des tarifs",
     "joinCondition": "Retrouvez les conditions d’inscription et les informations officielles dans le document du club.",
     "downloadPDF": "Télécharger le PDF",
+    "poster": "L'affiche officielle du club",
+    "posterInfo": "Retrouvez toutes les informations partiques sur l’affiche officielle du club.",
+    "downloadPoster": "Télécharger l'affiche",
     "note": "Tarif à titre indicatif, consulté le document pour connaitre le prix de votre licence en fonction de votre situation.",
     "seeYouSoon": "À bientôt au dojo",
     "question": "Une question avant de commencer ?",
@@ -807,6 +810,102 @@
       "prev": "Photo précédente",
       "next": "Photo suivante",
       "photoOf": "Photo {{n}} sur {{total}}"
+    }
+  },
+  "reglement": {
+    "title": "Règlement intérieur",
+    "description": "Les règles de fonctionnement et de vie collective de l'Aïkido Club Dieppois.",
+    "notice": {
+      "title": "Document provisoire",
+      "text": "Cette page présente une base de règlement intérieur destinée à être complétée et validée par les responsables du club. Les modalités définitives seront communiquées aux adhérents."
+    },
+    "sections": {
+      "object": {
+        "title": "Objet et champ d'application",
+        "p1": "Le présent règlement a pour objectif de définir les règles de fonctionnement de l'Aïkido Club Dieppois et de garantir un cadre de pratique agréable, respectueux et sécurisé pour tous.",
+        "p2": "Il s'adresse à l'ensemble des adhérents, pratiquants, enseignants et personnes participant aux activités organisées par le club."
+      },
+      "registration": {
+        "title": "Inscription et adhésion",
+        "p1": "La participation régulière aux cours est réservée aux personnes ayant effectué les démarches d'inscription auprès du club.",
+        "p2": "Chaque adhérent doit fournir les documents demandés lors de son inscription et s'assurer que son dossier reste à jour.",
+        "p3": "Les modalités d'adhésion, les cotisations et les éventuelles conditions particulières sont communiquées par le club lors de la saison sportive."
+      },
+      "equipment": {
+        "title": "Tenue et matériel",
+        "p1": "La pratique de l'aïkido nécessite une tenue adaptée, généralement composée d'un keikogi (kimono) propre et en bon état.",
+        "p2": "Les bijoux, montres et accessoires susceptibles de provoquer des blessures doivent être retirés avant la pratique. Les ongles doivent être courts et propres.",
+        "p3": "Chaque pratiquant veille à respecter le matériel mis à disposition et à maintenir le dojo propre et ordonné."
+      },
+      "behavior": {
+        "title": "Respect et comportement",
+        "p1": "Le respect des autres pratiquants, des enseignants et des responsables du club est indispensable. La politesse, l'écoute et la bienveillance font partie intégrante de la pratique.",
+        "p2": "Chaque pratiquant doit respecter les consignes données par l'enseignant et adapter sa pratique au niveau et aux capacités de son partenaire.",
+        "p3": "Tout comportement violent, discriminatoire, intimidant ou incompatible avec les valeurs du club n'a pas sa place sur le tatami."
+      },
+      "safety": {
+        "title": "Sécurité et responsabilité",
+        "p1": "Les pratiquants doivent signaler à l'enseignant toute blessure, difficulté physique ou situation pouvant affecter leur sécurité ou celle de leur partenaire.",
+        "p2": "Les exercices doivent être réalisés dans le respect des consignes de l'enseignant et des capacités de chacun. Il est important de ne jamais forcer une technique sur son partenaire.",
+        "p3": "Les mineurs restent soumis aux modalités d'encadrement et de prise en charge définies par le club et leurs responsables légaux."
+      },
+      "image": {
+        "title": "Droit à l'image",
+        "p1": "Des photographies ou vidéos peuvent être réalisées lors des cours ou des événements du club afin d'en présenter les activités.",
+        "p2": "Toute utilisation ou diffusion d'une image identifiable doit respecter les autorisations recueillies auprès des personnes concernées ou de leurs représentants légaux."
+      },
+      "application": {
+        "title": "Application et évolution du règlement",
+        "p1": "Les enseignants et responsables du club veillent au respect du présent règlement et peuvent intervenir lorsqu'une situation le nécessite.",
+        "p2": "Le règlement peut être modifié afin de tenir compte de l'évolution des activités, des besoins du club et des obligations applicables. Les adhérents sont informés des éventuelles modifications."
+      }
+    },
+    "lastUpdate": "Version provisoire — Date de mise à jour à définir"
+  },
+  "engagements": {
+    "title": "Nos engagements",
+    "description": "Faire vivre les valeurs de l'aïkido, sur le tatami comme en dehors.",
+    "introduction": "L'Aïkido Club Dieppois souhaite proposer bien plus qu'une activité sportive. À travers sa pratique, son fonctionnement et ses projets, le club entend promouvoir un environnement ouvert, respectueux et accessible, où chacun peut trouver sa place et progresser à son rythme.",
+    "items": {
+      "ecodesign": {
+        "title": "Un site web plus responsable",
+        "p1": "Le club souhaite limiter l'impact environnemental de sa présence numérique. Cela passe notamment par un site pensé pour rester simple, rapide et agréable à utiliser.",
+        "p2": "L'optimisation des images, la limitation des fonctionnalités superflues et une conception attentive aux ressources utilisées participent à cette démarche d'éco-conception."
+      },
+      "inclusion": {
+        "title": "L'inclusion des femmes dans les arts martiaux",
+        "p1": "Les arts martiaux doivent être ouverts à toutes et à tous. Le club souhaite encourager la pratique féminine de l'aïkido et contribuer à rendre cette discipline accessible sans distinction de genre.",
+        "p2": "Chaque pratiquante doit pouvoir évoluer dans un environnement où elle se sent respectée, légitime et libre de progresser à son propre rythme."
+      },
+      "protection": {
+        "title": "La protection des jeunes pratiquants",
+        "p1": "La sécurité physique et morale des jeunes pratiquants constitue une priorité. Le club souhaite leur offrir un cadre d'apprentissage adapté à leur âge, à leur niveau et à leurs besoins.",
+        "p2": "Le respect, l'écoute, la vigilance et la qualité de l'encadrement sont essentiels pour permettre aux plus jeunes de découvrir et de pratiquer l'aïkido sereinement."
+      },
+      "respect": {
+        "title": "Le respect et la bienveillance",
+        "p1": "L'aïkido repose sur une relation de coopération entre les pratiquants. Le partenaire n'est pas un adversaire : il est celui avec qui l'on apprend et progresse.",
+        "p2": "Le club souhaite faire vivre cet état d'esprit au quotidien en refusant les discriminations, les humiliations et les comportements qui nuisent à la cohésion du groupe."
+      },
+      "transmission": {
+        "title": "La transmission et le partage",
+        "p1": "La pratique de l'aïkido repose sur la transmission de connaissances, de techniques et de valeurs. Chaque pratiquant, quel que soit son niveau, participe à cette dynamique collective.",
+        "p2": "Le club souhaite encourager l'entraide entre débutants et pratiquants expérimentés, ainsi que le partage des expériences et des savoirs."
+      },
+      "accessibility": {
+        "title": "Une pratique ouverte au plus grand nombre",
+        "p1": "L'aïkido peut être pratiqué à différents âges et ne nécessite pas de posséder des qualités physiques particulières pour commencer.",
+        "p2": "Le club souhaite accueillir les personnes qui souhaitent découvrir la discipline et les accompagner dans leur progression, en tenant compte autant que possible de leurs capacités et de leurs contraintes."
+      },
+      "community": {
+        "title": "La vie associative et le collectif",
+        "p1": "Un club ne se résume pas à ses cours : il repose aussi sur les échanges, les rencontres et l'implication de ses membres.",
+        "p2": "L'Aïkido Club Dieppois souhaite entretenir cet esprit collectif et favoriser une vie associative conviviale, dans laquelle chacun peut contribuer à faire vivre le club."
+      }
+    },
+    "conclusion": {
+      "title": "Des engagements qui se construisent dans le temps",
+      "text": "Ces engagements constituent une direction que le club souhaite suivre et faire évoluer. Ils ne sont pas figés : ils doivent se traduire progressivement dans les pratiques, les décisions et les initiatives de l'association."
     }
   }
 }

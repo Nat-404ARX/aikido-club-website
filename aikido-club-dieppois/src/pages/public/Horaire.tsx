@@ -446,6 +446,46 @@ export default function HorairesTarifs() {
         </div>
       </section>
 
+      <section className="bg-[#f5f3ee] px-6 py-20 sm:py-28">
+        <img
+          src="/documents/affiche.jpeg"
+          alt="Photo du Dojo de l’Aïkido Club Dieppois"
+          className="mx-auto max-h-[500px] w-auto rounded-2xl object-cover object-center shadow-lg sm:max-h-[600px]"
+        />
+        <div className="mx-auto max-w-7xl">
+          <ScrollReveal delay={150}>
+            <div className="mt-8 flex flex-col items-start justify-between gap-6 rounded-2xl bg-neutral-950 p-6 text-white sm:flex-row sm:items-center sm:p-8">
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10">
+                  <FileText size={22} />
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold">
+
+                    {t("horaire.poster")}
+                  </h3>
+                  <p className="mt-2 max-w-xl text-sm leading-relaxed text-white/60">
+
+                    {t("horaire.posterInfo")}
+                  </p>
+                </div>
+              </div>
+
+              <a
+                href={"/documents/affiche.jpeg"}
+                download
+                className="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 bg-white px-5 py-3 text-sm font-semibold text-neutral-950 transition-colors hover:bg-[var(--color-accent)] hover:text-white"
+              >
+                <ArrowDownToLine size={18} />
+
+                {t("horaire.downloadPoster")}
+              </a>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
 
       {/* CONCLUSION */}
       <section className="bg-white px-6 py-20 sm:py-28">

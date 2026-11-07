@@ -40,7 +40,7 @@ export default function Confidentialite() {
 
       <div className="mx-auto max-w-5xl space-y-5 px-5 pt-8 mb-10 sm:pt-12">
         <section>
-          <h2>1. Informations générales</h2>
+          <h2 className="text-xl font-bold tracking-tight sm:text-2xl">1. Informations générales</h2>
           <p>
             La présente politique de confidentialité explique
             comment l'Aïkido Club Dieppois collecte, utilise,
@@ -61,7 +61,7 @@ export default function Confidentialite() {
         </section>
 
         <section>
-          <h2>2. Objet de la politique</h2>
+          <h2 className="text-xl font-bold tracking-tight sm:text-2xl">2. Objet de la politique</h2>
           <p>
             Lors de l'utilisation du site, l'Aïkido Club Dieppois
             peut être amené à collecter et traiter certaines
@@ -92,7 +92,7 @@ export default function Confidentialite() {
         </section>
 
         <section>
-          <h2>3. Responsable du traitement</h2>
+          <h2 className="text-xl font-bold tracking-tight sm:text-2xl">3. Responsable du traitement</h2>
           <p>
             Le responsable du traitement des données personnelles
             collectées sur le site est :
@@ -111,9 +111,9 @@ export default function Confidentialite() {
         </section>
 
         <section>
-          <h2>4. Données personnelles collectées</h2>
+          <h2 className="text-xl font-bold tracking-tight sm:text-2xl">4. Données personnelles collectées</h2>
 
-          <h3>4.1. Formulaire de contact</h3>
+          <h3 className="text-lg font-bold tracking-tight sm:text-xl">4.1. Formulaire de contact</h3>
           <p>
             Lorsque vous utilisez le formulaire de contact,
             les informations suivantes peuvent être collectées :
@@ -130,7 +130,7 @@ export default function Confidentialite() {
             de vous apporter une réponse.
           </p>
 
-          <h3>4.2. Données de navigation</h3>
+          <h3 className="text-lg font-bold tracking-tight sm:text-xl">4.2. Données de navigation</h3>
           <p>
             Lors de votre navigation, certaines informations
             techniques peuvent être recueillies, notamment
@@ -145,7 +145,7 @@ export default function Confidentialite() {
         </section>
 
         <section>
-          <h2>5. Finalités des traitements</h2>
+          <h2 className="text-xl font-bold tracking-tight sm:text-2xl">5. Finalités des traitements</h2>
           <p>
             Les données personnelles sont collectées uniquement
             pour répondre aux besoins du fonctionnement du site
@@ -174,7 +174,7 @@ export default function Confidentialite() {
         </section>
 
         <section>
-          <h2>6. Destinataires des données personnelles</h2>
+          <h2 className="text-xl font-bold tracking-tight sm:text-2xl">6. Destinataires des données personnelles</h2>
           <p>
             Les données personnelles sont destinées aux personnes
             habilitées de l'Aïkido Club Dieppois, dans la limite
@@ -198,7 +198,7 @@ export default function Confidentialite() {
         </section>
 
         <section>
-          <h2>7. Transfert des données hors de l'Union européenne</h2>
+          <h2 className="text-xl font-bold tracking-tight sm:text-2xl">7. Transfert des données hors de l'Union européenne</h2>
           <p>
             Certains prestataires techniques peuvent être amenés
             à traiter des données depuis des pays situés en dehors
@@ -212,7 +212,7 @@ export default function Confidentialite() {
         </section>
 
         <section>
-          <h2>8. Durée de conservation</h2>
+          <h2 className="text-xl font-bold tracking-tight sm:text-2xl">8. Durée de conservation</h2>
           <p>
             Les données personnelles sont conservées pendant
             une durée adaptée à la finalité pour laquelle elles
@@ -228,7 +228,7 @@ export default function Confidentialite() {
         </section>
 
         <section>
-          <h2>9. Droits des utilisateurs</h2>
+          <h2 className="text-xl font-bold tracking-tight sm:text-2xl">9. Droits des utilisateurs</h2>
           <p>
             Conformément à la réglementation applicable,
             toute personne concernée dispose, selon les conditions
@@ -276,7 +276,7 @@ export default function Confidentialite() {
         </section>
 
         <section>
-          <h2>10. Sécurité des données</h2>
+          <h2 className="text-xl font-bold tracking-tight sm:text-2xl">10. Sécurité des données</h2>
           <p>
             L'Aïkido Club Dieppois met en œuvre des mesures
             techniques et organisationnelles destinées à protéger
@@ -291,7 +291,7 @@ export default function Confidentialite() {
         </section>
 
         <section>
-          <h2>11. Liens vers des sites tiers</h2>
+          <h2 className="text-xl font-bold tracking-tight sm:text-2xl">11. Liens vers des sites tiers</h2>
           <p>
             Le site peut contenir des liens vers des services
             ou des sites externes, notamment des réseaux sociaux.
@@ -306,9 +306,9 @@ export default function Confidentialite() {
         </section>
 
         <section>
-          <h2>12. Gestion des cookies</h2>
+          <h2 className="text-xl font-bold tracking-tight sm:text-2xl">12. Gestion des cookies</h2>
 
-          <h3>12.1. Qu'est-ce qu'un cookie ?</h3>
+          <h3 className="text-lg font-bold tracking-tight sm:text-xl">12.1. Qu'est-ce qu'un cookie ?</h3>
           <p>
             Un cookie est un petit fichier enregistré sur votre
             terminal lors de la consultation d'un site internet.
@@ -316,7 +316,7 @@ export default function Confidentialite() {
             relatives à votre navigation ou à vos préférences.
           </p>
 
-          <h3>12.2. Les catégories de cookies</h3>
+          <h3 className="text-lg font-bold tracking-tight sm:text-xl">12.2. Les catégories de cookies</h3>
           <p>
             Le site peut utiliser différentes catégories de cookies
             ou de technologies similaires :
@@ -339,7 +339,7 @@ export default function Confidentialite() {
             </li>
           </ul>
 
-          <h3>12.3. Gestion de vos préférences</h3>
+          <h3 className="text-lg font-bold tracking-tight sm:text-xl">12.3. Gestion de vos préférences</h3>
           <p>
             Vous pouvez accepter, refuser ou modifier vos préférences
             concernant les cookies et les services tiers à tout
@@ -353,7 +353,7 @@ export default function Confidentialite() {
         </section>
 
         <section>
-          <h2>13. Contact et réclamations</h2>
+          <h2 className="text-xl font-bold tracking-tight sm:text-2xl">13. Contact et réclamations</h2>
           <p>
             Pour toute question concernant cette politique
             ou le traitement de vos données personnelles,

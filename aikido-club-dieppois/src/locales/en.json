@@ -163,6 +163,9 @@
     "allTarif": "Full pricing details",
     "joinCondition": "Please see the club's document for registration requirements and official information.",
     "downloadPDF": "Download the PDF",
+    "poster": "The official club poster",
+    "posterInfo": "Find all the practical information on the club's official poster.",
+    "downloadPoster": "Download the poster",
     "note": "Prices are for reference only; please consult the document to find out the price of your license based on your situation.",
     "seeYouSoon": "See you soon at the dojo",
     "question": "Any questions before we begin ?",
@@ -807,6 +810,102 @@
       "prev": "Previous photo",
       "next": "Next photo",
       "photoOf": "Photo {{n}} of {{total}}"
+    }
+  },
+  "reglement": {
+    "title": "Internal Rules",
+    "description": "The rules governing the activities and community life of the Aïkido Club Dieppois.",
+    "notice": {
+      "title": "Provisional document",
+      "text": "This page presents a draft set of internal rules to be completed and approved by the club's representatives. The final arrangements will be communicated to members."
+    },
+    "sections": {
+      "object": {
+        "title": "Purpose and scope",
+        "p1": "These internal rules aim to define how the Aïkido Club Dieppois operates and to provide a pleasant, respectful and safe environment for everyone.",
+        "p2": "They apply to all members, practitioners, instructors and anyone taking part in activities organised by the club."
+      },
+      "registration": {
+        "title": "Registration and membership",
+        "p1": "Regular participation in classes is reserved for individuals who have completed the club's registration process.",
+        "p2": "Each member must provide the documents requested during registration and ensure that their membership information remains up to date.",
+        "p3": "Membership procedures, fees and any specific conditions are communicated by the club at the beginning of each sporting season."
+      },
+      "equipment": {
+        "title": "Clothing and equipment",
+        "p1": "Aikido practice requires suitable clothing, generally consisting of a clean and well-maintained keikogi (training uniform).",
+        "p2": "Jewellery, watches and accessories that could cause injuries must be removed before practice. Fingernails should be kept short and clean.",
+        "p3": "Each practitioner must respect the equipment provided and help keep the dojo clean and tidy."
+      },
+      "behavior": {
+        "title": "Respect and conduct",
+        "p1": "Respect for fellow practitioners, instructors and club representatives is essential. Courtesy, attentiveness and kindness are an integral part of practice.",
+        "p2": "Each practitioner must follow the instructor's guidance and adapt their practice to their partner's level and abilities.",
+        "p3": "Violent, discriminatory, intimidating or otherwise inappropriate behaviour has no place on the mat."
+      },
+      "safety": {
+        "title": "Safety and responsibility",
+        "p1": "Practitioners must inform the instructor of any injury, physical difficulty or situation that could affect their own safety or that of their partner.",
+        "p2": "Exercises must be performed in accordance with the instructor's guidance and each person's abilities. Techniques must never be forced on a partner.",
+        "p3": "Specific supervision and care arrangements defined by the club and legal guardians apply to minors."
+      },
+      "image": {
+        "title": "Image rights",
+        "p1": "Photographs or videos may be taken during classes or club events to showcase the club's activities.",
+        "p2": "Any use or publication of an identifiable image must comply with the permissions obtained from the individuals concerned or their legal representatives."
+      },
+      "application": {
+        "title": "Application and amendments",
+        "p1": "The club's instructors and representatives ensure that these rules are followed and may intervene when necessary.",
+        "p2": "These rules may be amended to reflect changes in activities, the club's needs and applicable requirements. Members will be informed of any changes."
+      }
+    },
+    "lastUpdate": "Provisional version — Update date to be determined"
+  },
+  "engagements": {
+    "title": "Our commitments",
+    "description": "Bringing the values of aikido to life, both on and off the mat.",
+    "introduction": "The Aïkido Club Dieppois aims to offer more than just a sporting activity. Through its practice, organisation and projects, the club seeks to promote an open, respectful and accessible environment where everyone can find their place and progress at their own pace.",
+    "items": {
+      "ecodesign": {
+        "title": "A more responsible website",
+        "p1": "The club aims to reduce the environmental impact of its digital presence. This includes designing a website that remains simple, fast and pleasant to use.",
+        "p2": "Optimising images, limiting unnecessary features and paying attention to resource usage are all part of this eco-design approach."
+      },
+      "inclusion": {
+        "title": "Including women in martial arts",
+        "p1": "Martial arts should be open to everyone. The club aims to encourage women to practise aikido and help make this discipline accessible regardless of gender.",
+        "p2": "Every female practitioner should be able to develop in an environment where she feels respected, welcome and free to progress at her own pace."
+      },
+      "protection": {
+        "title": "Protecting young practitioners",
+        "p1": "The physical and emotional safety of young practitioners is a priority. The club aims to provide a learning environment suited to their age, level and needs.",
+        "p2": "Respect, attentive listening, vigilance and quality supervision are essential to helping younger members discover and practise aikido in a safe environment."
+      },
+      "respect": {
+        "title": "Respect and kindness",
+        "p1": "Aikido is based on cooperation between practitioners. A training partner is not an opponent, but someone with whom we learn and progress.",
+        "p2": "The club aims to put this mindset into practice every day by rejecting discrimination, humiliation and any behaviour that harms group cohesion."
+      },
+      "transmission": {
+        "title": "Passing on knowledge and sharing",
+        "p1": "Aikido practice involves passing on knowledge, techniques and values. Every practitioner, regardless of experience, contributes to this shared learning process.",
+        "p2": "The club aims to encourage mutual support between beginners and experienced practitioners, as well as the sharing of experiences and knowledge."
+      },
+      "accessibility": {
+        "title": "A practice open to everyone",
+        "p1": "Aikido can be practised at different ages and does not require any particular physical abilities to get started.",
+        "p2": "The club aims to welcome anyone interested in discovering the discipline and support their progress, taking their abilities and circumstances into account whenever possible."
+      },
+      "community": {
+        "title": "Community and collective life",
+        "p1": "A club is about more than its classes: it also relies on relationships, shared experiences and the involvement of its members.",
+        "p2": "The Aïkido Club Dieppois aims to maintain this collective spirit and encourage a friendly community life in which everyone can help the association thrive."
+      }
+    },
+    "conclusion": {
+      "title": "Commitments that grow over time",
+      "text": "These commitments represent a direction the club wishes to follow and develop. They are not fixed: they should gradually be reflected in the association's practices, decisions and initiatives."
     }
   }
 }

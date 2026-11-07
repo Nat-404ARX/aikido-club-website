@@ -4,7 +4,10 @@ import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import Waves from "../components/layout/Waves"
 
+import { usePageTracking } from "../hooks/usePageTracking";
+
 export default function PublicLayout() {
+  usePageTracking();
   return (
     <div className="public-site min-h-screen flex flex-col">
       <Navbar />
