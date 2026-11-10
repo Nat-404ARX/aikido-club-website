@@ -21,6 +21,7 @@ import Engagement from "./pages/public/Engagement.tsx";
 import Reglement from "./pages/public/Reglement.tsx";
 
 import AdminLogin from "./pages/admin/AdminLogin.tsx";
+import AcceptInvitation from "./pages/admin/AcceptInvitation.tsx";
 import AdminDashboard from "./pages/admin/AdminDashboard.tsx";
 import AdminPages from "./pages/admin/AdminPages.tsx";
 import AdminComptes from "./pages/admin/AdminComptes.tsx";
@@ -71,6 +72,7 @@ export default function App() {
       
       {/* Connexion : accessible sans être connecté */}
       <Route path="/admin/login" element={<AdminLogin />} />
+      <Route path="/admin/accept-invitation" element={<AcceptInvitation />} />
 
       {/* Toutes les routes ci-dessous sont protégées */}
       <Route element={<ProtectedAdminRoute />}>

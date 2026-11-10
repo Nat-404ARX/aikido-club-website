@@ -236,10 +236,17 @@ Deno.serve(async (req: Request): Promise<Response> => {
         if (existingUser) {
           userId = existingUser.id;
         } else {
-          const { data, error } =
-            await adminClient.auth.admin.inviteUserByEmail(email);
+          const appUrl = Deno.env.get("APP_URL");
 
-          if (error) throw error;
+          if (!appUrl) {
+            throw new Error("La variable APP_URL est manquante.");
+          }
+
+          const { data, error } =
+            await adminClient.auth.admin.inviteUserByEmail(email, {
+              redirectTo: `${appUrl}/admin/accept-invitation`,
+            });
+            
           if (!data.user) throw new Error("L'invitation n'a créé aucun utilisateur.");
 
           userId = data.user.id;

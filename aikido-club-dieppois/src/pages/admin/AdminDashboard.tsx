@@ -176,7 +176,6 @@ export default function AdminDashboard() {
     try { await messagesService.setStatus(id, "read"); messages.refresh(); } finally { setBusyId(null); }
   };
 
-  // Provenance : totaux par type + détail
   const byType = (Object.keys(SOURCE_LABELS) as SourceType[])
     .map((type) => ({ type, visits: stats?.sources.filter((s) => s.source_type === type).reduce((a, s) => a + s.visits, 0) ?? 0 }))
     .filter((s) => s.visits > 0)
@@ -194,8 +193,8 @@ export default function AdminDashboard() {
       <header className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="text-sm capitalize text-neutral-500">{dateLabel}</p>
-          <h1 className="mt-1 text-2xl font-semibold text-neutral-900">{hour < 18 ? "Bonjour" : "Bonsoir"} 👋</h1>
-          <p className="mt-1 text-sm text-neutral-500">Voici l'activité du club et du site en un coup d'œil.</p>
+          <h1 className="mt-1 text-2xl font-semibold text-neutral-900">{hour < 18 ? "Bonjour" : "Bonsoir"}</h1>
+          <p className="mt-1 text-sm text-neutral-500">Voici l'activité du site en un coup d'œil.</p>
         </div>
         <div role="radiogroup" aria-label="Période des statistiques" className="inline-flex rounded-lg border border-neutral-200 bg-white p-1">
           {([7, 30, 90] as const).map((d) => (
@@ -240,10 +239,10 @@ export default function AdminDashboard() {
           hint={stats && stats.visits ? `${(stats.views / stats.visits).toFixed(1).replace(".", ",")} pages par visite` : undefined}
         />
         <Kpi
-          label="Évènements à venir" icon={CalendarDays} to="/admin/evenements"
+          label="Évènements" icon={CalendarDays} to="/admin/evenements"
           value={events.data ? events.data.upcoming.length : null}
           hint={events.data
-            ? events.data.next ? `Prochain : ${events.data.next.title}` : "Aucun évènement programmé"
+            ? events.data.next ? `Dernier mis en ligne : ${events.data.next.title}` : "Aucun évènement"
             : undefined}
         />
       </div>
@@ -340,11 +339,11 @@ export default function AdminDashboard() {
               <div className="space-y-4 text-sm">
                 {events.data.next ? (
                   <div className="rounded-lg bg-neutral-50 p-3">
-                    <p className="text-xs text-neutral-500">Prochain évènement</p>
+                    <p className="text-xs text-neutral-500">Les évènements</p>
                     <p className="mt-1 font-semibold text-neutral-900">{events.data.next.title}</p>
                     <p className="text-neutral-500">{formatEventDate(events.data.next.event_date, events.data.next.end_date, "fr")}</p>
                   </div>
-                ) : <p className="text-neutral-500">Aucun évènement à venir.</p>}
+                ) : <p className="text-neutral-500">Aucun évènement</p>}
                 <p className="text-neutral-500">
                   {events.data.published} publié{events.data.published > 1 ? "s" : ""}
                   {events.data.drafts > 0 && <> · <span className="font-medium text-neutral-800">{events.data.drafts} brouillon{events.data.drafts > 1 ? "s" : ""}</span></>}
@@ -366,8 +365,7 @@ export default function AdminDashboard() {
         )}
         {noData && (
           <p className="rounded-lg bg-neutral-50 p-4 text-sm text-neutral-600">
-            Aucune visite enregistrée sur cette période. Le suivi démarre dès que <code className="rounded bg-neutral-200 px-1">usePageTracking()</code> est
-            ajouté à PublicLayout et que le site est consulté en ligne (les visites en local ne sont pas comptées).
+            Aucune visite enregistrée sur cette période.
           </p>
         )}
         {stats && !noData && <DailyChart daily={stats.daily} />}
