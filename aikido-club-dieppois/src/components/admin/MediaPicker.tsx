@@ -12,14 +12,25 @@ interface MediaPickerProps {
   onSelect: (media: MediaFile) => void;
   initialCategory?: MediaCategory;
   label?: string;
+  open?: boolean;
+  onClose?: () => void;
 }
 
 export default function MediaPicker({
   onSelect,
   initialCategory = "accueil",
   label = "Choisir une image",
+  open: controlledOpen,
+  onClose,
 }: MediaPickerProps) {
-  const [open, setOpen] = useState(false);
+  const [internalOpen, setInternalOpen] = useState(false);
+
+  const open = controlledOpen ?? internalOpen;
+
+  const close = () => {
+    setInternalOpen(false);
+    onClose?.();
+  };
   const [category, setCategory] = useState<MediaCategory>(initialCategory);
   const [files, setFiles] = useState<MediaFile[]>([]);
   const [loading, setLoading] = useState(false);
@@ -60,7 +71,7 @@ export default function MediaPicker({
     <>
       <button
         type="button"
-        onClick={() => setOpen(true)}
+        onClick={() => setInternalOpen(true)}
         className="inline-flex items-center justify-center gap-2 rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm font-medium transition hover:bg-neutral-50"
       >
         <Image size={17} />
@@ -71,7 +82,7 @@ export default function MediaPicker({
         <div
           className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 p-4"
           onMouseDown={(event) => {
-            if (event.target === event.currentTarget) setOpen(false);
+            if (event.target === event.currentTarget) close();
           }}
         >
           <section
@@ -91,7 +102,7 @@ export default function MediaPicker({
               </div>
               <button
                 type="button"
-                onClick={() => setOpen(false)}
+                onClick={() => close()}
                 aria-label="Fermer la bibliothèque"
                 className="rounded-lg p-2 hover:bg-neutral-100"
               >
@@ -173,7 +184,7 @@ export default function MediaPicker({
             <footer className="border-t border-neutral-200 p-4 text-right">
               <button
                 type="button"
-                onClick={() => setOpen(false)}
+                onClick={() => close()}
                 className="rounded-lg border border-neutral-200 px-4 py-2 text-sm hover:bg-neutral-50"
               >
                 Annuler

@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import {
   Leaf,
   Users,
@@ -7,14 +6,28 @@ import {
   GraduationCap,
   HandHeart,
   Venus,
+  type LucideIcon,
 } from "lucide-react";
+
+import { useEngagements } from "../../hooks/useEngagement.tsx";
+
+
+const iconMap: Record<string, LucideIcon> = {
+  Leaf,
+  Users,
+  HeartHandshake,
+  ShieldCheck,
+  GraduationCap,
+  HandHeart,
+  Venus,
+};
 
 function CommitmentCard({
   icon: Icon,
   title,
   children,
 }: {
-  icon: React.ElementType;
+  icon: LucideIcon;
   title: string;
   children: React.ReactNode;
 }) {
@@ -24,10 +37,12 @@ function CommitmentCard({
         <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#20282D] text-[#D5A46B] transition-colors group-hover:bg-[#303B42]">
           <Icon size={23} aria-hidden="true" />
         </div>
+
         <h2 className="text-lg font-bold text-neutral-900 sm:text-xl">
           {title}
         </h2>
       </div>
+
       <div className="space-y-3 text-sm leading-7 text-neutral-600">
         {children}
       </div>
@@ -36,7 +51,27 @@ function CommitmentCard({
 }
 
 export default function Engagement() {
-  const { t } = useTranslation();
+  const { engagements, sections, loading, error } = useEngagements();
+
+  if (loading) {
+    return (
+      <main className="min-h-screen bg-neutral-50 px-5 py-20">
+        <p className="text-center text-sm text-neutral-500">
+          Chargement des engagements...
+        </p>
+      </main>
+    );
+  }
+
+  if (error || !engagements) {
+    return (
+      <main className="min-h-screen bg-neutral-50 px-5 py-20">
+        <p className="text-center text-sm text-red-600">
+          Impossible de charger les engagements du club.
+        </p>
+      </main>
+    );
+  }
 
   return (
     <main className="min-h-screen bg-neutral-50 pb-16">
@@ -45,88 +80,58 @@ export default function Engagement() {
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#D5A46B]">
             Aïkido Club Dieppois
           </p>
+
           <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">
-            {t("engagements.title")}
+            {engagements.title}
           </h1>
+
           <p className="mt-4 max-w-2xl text-sm leading-6 text-neutral-300 sm:text-base">
-            {t("engagements.description")}
+            {engagements.description}
           </p>
+
           <div className="mt-7 h-1 w-12 rounded-full bg-[#D5A46B]" />
         </div>
       </header>
 
       <div className="mx-auto mb-10 max-w-5xl space-y-5 px-5 pt-8 sm:pt-12">
+        {/* Introduction */}
         <div className="mb-8 max-w-3xl">
           <p className="text-base leading-7 text-neutral-600">
-            {t("engagements.introduction")}
+            {engagements.introduction}
           </p>
         </div>
 
-        <CommitmentCard
-          icon={Leaf}
-          title={t("engagements.items.ecodesign.title")}
-        >
-          <p>{t("engagements.items.ecodesign.p1")}</p>
-          <p>{t("engagements.items.ecodesign.p2")}</p>
-        </CommitmentCard>
+        {/* Cartes des engagements */}
+        {sections.map((section) => {
+          const Icon = iconMap[section.icon] ?? HeartHandshake;
 
-        <CommitmentCard
-          icon={Venus}
-          title={t("engagements.items.inclusion.title")}
-        >
-          <p>{t("engagements.items.inclusion.p1")}</p>
-          <p>{t("engagements.items.inclusion.p2")}</p>
-        </CommitmentCard>
+          return (
+            <CommitmentCard
+              key={section.id}
+              icon={Icon}
+              title={section.title}
+            >
+              {section.content.map((paragraph, index) => (
+                <p key={`${section.id}-${index}`}>
+                  {paragraph}
+                </p>
+              ))}
+            </CommitmentCard>
+          );
+        })}
 
-        <CommitmentCard
-          icon={ShieldCheck}
-          title={t("engagements.items.protection.title")}
-        >
-          <p>{t("engagements.items.protection.p1")}</p>
-          <p>{t("engagements.items.protection.p2")}</p>
-        </CommitmentCard>
-
-        <CommitmentCard
-          icon={HeartHandshake}
-          title={t("engagements.items.respect.title")}
-        >
-          <p>{t("engagements.items.respect.p1")}</p>
-          <p>{t("engagements.items.respect.p2")}</p>
-        </CommitmentCard>
-
-        <CommitmentCard
-          icon={GraduationCap}
-          title={t("engagements.items.transmission.title")}
-        >
-          <p>{t("engagements.items.transmission.p1")}</p>
-          <p>{t("engagements.items.transmission.p2")}</p>
-        </CommitmentCard>
-
-        <CommitmentCard
-          icon={Users}
-          title={t("engagements.items.accessibility.title")}
-        >
-          <p>{t("engagements.items.accessibility.p1")}</p>
-          <p>{t("engagements.items.accessibility.p2")}</p>
-        </CommitmentCard>
-
-        <CommitmentCard
-          icon={HandHeart}
-          title={t("engagements.items.community.title")}
-        >
-          <p>{t("engagements.items.community.p1")}</p>
-          <p>{t("engagements.items.community.p2")}</p>
-        </CommitmentCard>
-
+        {/* Conclusion */}
         <div className="rounded-xl bg-[#20282D] p-6 text-white sm:p-8">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D5A46B]">
             Aïkido Club Dieppois
           </p>
+
           <h2 className="mt-3 text-xl font-bold">
-            {t("engagements.conclusion.title")}
+            {engagements.conclusionTitle}
           </h2>
+
           <p className="mt-3 max-w-3xl text-sm leading-7 text-neutral-300">
-            {t("engagements.conclusion.text")}
+            {engagements.conclusionText}
           </p>
         </div>
       </div>

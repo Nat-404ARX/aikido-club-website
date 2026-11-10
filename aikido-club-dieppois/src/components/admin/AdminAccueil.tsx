@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
-import { Eye, Image as ImageIcon, Save } from "lucide-react";
+import { Eye, Image, ImagePlus as ImageIcon, Save, ImagePlus } from "lucide-react";
 import {
   defaultHeroBanner,
   getHeroBanner,
   saveHeroBanner,
   type HeroBannerData,
 } from "../../services/heroBannerService";
+import MediaPicker from "./MediaPicker.tsx";
+import { toUrls } from "../../lib/mediaPick.ts";
 
 export default function AdminAccueil() {
   const [banner, setBanner] = useState<HeroBannerData>(defaultHeroBanner);
@@ -13,6 +15,7 @@ export default function AdminAccueil() {
   const [isSaving, setIsSaving] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [showMediaPicker, setShowMediaPicker] = useState(false);
 
   useEffect(() => {
     let active = true;
@@ -175,22 +178,15 @@ export default function AdminAccueil() {
                 htmlFor="banner-image"
                 className="mb-2 block text-sm font-medium text-neutral-800"
               >
-                URL de l’image
+                Image de fonds
               </label>
-              <input
-                id="banner-image"
-                type="url"
-                value={banner.image_url}
-                onChange={(event) =>
-                  updateField("image_url", event.target.value)
-                }
-                placeholder="https://…"
-                className="w-full rounded-lg border border-neutral-300 px-3 py-2.5 outline-none focus:border-neutral-700 focus:ring-2 focus:ring-neutral-200"
-              />
-              <p className="mt-1 text-xs text-neutral-500">
-                La sélection depuis la bibliothèque de médias sera ajoutée
-                ensuite.
-              </p>
+              <button
+                type="button"
+                className={"flex items-center gap-3 rounded-lg border border-neutral-300 px-3 py-2.5 outline-none focus:border-neutral-700"}
+                onClick={() => setShowMediaPicker(true)}
+              >
+                <ImagePlus className="size-4" aria-hidden />Choisir une image
+              </button>
             </div>
 
             <div className="grid gap-5 sm:grid-cols-2">
@@ -233,10 +229,6 @@ export default function AdminAccueil() {
 
             <div className="flex items-center gap-2 rounded-lg bg-neutral-100 p-3 text-sm text-neutral-600">
               <ImageIcon aria-hidden="true" className="size-5 shrink-0" />
-              <span>
-                Les changements sont visibles dans l’aperçu. Ils ne sont pas
-                encore enregistrés en base de données.
-              </span>
             </div>
           </form>
 
@@ -318,6 +310,15 @@ export default function AdminAccueil() {
           </button>
         </div>
       </section>
+      {showMediaPicker && (
+        <MediaPicker
+          open
+          onClose={() => setShowMediaPicker(false)}
+          onSelect={(media) => {
+            setShowMediaPicker(false);
+          }}
+        />
+      )}
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, House, Users, ContactRound, Landmark } from "lucide-react";
+import { ArrowRight, House, Users, ContactRound, Landmark, BookOpen, HandHeart } from "lucide-react";
 
 export default function AdminPages() {
   return (
@@ -68,7 +68,6 @@ export default function AdminPages() {
           </p>
         </Link>
 
-
         <Link
           to="/admin/pages/informations-club"
           className="group rounded-xl border border-neutral-200 bg-white p-5 transition hover:border-neutral-400 hover:shadow-sm"
@@ -113,6 +112,54 @@ export default function AdminPages() {
           <p className="mt-2 text-sm leading-relaxed text-neutral-500">
             Racontez l’histoire du club : sections, textes, photos, chronologie et
             chiffres clés, sans toucher au code.
+          </p>
+        </Link>
+        <Link
+          to="/admin/pages/reglement"
+          className="group rounded-xl border border-neutral-200 bg-white p-5 transition hover:border-neutral-400 hover:shadow-sm"
+        >
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex size-11 items-center justify-center rounded-lg bg-neutral-100 text-neutral-700">
+              <BookOpen aria-hidden="true" className="size-5" />
+            </div>
+
+            <ArrowRight
+              aria-hidden="true"
+              className="size-5 text-neutral-400 transition group-hover:translate-x-1 group-hover:text-neutral-900"
+            />
+          </div>
+
+          <h2 className="mt-5 text-lg font-semibold text-neutral-900">
+            Règlement intérieur
+          </h2>
+
+          <p className="mt-2 text-sm leading-relaxed text-neutral-500">
+            Gérez les règles de fonctionnement du club : textes, sections,
+            traductions, icônes et ordre d'affichage.
+          </p>
+        </Link>
+        <Link
+          to="/admin/pages/engagements"
+          className="group rounded-xl border border-neutral-200 bg-white p-5 transition hover:border-neutral-400 hover:shadow-sm"
+        >
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex size-11 items-center justify-center rounded-lg bg-neutral-100 text-neutral-700">
+              <HandHeart aria-hidden="true" className="size-5" />
+            </div>
+
+            <ArrowRight
+              aria-hidden="true"
+              className="size-5 text-neutral-400 transition group-hover:translate-x-1 group-hover:text-neutral-900"
+            />
+          </div>
+
+          <h2 className="mt-5 text-lg font-semibold text-neutral-900">
+            Nos engagements
+          </h2>
+
+          <p className="mt-2 text-sm leading-relaxed text-neutral-500">
+            Modifiez les engagements du club : introduction, conclusion,
+            sections, traductions et organisation du contenu.
           </p>
         </Link>
       </div>
