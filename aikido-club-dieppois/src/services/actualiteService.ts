@@ -37,7 +37,6 @@ const demoPosts: Actualite[] = [
 export async function getActualites(
   limit = 20,
 ): Promise<ActualitesResponse> {
-  // Prévisualisation locale, activée explicitement.
   if (DEMO_MODE) {
     return {
       data: demoPosts.slice(0, limit),

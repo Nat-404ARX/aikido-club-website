@@ -30,7 +30,7 @@ export type EventRow = {
   created_at: string;
   updated_at: string;
 };
-/** Version légère (liste, index, navbar) : sans paragraphes ni photos */
+
 export type EventCard = Omit<EventRow, "sections" | "photos" | "created_at" | "updated_at">;
 export type EventDraft = Omit<EventRow, "id" | "created_at" | "updated_at"> & { id?: string };
 

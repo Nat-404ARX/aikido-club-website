@@ -105,6 +105,7 @@ function EventDropdown({ onNavigate }: { onNavigate?: () => void }) {
         className="inline-flex min-h-10 items-center gap-1 rounded-md px-3 text-sm transition-colors hover:bg-black/5 focus-visible:outline focus-visible:outline-2"
       >
         {t("nav.events")}
+        
         <ChevronDown
           aria-hidden="true"
           className={`size-4 transition-transform duration-200 ${
@@ -120,7 +121,7 @@ function EventDropdown({ onNavigate }: { onNavigate?: () => void }) {
             : "invisible -translate-y-1 opacity-0"
         }`}
       >
-        <div className="rounded-lg border border-black/10 bg-[#F2EFE8]/95 p-2 text-neutral-900 shadow-xl backdrop-blur-xl">
+        <div className="flex flex-col gap-1 rounded-lg border border-black/10 bg-[#F2EFE8]/95 p-2 text-neutral-900 shadow-xl backdrop-blur-xl">
           {eventLinks.map((eventLink) => (
             <NavLink
               key={eventLink.to}
@@ -135,10 +136,7 @@ function EventDropdown({ onNavigate }: { onNavigate?: () => void }) {
                 }`
               }
             >
-              {/*
-              {"label" in l ? l.label : t(l.labelKey)}
-              */}
-              {t(eventLink.labelKey)}
+              {"label" in eventLink ? eventLink.label : t(eventLink.labelKey)}
             </NavLink>
           ))}
         </div>
@@ -183,7 +181,6 @@ export default function Navbar() {
           aria-label={t("nav.home")}
           className="flex shrink-0 items-center gap-3 rounded-md focus-visible:outline focus-visible:outline-2"
         >
-          {/* Remplacer par le logo officiel quand il sera disponible */}
           <div className="flex size-13 items-center p-1 justify-center rounded-md bg-neutral-900 text-[#F2EFE8]">
             <img src={"/assets/logos/logo_club.png"} alt="Aïkido Club Dieppois Logo" className="rounded-3xl"/>
           </div>
@@ -198,7 +195,6 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Navigation desktop */}
         <nav
           aria-label={t("nav.mainNavigation")}
           className="hidden items-center gap-1 lg:flex"
@@ -241,7 +237,6 @@ export default function Navbar() {
           <LanguageSwitcher />
         </div>
 
-        {/* Bouton burger mobile et tablette */}
         <button
           type="button"
           aria-label={mobileOpen ? t("nav.closeMenu") : t("nav.openMenu")}
@@ -298,12 +293,12 @@ export default function Navbar() {
               </NavLink>
             ))}
 
-            <div className="mt-2 border-y border-black/10 py-3">
+            <div className="flex flex-col gap-1 mt-2 border-y border-black/10 py-3">
               <p className="px-4 pb-2 text-xs font-semibold uppercase tracking-widest text-neutral-500">
                 {t("nav.events")}
               </p>
 
-              {eventLinks.map((link) => (
+              {eventLinks.slice(0, 1).map((link) => (
                 <NavLink
                   key={link.to}
                   to={link.to}

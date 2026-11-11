@@ -12,7 +12,6 @@ import {
 const heroChars = ["行", "事"];
 const kanjiOf = (c: EventCategory) => EVENT_CATEGORIES.find((x) => x.id === c)?.kanji ?? "他";
 
-/* ---------- Prochain évènement (mis en avant) ---------- */
 function Featured({ event }: { event: EventCard }) {
   const { t, i18n } = useTranslation();
   const d = daysUntil(event.event_date);
@@ -56,7 +55,6 @@ function Featured({ event }: { event: EventCard }) {
   );
 }
 
-/* ---------- Ligne de l'index ---------- */
 function IndexRow({ event, i }: { event: EventCard; i: number }) {
   const { t, i18n } = useTranslation();
   const date = new Date(`${event.event_date}T00:00:00`);
