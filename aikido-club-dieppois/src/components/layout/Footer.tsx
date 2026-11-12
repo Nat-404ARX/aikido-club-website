@@ -125,6 +125,10 @@ export default function Footer() {
                 <Phone size={18} className="shrink-0" aria-hidden />
                 <a href={`tel:${club.phoneHref}`} className={link}>{club.phone}</a>
               </li>
+              <li className="flex gap-3">
+                <img src={"/assets/icons/artix.svg"} className="shrink-0 w-6" aria-hidden />
+                <a href={`https://dev.artix-studio.fr`} className={link}>{t(`footer.by`)}</a>
+              </li>
             </ul>
           </div>
         </div>

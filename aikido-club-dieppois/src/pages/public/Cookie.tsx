@@ -40,7 +40,7 @@ export default function Cookies() {
   const [customizing, setCustomizing] = useState(false);
   const [functional, setFunctional] = useState(false);
 
-  if (!ready || consent !== null) return null;
+  //if (!ready || consent !== null) return null;
 
   return (
     <main className="min-h-screen bg-neutral-50 pb-16">
