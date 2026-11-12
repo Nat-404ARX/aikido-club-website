@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useState } from "react";
 import {
   ArrowDown,
   ArrowDownToLine,
@@ -18,7 +18,7 @@ import { useClubInformation } from "../../hooks/useClubInformation.tsx";
 import { usePricing } from "../../hooks/usePrincing.tsx";
 import GoogleMapEmbed from "../../components/ui/GoogleMapEmbed.tsx";
 
-import { useWeeklySchedule, useCourses } from "../../hooks/useCourses.tsx";
+import { useWeeklySchedule } from "../../hooks/useCourses.tsx";
 
 
 function getCurrentDayIndex() {
@@ -34,7 +34,7 @@ function formatPrice(price: number) {
 }
 
 export default function HorairesTarifs() {
-  const { schedule: weeklySchedule, state: scheduleState, reload } = useWeeklySchedule();
+  const { schedule: weeklySchedule } = useWeeklySchedule();
   const { club, annualSchedule } = useClubInformation();
   const pricing = usePricing()[0];
   const [selectedDay, setSelectedDay] = useState(getCurrentDayIndex);
@@ -45,12 +45,9 @@ export default function HorairesTarifs() {
   const currentDay = weeklySchedule[selectedDay];
 
   const { t } = useTranslation();
-  const { courses, state } = useCourses();
-  const courseIds = useMemo(() => courses.map((c) => c.slug), [courses]);
 
   return (
     <main className="overflow-hidden bg-[#f5f3ee] text-neutral-950">
-      {/* INTRODUCTION */}
       <section className="px-6 pb-18 pt-18 sm:pb-16 sm:pt-16 lg:pb-20 lg:pt-20">
         <div className="mx-auto max-w-7xl">
           <ScrollReveal>

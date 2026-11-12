@@ -129,7 +129,7 @@ export default function EvenementDetail() {
   const [state, setState] = useState<"loading" | "ready" | "missing" | "error">("loading");
   const [all, setAll] = useState<EventCard[]>([]);
   const [open, setOpen] = useState<number | null>(null);
-  const [coverRef, coverIn] = useInView<HTMLDivElement>(0.1);
+  //const [coverRef, coverIn] = useInView<HTMLDivElement>(0.1);
 
   useEffect(() => {
     let alive = true;

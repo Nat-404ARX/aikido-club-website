@@ -3,7 +3,6 @@ import {
   Cookie,
   ShieldCheck,
   SlidersHorizontal,
-  X,
 } from "lucide-react";
 
 const CONSENT_KEY = "aikido-club-cookie-consent";
@@ -38,8 +37,8 @@ function readConsent(): Consent | null {
 export function useCookieConsent() {
   const [consent, setConsent] = useState<Consent | null>(null);
   const [ready, setReady] = useState(false);
-  const [customizing, setCustomizing] = useState(false);
-  const [functional, setFunctional] = useState(false);
+  //const [customizing, setCustomizing] = useState(false);
+  //const [functional, setFunctional] = useState(false);
 
   useEffect(() => {
     setConsent(readConsent());
@@ -212,7 +211,6 @@ export default function CookieConsent() {
   );
 }
 
-/** Bouton à placer dans le pied de page pour rouvrir les préférences. */
 export function CookiePreferencesButton() {
   const [available, setAvailable] = useState(false);
 

@@ -159,7 +159,7 @@ function PublicationCard({
 
 export default function Actualites() {
   const { t, i18n } = useTranslation();
-  const { club, annualSchedule } =
+  const { club } =
     useClubInformation();
   const FACEBOOK_PAGE_URL = club.facebook;
   const [posts, setPosts] = useState<Actualite[]>([]);

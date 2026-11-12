@@ -17,6 +17,13 @@
   box-sizing: border-box;
 }
 
+@media (min-width: 640px) {
+  main {
+    overflow-x: hidden;
+  }
+}
+
+
 html {
   min-width: 320px;
   scroll-behavior: smooth;
@@ -82,4 +89,8 @@ h4 {
   font-feature-settings: "liga";
   -webkit-font-feature-settings: "liga";
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+main {
+  width: 100vw;
 }

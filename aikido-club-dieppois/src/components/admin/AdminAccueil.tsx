@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
-import { Eye, Image, ImagePlus as ImageIcon, Save, ImagePlus } from "lucide-react";
+import { Eye, ImagePlus as ImageIcon, Save, ImagePlus } from "lucide-react";
 import {
   defaultHeroBanner,
   getHeroBanner,
   saveHeroBanner,
   type HeroBannerData,
-} from "../../services/heroBannerService";
+} from "../../services/herobannerService.ts";
 import MediaPicker from "./MediaPicker.tsx";
-import { toUrls } from "../../lib/mediaPick.ts";
+//import { toUrls } from "../../lib/mediaPick.ts";
 
 export default function AdminAccueil() {
   const [banner, setBanner] = useState<HeroBannerData>(defaultHeroBanner);

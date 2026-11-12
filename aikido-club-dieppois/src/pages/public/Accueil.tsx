@@ -8,7 +8,6 @@ import { useTeachers } from "../../data/profs.ts";
 
 export default function Accueil() {
 
-  const featuredEvent = null;
   const { t } = useTranslation();
 
   const historyMilestones = [
@@ -45,7 +44,7 @@ export default function Accueil() {
 
   return (
     <>
-      <HeroBanner featuredEvent={featuredEvent} />
+      <HeroBanner />
 
       <section className="relative overflow-hidden bg-[#f4f1e9] text-neutral-950">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 py-24 md:grid-cols-12 md:items-center md:gap-10 md:px-10 md:py-32">

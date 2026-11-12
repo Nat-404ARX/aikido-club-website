@@ -5,9 +5,9 @@ import {
   SlidersHorizontal,
   ExternalLink,
 } from "lucide-react";
-import { useState, useEffect } from "react";
+//import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useCookieConsent } from "../../components/ui/CookieConsentContext.tsx";
+//import { useCookieConsent } from "../../components/ui/CookieConsentContext.tsx";
 
 function CookieSection({
   icon: Icon,
@@ -34,11 +34,10 @@ function CookieSection({
 }
 
 export default function Cookies() {
-  const { consent, ready, saveConsent, reopenPreferences } =
-    useCookieConsent();
+  //const { consent, ready, saveConsent, reopenPreferences } = useCookieConsent();
 
-  const [customizing, setCustomizing] = useState(false);
-  const [functional, setFunctional] = useState(false);
+  //const [customizing, setCustomizing] = useState(false);
+  //const [functional, setFunctional] = useState(false);
 
   //if (!ready || consent !== null) return null;
 

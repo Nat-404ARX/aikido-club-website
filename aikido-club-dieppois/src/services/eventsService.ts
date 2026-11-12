@@ -88,7 +88,7 @@ export async function deleteEvent(id: string): Promise<void> {
 const CHANGED = "events:changed";
 export const notifyEventsChanged = () => window.dispatchEvent(new Event(CHANGED));
 
-/** Renvoie les `limit` évènements publiés les plus récents, au format de la navbar */
+
 export function useEventNavLinks(limit = 10) {
   const [links, setLinks] = useState<{ to: string; label: string }[]>([]);
   useEffect(() => {

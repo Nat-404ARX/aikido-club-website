@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ArrowUp, ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 
@@ -21,12 +20,9 @@ const legalLinks = [
   { key: "engagement", to: "/engagement" },
 ];
 
-
-
-/* ------------------------------------------------------------------ */
 export default function Footer() {
   const { t } = useTranslation();
-  const { club, annualSchedule, loading, error } =
+  const { club } =
     useClubInformation();
 
   const associationInfo = [

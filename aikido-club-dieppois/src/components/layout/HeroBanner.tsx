@@ -161,12 +161,14 @@ export default function HeroBanner() {
               </div>
 
               <div className="relative flex min-h-[300px] items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 md:min-h-[420px]">
-                <img
-                  src={featuredEvent.image}
-                  alt=""
-                  className="absolute inset-0 h-full w-full object-cover"
-                  loading="lazy"
-                />
+                {featuredEvent.image && (
+                  <img
+                    src={featuredEvent.image}
+                    alt=""
+                    className="absolute inset-0 h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-neutral-950/10 to-transparent" />
               </div>
             </div>

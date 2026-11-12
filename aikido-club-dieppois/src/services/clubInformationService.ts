@@ -56,6 +56,20 @@ export const defaultClubInformation: ClubInformationInput = {
   season: "2026-2027",
   annual_schedule_image: "/assets/images/horaires/planning-annuel.jpg",
   annual_schedule_pdf: "",
+
+  legal_club_number: "",
+  legal_association_type: "",
+  legal_discipline: "",
+  legal_president_name: "",
+  legal_social_object: "",
+  legal_practice_address: "",
+  legal_registered_office: "",
+  legal_publication_director: "",
+  legal_host_name: "",
+  legal_host_company: "",
+  legal_host_address: "",
+  legal_host_contact: "",
+  legal_partner_url: "",
 };
 
 const DOCUMENT_BUCKET = "club-documents";

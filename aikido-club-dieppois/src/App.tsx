@@ -39,16 +39,6 @@ import AdminReglement from "./components/admin/AdminReglement.tsx";
 import AdminEngagement from "./components/admin/AdminEngagement.tsx";
 
 
-
-function PageEnConstruction( titre: any ) {
-  return (
-    <section className="mx-auto max-w-5xl px-5 py-16">
-      <h1 className="text-3xl font-bold">{titre}</h1>
-      <p className="mt-3">Cette page est en cours de construction.</p>
-    </section>
-  );
-}
-
 export default function App() {
   return (
     <Routes>

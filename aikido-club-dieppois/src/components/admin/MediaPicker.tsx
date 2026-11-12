@@ -64,7 +64,7 @@ export default function MediaPicker({
 
   function choose(media: MediaFile) {
     onSelect(media);
-    setOpen(false);
+    setInternalOpen(false);
   }
 
   return (

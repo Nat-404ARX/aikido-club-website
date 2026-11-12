@@ -36,31 +36,42 @@ function Enso() {
   );
 }
 
-function Photo({ src, alt, kanji }: {src: string; alt: string; kanji: string }) {
+function Photo({
+  src,
+  alt,
+  kanji,
+}: {
+  src: string | null | undefined;
+  alt: string;
+  kanji: string;
+}) {
+  if (!src) return null;
+
   return (
     <figure className="photo-frame group relative">
-      <img src={src} alt={alt} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-[2rem]" /> 
-      {/*
-      <div role="img" aria-label={alt} className="photo-placeholder relative flex aspect-[4/5] items-end overflow-hidden rounded-[2rem] border border-[var(--color-border)] p-6">
-        <p className="relative z-10 max-w-[18rem] text-xs leading-relaxed text-[var(--color-text-muted)]">{alt}</p>
-      </div>
-      */}
-      <span aria-hidden className="absolute -bottom-5 -right-3 flex h-16 w-16 rotate-6 items-center justify-center rounded-lg bg-[var(--color-accent)] text-3xl font-semibold text-white shadow-lg shadow-[var(--color-accent)]/25 transition-transform duration-500 group-hover:rotate-0 sm:-right-5 sm:h-20 sm:w-20 sm:text-4xl">
+      <img
+        src={src}
+        alt={alt}
+        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-[2rem]"
+      />
+
+      <span
+        aria-hidden
+        className="absolute -bottom-5 -right-3 flex h-16 w-16 rotate-6 items-center justify-center rounded-lg bg-[var(--color-accent)] text-3xl font-semibold text-white shadow-lg shadow-[var(--color-accent)]/25 transition-transform duration-500 group-hover:rotate-0 sm:-right-5 sm:h-20 sm:w-20 sm:text-4xl"
+      >
         {kanji}
       </span>
     </figure>
   );
 }
-
 export default function Cours() {
   const { t } = useTranslation();
-  const { courses, state, reload } = useCourses();
+  const { courses } = useCourses();
   const courseIds = useMemo(() => courses.map((c) => c.slug), [courses]);
   const active = useActiveSection(courseIds);
 
   return (
     <main className="bg-[var(--color-background)] text-[var(--color-text)]">
-      {/* ============ HERO ============ */}
       <section className="relative overflow-hidden px-6 pb-12 pt-12 sm:pb-16 lg:pt-16">
         <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-8">
@@ -128,11 +139,17 @@ export default function Cours() {
             </span>
 
             <div className="relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-12 lg:gap-20">
-              <div className={`lg:col-span-5 ${flip ? "lg:order-2" : ""}`}>
-                <ScrollReveal>
-                  <Photo src={c.image} alt={t(`cours.items.${c.id}.alt`)} kanji={c.kanji} />
-                </ScrollReveal>
-              </div>
+              {c.image && (
+                <div className={`lg:col-span-5 ${flip ? "lg:order-2" : ""}`}>
+                  <ScrollReveal>
+                    <Photo
+                      src={c.image}
+                      alt={t(`cours.items.${c.id}.alt`)}
+                      kanji={c.kanji}
+                    />
+                  </ScrollReveal>
+                </div>
+              )}
 
               <div className={`lg:col-span-7 ${flip ? "lg:order-1" : ""}`}>
                 <ScrollReveal>

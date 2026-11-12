@@ -1,7 +1,4 @@
-import { useTranslation } from "react-i18next";
-
 export const useTeachers = () => {
-  const { t } = useTranslation('translation', { keyPrefix: 'cours' });
   return [
     {
       key: "gilles",

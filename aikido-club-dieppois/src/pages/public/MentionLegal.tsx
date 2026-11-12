@@ -5,7 +5,6 @@ import {
   Phone,
   Monitor,
   ExternalLink,
-  CircleHelp,
 } from "lucide-react";
 
 function LegalSection({

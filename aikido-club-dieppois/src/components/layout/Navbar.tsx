@@ -308,7 +308,7 @@ export default function Navbar() {
                     }`
                   }
                 >
-                  {t(link.labelKey)}
+                  {"labelKey" in link ? t(link.labelKey) : link.label}
                 </NavLink>
               ))}
             </div>

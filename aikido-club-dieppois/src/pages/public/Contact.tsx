@@ -23,12 +23,11 @@ import { useClubInformation } from "../../hooks/useClubInformation.tsx";
 
 export default function Contact() {
   const { t } = useTranslation();
-  const { club, annualSchedule } =
-    useClubInformation();
+  const { club } = useClubInformation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
-  const contactItems = [
+  const contactItems: IconItem[] = [
     {
       key: "email",
       value: club.email,
@@ -76,8 +75,20 @@ export default function Contact() {
   ];
 
   type IconItem =
-    | { key: string; iconType: "image"; icon: string }
-    | { key: string; iconType: "lucide"; icon: LucideIcon };
+    | {
+      key: string;
+      value: string;
+      href: string;
+      iconType: "image";
+      icon: string;
+    }
+    | {
+      key: string;
+      value: string;
+      href: string;
+      iconType: "lucide";
+      icon: LucideIcon;
+    };
 
   const renderIcon = (item: IconItem) => {
     if (item.iconType === "image") {

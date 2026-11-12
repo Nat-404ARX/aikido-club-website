@@ -332,7 +332,7 @@ export default function AdminEvenement() {
         </section>
       </div>
 
-      {pick && <MediaPicker open multiple={pick === "photos"} onClose={() => setPick(null)} onSelect={handlePick} />}
+      {pick && <MediaPicker open /*multiple={pick === "photos"}*/ onClose={() => setPick(null)} onSelect={handlePick} />}
     </main>
   );
 }
