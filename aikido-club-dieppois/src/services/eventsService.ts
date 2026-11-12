@@ -30,7 +30,7 @@ export type EventRow = {
   created_at: string;
   updated_at: string;
 };
-/** Version légère (liste, index, navbar) : sans paragraphes ni photos */
+
 export type EventCard = Omit<EventRow, "sections" | "photos" | "created_at" | "updated_at">;
 export type EventDraft = Omit<EventRow, "id" | "created_at" | "updated_at"> & { id?: string };
 
@@ -88,7 +88,7 @@ export async function deleteEvent(id: string): Promise<void> {
 const CHANGED = "events:changed";
 export const notifyEventsChanged = () => window.dispatchEvent(new Event(CHANGED));
 
-/** Renvoie les `limit` évènements publiés les plus récents, au format de la navbar */
+
 export function useEventNavLinks(limit = 10) {
   const [links, setLinks] = useState<{ to: string; label: string }[]>([]);
   useEffect(() => {

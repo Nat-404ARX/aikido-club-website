@@ -110,7 +110,7 @@ export default function AdminComptes() {
 
   async function handleRevoke(admin: AdminUser) {
     const confirmed = window.confirm(
-      `Révoquer l'accès administrateur de ${admin.email} ?\n\nSon compte Supabase ne sera pas supprimé.`
+      `Révoquer l'accès administrateur de ${admin.email} ?`
     );
 
     if (!confirmed) return;
@@ -255,8 +255,6 @@ export default function AdminComptes() {
           </form>
 
           <p className="mt-4 text-xs leading-5 text-neutral-500">
-            Un compte invité devra suivre le processus d'invitation Supabase.
-            Attribue le rôle super-admin uniquement aux personnes de confiance.
           </p>
         </section>
 

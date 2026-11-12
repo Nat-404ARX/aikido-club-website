@@ -17,7 +17,7 @@ function Img({ item, onOpen, className = "", natural = false }: { item: IndexedP
   return (
     <button
       ref={ref} type="button" data-in={inView} onClick={() => onOpen(item.index)} aria-label={t("evenements.detail.open")}
-      className={`cut-reveal group relative block w-full overflow-hidden rounded-[1.5rem] bg-[var(--color-surface)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)] ${className}`}
+      className={`group relative block w-full overflow-hidden rounded-[1.5rem] bg-[var(--color-surface)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)] ${className}`}
     >
       <img
         src={item.photo.url} alt={item.photo.alt ?? ""} loading="lazy" decoding="async"
@@ -27,7 +27,6 @@ function Img({ item, onOpen, className = "", natural = false }: { item: IndexedP
   );
 }
 
-/** Grappe de 1, 2 ou 3 photos */
 function Cluster({ photos, onOpen }: { photos: IndexedPhoto[]; onOpen: OpenFn }) {
   if (photos.length === 1)
     return <Img item={photos[0]} onOpen={onOpen} className="aspect-[4/3] lg:aspect-[4/5]" />;
@@ -47,7 +46,6 @@ function Cluster({ photos, onOpen }: { photos: IndexedPhoto[]; onOpen: OpenFn })
   );
 }
 
-/** Texte : les lignes vides séparent les paragraphes */
 function Prose({ body }: { body: string }) {
   return (
     <div className="space-y-5 text-base leading-relaxed text-neutral-600 sm:text-lg">
@@ -64,7 +62,6 @@ function SectionBlock({ item, onOpen }: { item: PlannedSection; onOpen: OpenFn }
     <h2 className="title-underline text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">{section.subtitle}</h2>
   );
 
-  // Paragraphe sans photo : colonne éditoriale (sous-titre à gauche, texte à droite)
   if (photos.length === 0)
     return (
       <ScrollReveal>
@@ -88,7 +85,6 @@ function SectionBlock({ item, onOpen }: { item: PlannedSection; onOpen: OpenFn }
   );
 }
 
-/* ---------- Visionneuse plein écran ---------- */
 function Lightbox({ photos, index, onIndex, onClose }: { photos: EventRow["photos"]; index: number; onIndex: (i: number) => void; onClose: () => void }) {
   const { t } = useTranslation();
   const n = photos.length;
@@ -126,7 +122,6 @@ function Lightbox({ photos, index, onIndex, onClose }: { photos: EventRow["photo
   );
 }
 
-/* ------------------------------------------------------------------ */
 export default function EvenementDetail() {
   const { slug = "" } = useParams();
   const { t, i18n } = useTranslation();
@@ -134,7 +129,7 @@ export default function EvenementDetail() {
   const [state, setState] = useState<"loading" | "ready" | "missing" | "error">("loading");
   const [all, setAll] = useState<EventCard[]>([]);
   const [open, setOpen] = useState<number | null>(null);
-  const [coverRef, coverIn] = useInView<HTMLDivElement>(0.1);
+  //const [coverRef, coverIn] = useInView<HTMLDivElement>(0.1);
 
   useEffect(() => {
     let alive = true;
@@ -172,9 +167,9 @@ export default function EvenementDetail() {
   const newer = i > 0 ? all[i - 1] : null;
   const older = i >= 0 && i < all.length - 1 ? all[i + 1] : null;
 
+
   return (
     <main className="bg-[var(--color-background)] text-[var(--color-text)]">
-      {/* ============ EN-TÊTE ============ */}
       <section className="relative px-6 pb-10 pt-16 sm:pb-14 lg:pt-20">
         <div className="mx-auto max-w-7xl">
           <Link to="/evenements" className="group inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]">
@@ -214,18 +209,27 @@ export default function EvenementDetail() {
         </div>
       </section>
 
-      {/* ============ COUVERTURE ============ */}
       <div className="px-6">
-        <div ref={coverRef} data-in={coverIn} className="cut-reveal cover-zoom mx-auto aspect-[4/3] max-w-7xl overflow-hidden rounded-[2rem] sm:aspect-[16/8]">
+        <div className="mx-auto mb-25 aspect-[4/3] max-w-7xl overflow-hidden rounded-[2rem] sm:aspect-[16/8]">
           {cover ? (
-            <img src={cover} alt={event.title} decoding="async" className="h-full w-full object-cover" />
+            <img
+              src={cover}
+              alt={event.title}
+              decoding="async"
+              className="h-full w-full object-cover"
+              onLoad={() => console.log("Image de couverture chargée :", cover)}
+              onError={(e) => console.error("Erreur de chargement de l'image :", cover, e)}
+            />
           ) : (
-            <div className="photo-placeholder flex h-full w-full items-center justify-center"><span aria-hidden className="text-[12rem] font-semibold leading-none opacity-25">{cat.kanji}</span></div>
+            <div className="photo-placeholder flex h-full w-full items-center justify-center">
+              <span aria-hidden className="text-[12rem] font-semibold leading-none opacity-25">
+                {cat.kanji}
+              </span>
+            </div>
           )}
         </div>
       </div>
 
-      {/* ============ PARAGRAPHES + PHOTOS ============ */}
       {plan.sections.length > 0 && (
         <section className="px-6 py-20 sm:py-28">
           <div className="mx-auto max-w-7xl space-y-24 sm:space-y-32">
@@ -234,7 +238,6 @@ export default function EvenementDetail() {
         </section>
       )}
 
-      {/* ============ GALERIE (surplus de photos, ou évènement sans texte) ============ */}
       {plan.gallery.length > 0 && (
         <section className={`px-6 pb-20 sm:pb-28 ${plan.sections.length === 0 ? "pt-20 sm:pt-28" : "bg-[var(--color-surface)] pt-20 sm:pt-28"}`}>
           <div className="mx-auto max-w-7xl">
@@ -246,7 +249,6 @@ export default function EvenementDetail() {
         </section>
       )}
 
-      {/* ============ PRÉCÉDENT / SUIVANT ============ */}
       <section className="relative overflow-hidden bg-[var(--color-primary)] px-6 pb-36 pt-20 text-white sm:pb-44 sm:pt-28">
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2">
           {[{ ev: older, label: "prev", Icon: ArrowLeft }, { ev: newer, label: "next", Icon: ArrowRight }].map(({ ev, label, Icon }) =>

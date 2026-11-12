@@ -8,7 +8,6 @@ import { useTeachers } from "../../data/profs.ts";
 
 export default function Accueil() {
 
-  const featuredEvent = null;
   const { t } = useTranslation();
 
   const historyMilestones = [
@@ -45,7 +44,7 @@ export default function Accueil() {
 
   return (
     <>
-      <HeroBanner featuredEvent={featuredEvent} />
+      <HeroBanner />
 
       <section className="relative overflow-hidden bg-[#f4f1e9] text-neutral-950">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 py-24 md:grid-cols-12 md:items-center md:gap-10 md:px-10 md:py-32">
@@ -218,7 +217,7 @@ export default function Accueil() {
                 <div className="group relative lg:sticky lg:top-24">
                   <div className="relative aspect-[4/5] overflow-hidden bg-neutral-200 rounded-xl">
                     <img
-                      src="/assets/images/accueil/histoire-club.jpg"
+                      src="/assets/images/tisier.png"
                       alt={t("history.imageAlt")}
                       loading="lazy"
                       className="h-full w-full object-cover grayscale transition duration-700 group-hover:scale-[1.03] group-hover:grayscale-0 motion-reduce:transform-none"
@@ -235,10 +234,6 @@ export default function Accueil() {
                       </p>
                     </div>
                   </div>
-
-                  <p className="mt-3 text-xs text-neutral-500">
-                    {t("history.imageNote")}
-                  </p>
                 </div>
               </ScrollReveal>
             </div>

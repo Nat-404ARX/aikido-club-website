@@ -14,10 +14,11 @@ import {
 import ScrollReveal from "../../components/ui/ScrollReveal";
 import { useTranslation } from "react-i18next";
 
-import { useWeeklySchedule } from "../../data/cours.ts";
 import { useClubInformation } from "../../hooks/useClubInformation.tsx";
 import { usePricing } from "../../hooks/usePrincing.tsx";
 import GoogleMapEmbed from "../../components/ui/GoogleMapEmbed.tsx";
+
+import { useWeeklySchedule } from "../../hooks/useCourses.tsx";
 
 
 function getCurrentDayIndex() {
@@ -33,9 +34,8 @@ function formatPrice(price: number) {
 }
 
 export default function HorairesTarifs() {
-  const weeklySchedule = useWeeklySchedule();
-  const { club } = useClubInformation();
-  const { annualSchedule } = useClubInformation();
+  const { schedule: weeklySchedule } = useWeeklySchedule();
+  const { club, annualSchedule } = useClubInformation();
   const pricing = usePricing()[0];
   const [selectedDay, setSelectedDay] = useState(getCurrentDayIndex);
   const [showAnnualImage, setShowAnnualImage] = useState(false);
@@ -48,7 +48,6 @@ export default function HorairesTarifs() {
 
   return (
     <main className="overflow-hidden bg-[#f5f3ee] text-neutral-950">
-      {/* INTRODUCTION */}
       <section className="px-6 pb-18 pt-18 sm:pb-16 sm:pt-16 lg:pb-20 lg:pt-20">
         <div className="mx-auto max-w-7xl">
           <ScrollReveal>
@@ -166,6 +165,7 @@ export default function HorairesTarifs() {
               )}
             </div>
 
+            
             <div className="mt-6 space-y-3">
               {currentDay.courses.length > 0 ? (
                 currentDay.courses.map((course, index) => (
@@ -213,6 +213,7 @@ export default function HorairesTarifs() {
                 </div>
               )}
             </div>
+            
 
             <p className="mt-5 text-xs leading-relaxed text-neutral-500">
               {t("horaire.confirmHours")}
@@ -439,6 +440,46 @@ export default function HorairesTarifs() {
           <GoogleMapEmbed />
           
 
+        </div>
+      </section>
+
+      <section className="bg-[#f5f3ee] px-6 py-20 sm:py-28">
+        <img
+          src="/documents/affiche.jpeg"
+          alt="Photo du Dojo de l’Aïkido Club Dieppois"
+          className="mx-auto max-h-[500px] w-auto rounded-2xl object-cover object-center shadow-lg sm:max-h-[600px]"
+        />
+        <div className="mx-auto max-w-7xl">
+          <ScrollReveal delay={150}>
+            <div className="mt-8 flex flex-col items-start justify-between gap-6 rounded-2xl bg-neutral-950 p-6 text-white sm:flex-row sm:items-center sm:p-8">
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10">
+                  <FileText size={22} />
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold">
+
+                    {t("horaire.poster")}
+                  </h3>
+                  <p className="mt-2 max-w-xl text-sm leading-relaxed text-white/60">
+
+                    {t("horaire.posterInfo")}
+                  </p>
+                </div>
+              </div>
+
+              <a
+                href={"/documents/affiche.jpeg"}
+                download
+                className="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 bg-white px-5 py-3 text-sm font-semibold text-neutral-950 transition-colors hover:bg-[var(--color-accent)] hover:text-white"
+              >
+                <ArrowDownToLine size={18} />
+
+                {t("horaire.downloadPoster")}
+              </a>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

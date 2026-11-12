@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useHeroBanner } from "../../hooks/useHeroBanner.tsx";
 import {
   ChevronLeft,
   ChevronRight,
@@ -8,23 +9,27 @@ import {
   Play,
 } from "lucide-react";
 
-type FeaturedEvent = {
-  title: string;
-  description: string;
-  image: string;
-  href: string;
-};
 
-type HeroBannerProps = {
-  featuredEvent?: FeaturedEvent | null;
-};
 
-export default function HeroBanner({
-  featuredEvent,
-}: HeroBannerProps) {
+export default function HeroBanner() {
   const { t } = useTranslation();
   const [activeSlide, setActiveSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+
+
+  const { banner, isLoading } = useHeroBanner();
+
+  const featuredEvent =
+    !isLoading && banner?.is_enabled && banner.title.trim()
+      ? {
+        eyebrow: banner.eyebrow,
+        title: banner.title,
+        description: banner.description,
+        href: banner.button_href,
+        image: banner.image_url,
+        buttonLabel: banner.button_label,
+      }
+      : null;
 
   const slideCount = featuredEvent ? 2 : 1;
 
@@ -53,7 +58,6 @@ export default function HeroBanner({
       className="relative overflow-hidden bg-neutral-950 text-white"
     >
       <div className="relative">
-        {/* Bannière classique */}
         <div
           className={
             activeSlide === 0
@@ -134,7 +138,7 @@ export default function HeroBanner({
             <div className="mx-auto grid min-h-[560px] max-w-7xl items-center gap-10 px-5 py-6 md:grid-cols-2 md:px-10">
               <div className="relative z-10">
                 <p className="mb-5 text-sm uppercase tracking-[0.25em] text-neutral-400">
-                  {t("hero.eventEyebrow")}
+                  {featuredEvent.eyebrow}
                 </p>
 
                 <h2 className="max-w-2xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
@@ -151,18 +155,20 @@ export default function HeroBanner({
                     tabIndex={activeSlide === 1 ? 0 : -1}
                     className="inline-flex rounded-md bg-[var(--color-accent)] px-6 py-3 font-medium text-white transition-transform duration-200 hover:-translate-y-1"
                   >
-                    {t("hero.eventCta")}
+                    {featuredEvent.buttonLabel}
                   </Link>
                 </div>
               </div>
 
               <div className="relative flex min-h-[300px] items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 md:min-h-[420px]">
-                <img
-                  src={featuredEvent.image}
-                  alt=""
-                  className="absolute inset-0 h-full w-full object-cover"
-                  loading="lazy"
-                />
+                {featuredEvent.image && (
+                  <img
+                    src={featuredEvent.image}
+                    alt=""
+                    className="absolute inset-0 h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-neutral-950/10 to-transparent" />
               </div>
             </div>

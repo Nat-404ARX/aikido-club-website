@@ -4,7 +4,14 @@ import { useTranslation } from "react-i18next";
 import { ArrowDown, ArrowUpRight, ChevronDown } from "lucide-react";
 import ScrollReveal from "../../components/ui/ScrollReveal";
 
-type TLEvent = { id: string; kanji: string; year?: string; photo?: boolean; src?: string; miror?: bool; };
+type TLEvent = {
+  id: string;
+  kanji: string;
+  year?: string;
+  photo?: boolean;
+  src?: string;
+  miror?: boolean;
+};
 
 const sections = [
   { id: "essence", kanji: "心" },
@@ -149,7 +156,6 @@ function useActiveSection(ids: string[]) {
   return active;
 }
 
-/** Écrit --p (0 → 1) sur l'élément : avancement du scroll dans la frise */
 function useScrollProgress(ref: RefObject<HTMLElement | null>) {
   useEffect(() => {
     const el = ref.current;
@@ -200,21 +206,40 @@ function BlockTitle({ kanji, title, lead }: { kanji: string; title: string; lead
   );
 }
 
-/** Placeholder photo (révélée par une « coupe de sabre ») — remplace le bloc role="img" par un <img> */
-function Photo({ src, alt, kanji, ratio = "aspect-[4/3]", miror = false }: { src: string; alt: string; kanji: string; ratio?: string; miror: bool; }) {
+function Photo({
+  src,
+  alt,
+  kanji,
+  miror = false,
+}: {
+  src: string;
+  alt: string;
+  kanji: string;
+  miror?: boolean;
+}) {
   const [ref, inView] = useInView<HTMLElement>(0.2);
-  let align;
-  let position;
-  miror ? align = "group relative flex justify-start-safe items-end" : align = "group relative flex justify-end-safe items-end";
-  miror ? position = "absolute -bottom-5 left-5 flex h-16 w-16 -rotate-6 items-center justify-center rounded-lg bg-[var(--color-accent)] text-3xl font-semibold text-white shadow-lg transition-transform duration-500 group-hover:rotate-0 sm:-left-7" : position = "absolute -bottom-5 right-5 flex h-16 w-16 rotate-6 items-center justify-center rounded-lg bg-[var(--color-accent)] text-3xl font-semibold text-white shadow-lg transition-transform duration-500 group-hover:rotate-0 sm:-right-7";
+
+  const align = miror
+    ? "group relative flex justify-start-safe items-end"
+    : "group relative flex justify-end-safe items-end";
+
+  const position = miror
+    ? "absolute -bottom-5 left-5 flex h-16 w-16 -rotate-6 items-center justify-center rounded-lg bg-[var(--color-accent)] text-3xl font-semibold text-white shadow-lg transition-transform duration-500 group-hover:rotate-0 sm:-left-7"
+    : "absolute -bottom-5 right-5 flex h-16 w-16 rotate-6 items-center justify-center rounded-lg bg-[var(--color-accent)] text-3xl font-semibold text-white shadow-lg transition-transform duration-500 group-hover:rotate-0 sm:-right-7";
+
   return (
     <figure ref={ref} className={align}>
-      <div data-in={inView} className="cut-reveal overflow-hidden rounded-[2rem] max-h-125"><img src={src} alt={alt} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" /></div>
-      {/* 
-      <div role="img" aria-label={alt} data-in={inView} className={`photo-placeholder cut-reveal relative flex ${ratio} items-end overflow-hidden rounded-[2rem] border border-[var(--color-border)] p-6`}>
-        <p className="relative z-10 max-w-[20rem] text-xs leading-relaxed text-[var(--color-text-muted)]">{alt}</p>
+      <div
+        data-in={inView}
+        className="cut-reveal overflow-hidden rounded-[2rem] max-h-125"
+      >
+        <img
+          src={src}
+          alt={alt}
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
       </div>
-      */}
+
       <span aria-hidden className={position}>
         {kanji}
       </span>
@@ -233,7 +258,6 @@ function Torii({ className = "" }: { className?: string }) {
   );
 }
 
-/* ---------- Frise chronologique à progression au scroll ---------- */
 function Timeline({ prefix, events }: { prefix: string; events: TLEvent[] }) {
   const ref = useRef<HTMLOListElement>(null);
   useScrollProgress(ref);
@@ -268,9 +292,14 @@ function TimelineItem({ ev, base, flip }: { ev: TLEvent; base: string; flip: boo
             </p>
           )}
         </div>
-        {ev.photo && (
+        {ev.photo && ev.src && (
           <div className={flip ? "lg:order-first" : ""}>
-            <Photo src={ev.src} alt={t(`${base}.alt`)} kanji={ev.kanji} miror={ev.miror} />
+            <Photo
+              src={ev.src}
+              alt={t(`${base}.alt`)}
+              kanji={ev.kanji}
+              miror={ev.miror}
+            />
           </div>
         )}
       </div>
@@ -278,7 +307,6 @@ function TimelineItem({ ev, base, flip }: { ev: TLEvent; base: string; flip: boo
   );
 }
 
-/* ---------- Déroulement d'un cours ---------- */
 function ClassFlow() {
   const { t } = useTranslation();
   const [active, setActive] = useState(0);
@@ -480,7 +508,7 @@ export default function Aikido() {
           <aside className="lg:relative lg:top-40 lg:col-span-4 lg:self-start">  {/*mettre en lg:sticky et corrigé la zone d'arrêt qui est trop basse  */}
             <BlockTitle kanji="翁" title={t("aikido.ueshiba.title")} lead={t("aikido.ueshiba.lead")} />
             <div className="mt-10">
-              <Photo src={"/assets/images/aikido/morihei-ueshiba.jpg"} alt={t("aikido.ueshiba.alt")} kanji="翁" ratio="aspect-[4/5]" />
+              <Photo src={"/assets/images/aikido/morihei-ueshiba.jpg"} alt={t("aikido.ueshiba.alt")} kanji="翁" />
             </div>
             <dl className="mt-12 divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
               {ueshibaFacts.map((f) => (
@@ -578,9 +606,9 @@ export default function Aikido() {
           <div className="grid gap-14 lg:grid-cols-2 lg:gap-16">
             <div>
               <BlockTitle kanji="衣" title={t("aikido.gear.title")} lead={t("aikido.gear.lead")} />
-              <div className="mt-10">
-                {/*<Photo src={"/assets/images/tenu.jpg"} alt={t("aikido.gear.alt")} kanji="袴" />*/}
-              </div>
+                <div className="flex justify-center overflow-hidden rounded-[2rem] mt-10">
+                  <img src={"/assets/images/tenu.jpg"} alt={t("aikido.gear.alt")} className="max-h-140 max-w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </div>
               <ul className="mt-12 divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
                 {gear.map((g) => (
                   <li key={g.id} className="slot-row flex gap-5 py-5">
@@ -599,6 +627,12 @@ export default function Aikido() {
                 <Weapons />
               </div>
               <p className="mt-6 text-sm text-[var(--color-text-muted)]">{t("aikido.weapons.note")}</p>
+              <div className="flex justify-center overflow-hidden rounded-[2rem] mt-10">
+                <img src={"/assets/images/armes-aikido.jpg"} alt={t("aikido.gear.alt")} className="max-h-140 max-w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
+              <div className="flex justify-center overflow-hidden rounded-[2rem] mt-10">
+                <img src={"/assets/images/shinai.png"} alt={t("aikido.gear.alt")} className="max-h-140 max-w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
             </div>
           </div>
 

@@ -21,6 +21,7 @@ import Engagement from "./pages/public/Engagement.tsx";
 import Reglement from "./pages/public/Reglement.tsx";
 
 import AdminLogin from "./pages/admin/AdminLogin.tsx";
+import AcceptInvitation from "./pages/admin/AcceptInvitation.tsx";
 import AdminDashboard from "./pages/admin/AdminDashboard.tsx";
 import AdminPages from "./pages/admin/AdminPages.tsx";
 import AdminComptes from "./pages/admin/AdminComptes.tsx";
@@ -34,18 +35,9 @@ import AdminAccueil from "./components/admin/AdminAccueil.tsx";
 import AdminProfesseurs from "./components/admin/AdminTeacher.tsx";
 import AdminInformationsClub from "./components/admin/AdminInformationClub.tsx";
 import AdminClub from "./components/admin/AdminClub.tsx";
+import AdminReglement from "./components/admin/AdminReglement.tsx";
+import AdminEngagement from "./components/admin/AdminEngagement.tsx";
 
-
-
-
-function PageEnConstruction( titre: any ) {
-  return (
-    <section className="mx-auto max-w-5xl px-5 py-16">
-      <h1 className="text-3xl font-bold">{titre}</h1>
-      <p className="mt-3">Cette page est en cours de construction.</p>
-    </section>
-  );
-}
 
 export default function App() {
   return (
@@ -71,6 +63,7 @@ export default function App() {
       
       {/* Connexion : accessible sans être connecté */}
       <Route path="/admin/login" element={<AdminLogin />} />
+      <Route path="/admin/accept-invitation" element={<AcceptInvitation />} />
 
       {/* Toutes les routes ci-dessous sont protégées */}
       <Route element={<ProtectedAdminRoute />}>
@@ -82,6 +75,8 @@ export default function App() {
           <Route path="pages/professeurs" element={<AdminProfesseurs />} />
           <Route path="pages/informations-club" element={<AdminInformationsClub />} />
           <Route path="pages/club" element={<AdminClub />} />
+          <Route path="pages/engagements" element={<AdminEngagement />} />
+          <Route path="pages/reglement" element={<AdminReglement />} />
 
           <Route path="cours" element={<AdminCours />} />
           <Route path="horaires" element={<AdminHoraire />} />

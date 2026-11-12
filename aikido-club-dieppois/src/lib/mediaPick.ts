@@ -1,4 +1,3 @@
-/** Normalise ce que renvoie <MediaPicker onSelect> : URL, { url }, ou tableau des deux. */
 type PickResult = { url?: string; publicUrl?: string; src?: string };
 export function toUrls(result: unknown): string[] {
   const list = Array.isArray(result) ? result : [result];

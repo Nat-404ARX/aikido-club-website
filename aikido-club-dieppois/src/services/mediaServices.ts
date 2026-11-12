@@ -1,4 +1,5 @@
 import { supabase } from "../lib/supabase";
+import { type MediaCategory } from "../data/mediaCategories.ts"
 
 export const MEDIA_BUCKET = "club-media";
 export const MAX_MEDIA_SIZE = 5 * 1024 * 1024;
@@ -80,6 +81,19 @@ function toMediaFile(
   };
 }
 
+function hasMediaIdentity<T extends {
+  id: string | null;
+  name: string | null;
+}>(
+  item: T
+): item is T & { id: string; name: string } {
+  return (
+    typeof item.id === "string" &&
+    item.id.length > 0 &&
+    typeof item.name === "string" &&
+    item.name.length > 0
+  );
+}
 export const mediaService = {
   async list(category: MediaCategory): Promise<MediaFile[]> {
     const { data, error } = await supabase.storage
@@ -95,10 +109,15 @@ export const mediaService = {
     }
 
     return (data ?? [])
-      .filter((item) => Boolean(item.id) && Boolean(item.name))
-      .map((item) => toMediaFile(category, item));
+      .filter(hasMediaIdentity)
+      .map((item) =>
+        toMediaFile(category, {
+          ...item,
+          created_at: item.created_at ?? undefined,
+        })
+      );
   },
-
+  
   async upload(
     file: File,
     category: MediaCategory

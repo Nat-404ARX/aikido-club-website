@@ -136,7 +136,6 @@ function BlockEditor({ block, onChange, onPickImages }: { block: ClubBlock; onCh
   }
 }
 
-/* ------------------------------------------------------------------ */
 type PickTarget = { kind: "hero" } | { kind: "images"; sectionId: string; blockId: string } | null;
 
 export default function AdminClub() {
@@ -165,7 +164,6 @@ export default function AdminClub() {
     return () => window.removeEventListener("beforeunload", h);
   }, [dirty]);
 
-  /* ----- mises à jour immuables ----- */
   const patchPage = (p: Partial<ClubPage>) => setPage((cur) => (cur ? { ...cur, ...p } : cur));
   const updateSection = (sid: string, fn: (s: ClubSection) => ClubSection) =>
     setPage((cur) => (cur ? { ...cur, sections: cur.sections.map((s) => (s.id === sid ? fn(s) : s)) } : cur));
@@ -217,7 +215,6 @@ export default function AdminClub() {
     } finally { setSaving(false); }
   };
 
-  /* ------------------------------------------------------------------ */
   if (state === "loading") return <main className="mx-auto max-w-4xl p-6"><div className="h-64 animate-pulse rounded-xl bg-neutral-100" /></main>;
   if (state === "error" || !page)
     return (
@@ -242,7 +239,6 @@ export default function AdminClub() {
         </div>
       </header>
 
-      {/* Image d'en-tête */}
       <section className={panel}>
         <h2 className="text-base font-semibold text-neutral-900">Image d'en-tête</h2>
         <p className="mt-1 text-sm text-neutral-500">Grande image sous le titre de la page (facultative).</p>
@@ -260,7 +256,6 @@ export default function AdminClub() {
         </div>
       </section>
 
-      {/* Sections */}
       <section className="space-y-3">
         <h2 className="text-base font-semibold text-neutral-900">Sections <span className="font-normal text-neutral-500">({page.sections.length})</span></h2>
 
@@ -338,7 +333,6 @@ export default function AdminClub() {
         <button type="button" onClick={addSection} className={ghost}><Plus className="size-4" aria-hidden />Ajouter une section</button>
       </section>
 
-      {/* Barre d'enregistrement */}
       <div className="sticky bottom-3 z-10 space-y-2">
         {message && <p role="status" className={`rounded-lg px-4 py-2.5 text-sm font-medium ${message.ok ? "bg-neutral-900 text-white" : "bg-red-600 text-white"}`}>{message.text}</p>}
         <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-neutral-200 bg-white/95 p-3 shadow-sm backdrop-blur">
@@ -349,7 +343,14 @@ export default function AdminClub() {
         </div>
       </div>
 
-      {pick && <MediaPicker open multiple={pick.kind === "images"} onClose={() => setPick(null)} onSelect={handlePick} />}
+      {pick && (
+        <MediaPicker
+          open
+          initialCategory="accueil"
+          onClose={() => setPick(null)}
+          onSelect={(media) => handlePick(media)}
+        />
+      )}
     </main>
   );
 }

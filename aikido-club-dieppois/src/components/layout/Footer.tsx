@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ArrowUp, ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 
@@ -21,12 +20,9 @@ const legalLinks = [
   { key: "engagement", to: "/engagement" },
 ];
 
-
-
-/* ------------------------------------------------------------------ */
 export default function Footer() {
   const { t } = useTranslation();
-  const { club, annualSchedule, loading, error } =
+  const { club } =
     useClubInformation();
 
   const associationInfo = [
@@ -124,6 +120,10 @@ export default function Footer() {
               <li className="flex gap-3">
                 <Phone size={18} className="shrink-0" aria-hidden />
                 <a href={`tel:${club.phoneHref}`} className={link}>{club.phone}</a>
+              </li>
+              <li className="flex gap-3">
+                <img src={"/assets/icons/artix.svg"} className="shrink-0 w-6" aria-hidden />
+                <a href={`https://dev.artix-studio.fr`} className={link}>{t(`footer.by`)}</a>
               </li>
             </ul>
           </div>

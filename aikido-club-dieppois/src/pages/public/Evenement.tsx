@@ -12,7 +12,6 @@ import {
 const heroChars = ["行", "事"];
 const kanjiOf = (c: EventCategory) => EVENT_CATEGORIES.find((x) => x.id === c)?.kanji ?? "他";
 
-/* ---------- Prochain évènement (mis en avant) ---------- */
 function Featured({ event }: { event: EventCard }) {
   const { t, i18n } = useTranslation();
   const d = daysUntil(event.event_date);
@@ -56,7 +55,6 @@ function Featured({ event }: { event: EventCard }) {
   );
 }
 
-/* ---------- Ligne de l'index ---------- */
 function IndexRow({ event, i }: { event: EventCard; i: number }) {
   const { t, i18n } = useTranslation();
   const date = new Date(`${event.event_date}T00:00:00`);
@@ -67,7 +65,7 @@ function IndexRow({ event, i }: { event: EventCard; i: number }) {
     <div role="listitem" style={vi(i)} className="rise">
       <Link
         to={`/evenements/${event.slug}`}
-        className="group flex items-center gap-4 py-6 transition-[padding] duration-300 hover:pl-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)] sm:gap-6"
+        className="group flex max-w-[80vw] items-center gap-4 py-6 transition-[padding] duration-300 hover:pl-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)] sm:gap-6"
       >
         <div className="w-14 shrink-0 text-center sm:w-20">
           <p className="text-3xl font-semibold tabular-nums leading-none sm:text-4xl">{day}</p>
